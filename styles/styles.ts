@@ -1,7 +1,6 @@
 //serves as a master scss file if you will
 import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
     html {
         font-size: 62.5%;
