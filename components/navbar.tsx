@@ -1,19 +1,22 @@
 import Link from "next/link";
 
 const Navbar = () => {
+    return (
     <nav>
     <Link href="/">
         <a>HOME</a>
     </Link>
-    <Link>
+    <Link href="/services">
         <a>SERVICES</a>
     </Link>
-    <Link>
+    <Link href="/gallery">
         <a>GALLERY</a>
     </Link>
-    <Link>
+    <Link href="/clients">
     <a>CLIENTS</a></Link>
-    <Link><a>STORY</a></Link>
-    <Link><a>CONTACT</a></Link>
-    </nav>
+    <Link href="/story"><a>STORY</a></Link>
+    <Link href="/contact"><a>CONTACT</a></Link>
+    </nav>);
 }
+
+export default Navbar;
