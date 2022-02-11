@@ -1,12 +1,21 @@
+import styled from "styled-components";
+
 import BurgerIcon from "./Icons/BurgerIcon";
-import SearchIcon from "./Icons/SearchIcon"
+import SearchIcon from "./Icons/SearchIcon";
+
+const IconBarContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 30px;
+`
 
 const IconBar = () => {
     return (
-        <div>
+        <IconBarContainer>
             <SearchIcon />
             <BurgerIcon />
-        </div>
+        </IconBarContainer>
     )
 }
 

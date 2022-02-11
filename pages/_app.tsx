@@ -6,15 +6,17 @@ import TagManager from 'react-gtm-module'
 import theme from '../styles/themes'
 import { useEffect } from 'react'
 
-function MyApp({ Component, pageProps }) {
+const MyApp = ({ Component, pageProps }) => {
     return (
         // easily implement dark mode here
+        <Component {...pageProps}>
         <ThemeProvider theme={theme}>
             <MainContextProvider>
                 <GlobalStyle />
                 <Homepage />
             </MainContextProvider>
         </ThemeProvider>
+        </Component>
     )
 }
 

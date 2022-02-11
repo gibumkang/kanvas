@@ -1,9 +1,11 @@
+import styles from "../../../../styles/SearchIcon.module.css"
+
 const SearchIcon = () => {
     return (
         <svg
-            className="w-6 h-6"
+            className={styles.search}
             fill="none"
-            stroke="currentColor"
+            stroke="black"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
         >
