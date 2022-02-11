@@ -6,21 +6,15 @@ import TagManager from 'react-gtm-module'
 import theme from '../styles/themes'
 import { Helmet } from 'react-helmet'
 
-const MyApp = () => {
+const MyApp = ({ Component, pageProps }) => {
     return (
-        // easily implement dark mode here
-        <ThemeProvider theme={theme}>
+        <>
+            {/* // easily implement dark mode here */}
+            <GlobalStyle theme={theme} />
             <MainContextProvider>
-                <GlobalStyle />
-                <Helmet>
-                    <link
-                        rel="stylesheet"
-                        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-                    />
-                </Helmet>
-                <Homepage />
+                <Component {...pageProps} />
             </MainContextProvider>
-        </ThemeProvider>
+        </>
     )
 }
 

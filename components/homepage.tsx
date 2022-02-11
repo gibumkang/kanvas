@@ -1,10 +1,10 @@
 import React from 'react'
+import Header from './Header/Header'
 
 const homepage = () => {
     return (
         <div>
-            This is a boilerplate website that can be used as a foundation for
-            any nextjs project
+            <Header />
         </div>
     )
 }
