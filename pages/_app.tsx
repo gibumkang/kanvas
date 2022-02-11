@@ -8,15 +8,13 @@ import { useEffect } from 'react'
 
 const MyApp = ({ Component, pageProps }) => {
     return (
-        // easily implement dark mode here
-        <Component {...pageProps}>
-        <ThemeProvider theme={theme}>
-            <MainContextProvider>
-                <GlobalStyle />
-                <Homepage />
-            </MainContextProvider>
-        </ThemeProvider>
-        </Component>
+        <>
+            {/* // easily implement dark mode here */}
+            <GlobalStyle theme={theme}/>
+                <MainContextProvider>
+                    <Component {...pageProps} />
+                </MainContextProvider>
+        </>
     )
 }
 

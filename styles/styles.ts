@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
         @media screen and (max-width: ${(props) => props.theme.maxWidth}){
             font-size: 5.5rem;
         };
+        color: blue;
     }
     h2 {
         font-size: 6rem;
@@ -48,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     .h1 {
         font-size: 3rem;
         font-family: ${(props) => props.theme.fonts.header};
+        color: purple;
     }
     .h2 {
         font-size: 2.5rem;
