@@ -3,14 +3,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 7px;
+}
+
+.container > a {
+    text-decoration: none;
+}
+
+.container > a:hover {
+    font-weight: bold;
+}
+
+.current {
+    font-weight: bold;
 }
 
 .selected, .unselected {
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
 }
 
 .selected {
-    background-color: black;
+    background-color: gold;
 }
