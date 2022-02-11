@@ -1,14 +1,19 @@
+import Link from "next/link";
+
 const Services = () => {
     return (
         <div>
-            <Link href="/engage"><a>Engage</a>
+            <Link href="/services/engage">
+                <a>Engage</a>
             </Link>
-            <Link><a>Extend</a>
+            <Link href="/services/extend">
+                <a>Extend</a>
             </Link>
-            <Link><a>Reward</a>
+            <Link href="/services/reward">
+                <a>Reward</a>
             </Link>
         </div>
     )
 }
 
-export default Services;
+export default Services
