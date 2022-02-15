@@ -1,6 +1,6 @@
 import NavOption from './NavOption/NavOption';
 
-import styles from "../../../styles/Navbar.module.css";
+import styles from "../../../../styles/Navbar.module.css";
 
 const Navbar = () => {
     return (

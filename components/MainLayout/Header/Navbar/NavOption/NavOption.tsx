@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useContext } from 'react'
-import { MainContext } from '../../../../hooks/MainContext'
+import { MainContext } from '../../../../../hooks/MainContext'
 
-import styles from '../../../../styles/NavOption.module.css'
+import styles from '../../../../../styles/NavOption.module.css'
 
 interface INavOptionProps {
     page?: String
