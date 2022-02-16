@@ -3,8 +3,6 @@ import Navbar from './Navbar/Navbar'
 import styled from 'styled-components'
 
 import IconBar from './IconBar/IconBar'
-import { MainContext } from '../../../hooks/MainContext'
-import { useContext } from 'react'
 import Logo from './Logo/Logo'
 
 const HeaderContainer = styled.div`
@@ -21,16 +19,10 @@ const LogoContainer = styled.div`
 `
 
 const Header = () => {
-    const {
-        view: {
-            Navigation: { currentPage },
-        },
-    } = useContext(MainContext)
-
     return (
         <HeaderContainer>
             <LogoContainer>
-                {currentPage === 'HOME' ? null : <Logo />}
+                <Logo />
                 <Navbar />
             </LogoContainer>
             <IconBar />

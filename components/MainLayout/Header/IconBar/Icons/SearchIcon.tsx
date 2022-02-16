@@ -1,13 +1,11 @@
-import styles from "../../../../../styles/SearchIcon.module.css"
-
 const SearchIcon = () => {
     return (
         <svg
-            className={styles.search}
             fill="none"
             stroke="black"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            height="30px"
         >
             <path
                 strokeLinecap="round"
@@ -19,4 +17,4 @@ const SearchIcon = () => {
     )
 }
 
-export default SearchIcon;
+export default SearchIcon
