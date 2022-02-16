@@ -84,12 +84,36 @@ const Footer: React.FC = () => {
                 <div>
                     <h3>Helpful Links</h3>
                     <ul>
-                        <li><Link href="/"><a>Home</a></Link></li>
-                        <li><Link href="/"><a>Services</a></Link></li>
-                        <li><Link href="/"><a>Gallery</a></Link></li>
-                        <li><Link href="/"><a>Clients</a></Link></li>
-                        <li><Link href="/"><a>Story</a></Link></li>
-                        <li><Link href="/"><a>Contact</a></Link></li>
+                        <li>
+                            <Link href="/">
+                                <a>Home</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/services">
+                                <a>Services</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/gallery">
+                                <a>Gallery</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/clients">
+                                <a>Clients</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/story">
+                                <a>Story</a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/contact">
+                                <a>Contact</a>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
                 <div>
