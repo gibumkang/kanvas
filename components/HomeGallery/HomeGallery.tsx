@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import * as GS from '../../../styles/global'
+import * as GS from '../../styles/global'
 import Image from 'next/image'
 
 const Grid = styled.div`

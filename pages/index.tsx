@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Clients from '../components/MainLayout/Clients/Clients'
-import HomeGallery from '../components/MainLayout/HomeGallery/HomeGallery'
+import Clients from '../components/Clients/Clients'
+import HomeGallery from '../components/HomeGallery/HomeGallery'
 
 const Home = () => {
     return (

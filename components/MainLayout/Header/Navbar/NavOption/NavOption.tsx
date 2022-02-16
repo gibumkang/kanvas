@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { useContext } from 'react'
-import { MainContext } from '../../../../../hooks/MainContext'
+import { useRouter } from 'next/router'
 
 import styled from 'styled-components'
 
@@ -38,24 +37,16 @@ const CurrentPageButton = styled.a`
 const DifferentPageButton = styled.a`
     text-decoration: none;
     cursor: pointer;
-    $hover {
+    &:hover {
         font-weight: bold;
     }
 `
 
 const NavOption = ({ page }: INavOptionProps) => {
-    const {
-        view: {
-            Navigation: { currentPage },
-        },
-        changePage,
-    } = useContext(MainContext)
+    const pathName = useRouter().pathname
+    const currentPage = pathName === "/" ? "HOME" : pathName.split("/")[1].toUpperCase();
 
     const isCurrentPage = currentPage === page
-
-    const onClickChangePageHandler = () => {
-        changePage(page)
-    }
 
     return (
         <NavOptionContainer>
@@ -68,9 +59,7 @@ const NavOption = ({ page }: INavOptionProps) => {
                 {isCurrentPage ? (
                     <CurrentPageButton>{page}</CurrentPageButton>
                 ) : (
-                    <DifferentPageButton onClick={onClickChangePageHandler}>
-                        {page}
-                    </DifferentPageButton>
+                    <DifferentPageButton>{page}</DifferentPageButton>
                 )}
             </Link>
         </NavOptionContainer>
