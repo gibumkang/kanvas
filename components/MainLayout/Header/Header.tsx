@@ -1,7 +1,5 @@
 import Navbar from './Navbar/Navbar'
-
 import styled from 'styled-components'
-
 import IconBar from './IconBar/IconBar'
 import { MainContext } from '../../../hooks/MainContext'
 import { useContext } from 'react'
@@ -11,6 +9,7 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
+    background: #888;
 `
 
 const LogoContainer = styled.div`
@@ -30,7 +29,7 @@ const Header = () => {
     return (
         <HeaderContainer>
             <LogoContainer>
-                {currentPage === 'HOME' ? null : <Logo />}
+                <Logo />
                 <Navbar />
             </LogoContainer>
             <IconBar />
