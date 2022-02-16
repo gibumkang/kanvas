@@ -3,7 +3,7 @@ const green = '#53B21F';
 //acts as a theme switcher + global variables
 export const theme = {
 	fonts: {
-		main: 'DM Sans', //fonts located in header file
+		main: '"Poppins",sans-serif',
 		header: 'Din',
 		reading: '2rem',
 	},

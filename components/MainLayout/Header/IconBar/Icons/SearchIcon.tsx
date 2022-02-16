@@ -1,4 +1,4 @@
-import styles from "../../../../styles/SearchIcon.module.css"
+import styles from "../../../../../styles/SearchIcon.module.css"
 
 const SearchIcon = () => {
     return (

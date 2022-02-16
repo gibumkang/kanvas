@@ -1,7 +1,9 @@
 //serves as a master scss file if you will
 import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
-
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
     html {
         font-size: 62.5%;
         scroll-behavior: smooth;
@@ -20,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: -.05rem;
         font-family: ${(props) => props.theme.fonts.header};
         padding: .75rem 0rem;
+        color: blue;
     }
     h1 {
         font-size: 8rem;
@@ -77,6 +80,7 @@ const GlobalStyle = createGlobalStyle`
     }
     a {
         text-decoration: underline;
+        font-family: 'Poppins', sans-serif;
     }
     .popover-header {
         background: ${(props) => props.theme.colors.background};

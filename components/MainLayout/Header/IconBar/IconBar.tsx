@@ -8,6 +8,7 @@ const IconBarContainer = styled.div`
     justify-content: center;
     align-items:center;
     gap: 30px;
+    padding-top: 12px;
 `
 
 const IconBar = () => {

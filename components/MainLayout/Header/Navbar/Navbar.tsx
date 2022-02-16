@@ -1,17 +1,23 @@
-import NavOption from './NavOption/NavOption';
+import NavOption from './NavOption/NavOption'
 
-import styles from "../../../styles/Navbar.module.css";
+import styled from 'styled-components'
+
+const NavbarContainer = styled.nav`
+    display: flex;
+    justify-content: unset;
+    gap: 20px;
+`
 
 const Navbar = () => {
     return (
-        <nav className={styles.container}>
+        <NavbarContainer>
             <NavOption page="HOME" />
             <NavOption page="SERVICES" />
             <NavOption page="GALLERY" />
             <NavOption page="CLIENTS" />
             <NavOption page="STORY" />
             <NavOption page="CONTACT" />
-        </nav>
+        </NavbarContainer>
     )
 }
 

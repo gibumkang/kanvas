@@ -17,13 +17,3 @@
 .current {
     font-weight: bold;
 }
-
-.selected, .unselected {
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-}
-
-.selected {
-    background-color: gold;
-}

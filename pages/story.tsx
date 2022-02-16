@@ -1,7 +1,9 @@
 const Story = () => {
     return (
-        <div>Gallery</div>
+        <div>
+            Gallery
+        </div>
     )
 }
 
-export default Story;
+export default Story

@@ -1,10 +1,9 @@
 import { ThemeProvider } from 'styled-components'
 import MainContextProvider from '../hooks/MainContext'
-import Homepage from '../components/homepage'
 import GlobalStyle from '../styles/styles'
 import TagManager from 'react-gtm-module'
 import theme from '../styles/themes'
-import { Helmet } from 'react-helmet'
+import MainLayout from '../components/MainLayout/MainLayout'
 
 const MyApp = ({ Component, pageProps }) => {
     return (
@@ -12,7 +11,9 @@ const MyApp = ({ Component, pageProps }) => {
             {/* // easily implement dark mode here */}
             <GlobalStyle theme={theme} />
             <MainContextProvider>
-                <Component {...pageProps} />
+                <MainLayout>
+                    <Component {...pageProps} />
+                </MainLayout>
             </MainContextProvider>
         </>
     )
