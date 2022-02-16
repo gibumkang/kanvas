@@ -8,13 +8,15 @@ import MainLayout from '../components/MainLayout/MainLayout'
 const MyApp = ({ Component, pageProps }) => {
     return (
         <>
-            {/* // easily implement dark mode here */}
-            <GlobalStyle theme={theme} />
-            <MainContextProvider>
-                <MainLayout>
-                    <Component {...pageProps} />
-                </MainLayout>
-            </MainContextProvider>
+            <ThemeProvider theme={theme}>
+                {/* // easily implement dark mode here */}
+                <GlobalStyle />
+                <MainContextProvider>
+                    <MainLayout>
+                        <Component {...pageProps} />
+                    </MainLayout>
+                </MainContextProvider>
+            </ThemeProvider>
         </>
     )
 }
