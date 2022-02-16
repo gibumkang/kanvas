@@ -1,7 +1,5 @@
 import Navbar from './Navbar/Navbar'
-
 import styled from 'styled-components'
-
 import IconBar from './IconBar/IconBar'
 import Logo from './Logo/Logo'
 
@@ -9,6 +7,7 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
+    background: #888;
 `
 
 const LogoContainer = styled.div`

@@ -2,7 +2,7 @@
 import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
     * {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'DM Sans', sans-serif;
     }
     html {
         font-size: 62.5%;
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         letter-spacing: -.05rem;
         font-family: ${(props) => props.theme.fonts.header};
         padding: .75rem 0rem;
-        color: blue;
+        color: #fff;
     }
     h1 {
         font-size: 8rem;
@@ -31,7 +31,6 @@ const GlobalStyle = createGlobalStyle`
         @media screen and (max-width: ${(props) => props.theme.maxWidth}){
             font-size: 5.5rem;
         };
-        color: blue;
     }
     h2 {
         font-size: 6rem;
@@ -66,7 +65,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${(props) => props.theme.fonts.header};
     }
     ul {
-        list-style: none;
         margin: 0;
         padding: 0;
     }
