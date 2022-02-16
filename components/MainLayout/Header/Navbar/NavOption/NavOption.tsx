@@ -2,28 +2,78 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { MainContext } from '../../../../../hooks/MainContext'
 
-import styles from '../../../../../styles/NavOption.module.css'
+import styled from 'styled-components'
 
 interface INavOptionProps {
     page?: String
 }
 
-const NavOption = ({ page }: INavOptionProps) => {
-    const { view : { Navigation : { currentPage } }, changePage } = useContext(MainContext);
+const NavOptionContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+`
 
-    const isCurrentPage = currentPage === page;
+const CurrentPageIndicatorOn = styled.div`
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: gold;
+`
+
+const CurrentPageIndicatorOff = styled.div`
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+`
+
+const CurrentPageButton = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+`
+
+const DifferentPageButton = styled.a`
+    text-decoration: none;
+    cursor: pointer;
+    $hover {
+        font-weight: bold;
+    }
+`
+
+const NavOption = ({ page }: INavOptionProps) => {
+    const {
+        view: {
+            Navigation: { currentPage },
+        },
+        changePage,
+    } = useContext(MainContext)
+
+    const isCurrentPage = currentPage === page
 
     const onClickChangePageHandler = () => {
-        changePage(page);
+        changePage(page)
     }
 
     return (
-        <div className={styles.container}>
-            {isCurrentPage ? <div className={styles.selected}></div> : <div className={styles.unselected}></div>}
+        <NavOptionContainer>
+            {isCurrentPage ? (
+                <CurrentPageIndicatorOn />
+            ) : (
+                <CurrentPageIndicatorOff />
+            )}
             <Link href={`${page === 'HOME' ? '/' : `/${page.toLowerCase()}`}`}>
-                <a className={isCurrentPage ? styles.current : ""} onClick={onClickChangePageHandler}>{page}</a>
+                {isCurrentPage ? (
+                    <CurrentPageButton>{page}</CurrentPageButton>
+                ) : (
+                    <DifferentPageButton onClick={onClickChangePageHandler}>
+                        {page}
+                    </DifferentPageButton>
+                )}
             </Link>
-        </div>
+        </NavOptionContainer>
     )
 }
 
