@@ -12,7 +12,7 @@ const Home = () => {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
                     rel="preconnect"
                     href="https://fonts.gstatic.com"
@@ -21,7 +21,7 @@ const Home = () => {
                 <link
                     href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
                     rel="stylesheet"
-                />
+                /> */}
             </Head>
             <HomeGallery />
             <Clients />

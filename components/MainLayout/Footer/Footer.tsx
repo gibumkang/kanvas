@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
+import Link from 'next/link'
 import * as GS from '../../../styles/global'
 
 const StyledFooter = styled.footer`
@@ -83,12 +84,12 @@ const Footer: React.FC = () => {
                 <div>
                     <h3>Helpful Links</h3>
                     <ul>
-                        <li>Home</li>
-                        <li>Services</li>
-                        <li>Gallery</li>
-                        <li>Clients</li>
-                        <li>Story</li>
-                        <li>Contact</li>
+                        <li><Link href="/"><a>Home</a></Link></li>
+                        <li><Link href="/"><a>Services</a></Link></li>
+                        <li><Link href="/"><a>Gallery</a></Link></li>
+                        <li><Link href="/"><a>Clients</a></Link></li>
+                        <li><Link href="/"><a>Story</a></Link></li>
+                        <li><Link href="/"><a>Contact</a></Link></li>
                     </ul>
                 </div>
                 <div>

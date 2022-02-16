@@ -28,13 +28,13 @@ const CurrentPageIndicatorOff = styled.div`
     border-radius: 50%;
 `
 
-const CurrentPageButton = styled.a`
+const NavLinkBold = styled.a`
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
 `
 
-const DifferentPageButton = styled.a`
+export const NavLink = styled.a`
     text-decoration: none;
     cursor: pointer;
     &:hover {
@@ -57,9 +57,9 @@ const NavOption = ({ page }: INavOptionProps) => {
             )}
             <Link href={`${page === 'HOME' ? '/' : `/${page.toLowerCase()}`}`}>
                 {isCurrentPage ? (
-                    <CurrentPageButton>{page}</CurrentPageButton>
+                    <NavLinkBold>{page}</NavLinkBold>
                 ) : (
-                    <DifferentPageButton>{page}</DifferentPageButton>
+                    <NavLink>{page}</NavLink>
                 )}
             </Link>
         </NavOptionContainer>
