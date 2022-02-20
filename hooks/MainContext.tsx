@@ -6,7 +6,6 @@ enum viewState {
     details,
 }
 
-
 const MainContextProvider = ({ children }) => {
     const [view, setView] = useState(viewState.standard)
     const value = {

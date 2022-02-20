@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import BurgerIcon from "./Icons/BurgerIcon";
+import OffCanvasMenuIcon from "./Icons/OffCanvasMenuIcon";
 import SearchIcon from "./Icons/SearchIcon";
 
 const IconBarContainer = styled.div`
@@ -15,7 +15,7 @@ const IconBar = () => {
     return (
         <IconBarContainer>
             <SearchIcon />
-            <BurgerIcon />
+            <OffCanvasMenuIcon />
         </IconBarContainer>
     )
 }

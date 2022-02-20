@@ -1,7 +1,8 @@
 import Navbar from './Navbar/Navbar'
 import styled from 'styled-components'
-import IconBar from './IconBar/IconBar'
+import IconBar from './IconBarAndOffCanvasMenu/IconBar'
 import Logo from './Logo/Logo'
+import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -24,7 +25,8 @@ const Header = () => {
                 <Logo />
                 <Navbar />
             </LogoContainer>
-            <IconBar />
+                <IconBar />
+                <OffCanvasMenu />
         </HeaderContainer>
     )
 }

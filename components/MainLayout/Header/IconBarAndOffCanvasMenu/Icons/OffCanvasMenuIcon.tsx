@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { useHeaderContext } from '../../../../../hooks/HeaderContext'
 
 const BurgerContainer = styled.div`
     display: flex;
@@ -6,6 +7,9 @@ const BurgerContainer = styled.div`
     gap: 8px;
     justify-content: flex-end;
     align-items: flex-end;
+    &:hover {
+        cursor: pointer;
+    }
 `
 
 const BiggerBar = styled.div`
@@ -22,13 +26,16 @@ const SmallerBar = styled.div`
     background-color: black;
 `
 
-const BurgerIcon = () => {
+const OffCanvasMenuIcon = () => {
+
+    const { setView } = useHeaderContext();
+
     return (
-        <BurgerContainer>
+        <BurgerContainer onClick={() => setView(true)}>
             <BiggerBar />
             <SmallerBar />
         </BurgerContainer>
     )
 }
 
-export default BurgerIcon
+export default OffCanvasMenuIcon
