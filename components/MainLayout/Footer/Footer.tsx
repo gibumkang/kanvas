@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 import Link from 'next/link'
 import * as GS from '../../../styles/global'
+import ULNavLinks from '../ULNavLinks'
 
 const StyledFooter = styled.footer`
     width: 100%;
@@ -83,38 +84,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h3>Helpful Links</h3>
-                    <ul>
-                        <li>
-                            <Link href="/">
-                                <a>Home</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/services">
-                                <a>Services</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/gallery">
-                                <a>Gallery</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/clients">
-                                <a>Clients</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/story">
-                                <a>Story</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href="/contact">
-                                <a>Contact</a>
-                            </Link>
-                        </li>
-                    </ul>
+                    <ULNavLinks />
                 </div>
                 <div>
                     <h3>Contact Us</h3>

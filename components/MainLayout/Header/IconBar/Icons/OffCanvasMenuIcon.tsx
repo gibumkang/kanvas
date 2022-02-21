@@ -27,8 +27,7 @@ const SmallerBar = styled.div`
 `
 
 const OffCanvasMenuIcon = () => {
-
-    const { setView } = useHeaderContext();
+    const { setView } = useHeaderContext()
 
     return (
         <BurgerContainer onClick={() => setView(true)}>

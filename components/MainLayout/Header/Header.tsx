@@ -1,6 +1,6 @@
 import Navbar from './Navbar/Navbar'
 import styled from 'styled-components'
-import IconBar from './IconBarAndOffCanvasMenu/IconBar'
+import IconBar from './IconBar/IconBar'
 import Logo from './Logo/Logo'
 import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
 
@@ -25,8 +25,8 @@ const Header = () => {
                 <Logo />
                 <Navbar />
             </LogoContainer>
-                <IconBar />
-                <OffCanvasMenu />
+            <IconBar />
+            <OffCanvasMenu />
         </HeaderContainer>
     )
 }
