@@ -50,6 +50,15 @@ const StyledFlex = styled.div`
     }
 `
 
+const StyledULNavLinks = styled(ULNavLinks)`
+    list-style: none;
+    color: #fff;
+    li {
+        padding: 0.75rem 0rem;
+        color: #fff;
+    }
+`
+
 const Copyright = styled.div`
     padding: 0rem 3rem 0rem 3rem;
     max-width: ${(props) => props.theme.maxWidth};
@@ -84,7 +93,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h3>Helpful Links</h3>
-                    <ULNavLinks />
+                    <StyledULNavLinks />
                 </div>
                 <div>
                     <h3>Contact Us</h3>

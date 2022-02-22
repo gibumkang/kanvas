@@ -1,4 +1,5 @@
 import Link from "next/link";
+import YellowLetteringParagraph from "../../components/Services/components/YellowLetteringParagraph";
 
 const Services = () => {
     return (
@@ -12,6 +13,7 @@ const Services = () => {
             <Link href="/services/reward">
                 <a>Reward</a>
             </Link>
+            <YellowLetteringParagraph text="Hello Moto" />
         </div>
     )
 }
