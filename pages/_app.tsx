@@ -4,7 +4,6 @@ import GlobalStyle from '../styles/styles'
 import TagManager from 'react-gtm-module'
 import theme from '../styles/themes'
 import MainLayout from '../components/MainLayout/MainLayout'
-import Head from 'next/head'
 import HeaderContextProvider from '../hooks/HeaderContext'
 import 'bootstrap/dist/css/bootstrap.css'
 

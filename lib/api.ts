@@ -1,0 +1,1 @@
+export const api = async () => console.log("Does nothing")

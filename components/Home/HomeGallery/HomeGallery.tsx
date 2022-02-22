@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import * as GS from '../../styles/global'
+import * as GS from '../../../styles/global'
 import Image from 'next/image'
+import YellowButton from '../YellowButton'
 
 const Grid = styled.div`
     display: grid;
@@ -36,13 +37,6 @@ const StyledImage = styled.div`
     }
 `
 
-const SeeMoreButton = styled.span`
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 2;
-    cursor: pointer;
-`
 
 const HomeGallery = () => {
     return (
@@ -135,11 +129,9 @@ const HomeGallery = () => {
                     />
                 </StyledImage>
             </div>
-            <SeeMoreButton>
-                <GS.StyledButton>
-                    See <strong>More</strong>
-                </GS.StyledButton>
-            </SeeMoreButton>
+            <YellowButton>
+                See <strong>More</strong>
+            </YellowButton>
         </Grid>
     )
 }
