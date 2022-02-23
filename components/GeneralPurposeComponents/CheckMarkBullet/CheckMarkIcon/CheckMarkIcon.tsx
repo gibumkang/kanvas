@@ -4,6 +4,7 @@ const CheckMarkIcon = () => (
         stroke="gold"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
+        height="20px"
     >
         <path
             strokeLinecap="round"

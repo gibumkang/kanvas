@@ -39,6 +39,7 @@ export const NavLink = styled.a`
     cursor: pointer;
     &:hover {
         font-weight: bold;
+        color: black;
     }
 `
 
