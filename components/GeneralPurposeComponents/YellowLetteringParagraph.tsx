@@ -26,7 +26,12 @@ const YellowWords = ({ text, numberOfWords }) => {
     return <p>{formattedText}</p>
 }
 
-const YellowLetteringParagraph = ({ text, numberOfWords = 0 }) =>
+interface IProps {
+    text : string
+    numberOfWords? : number
+}
+
+const YellowLetteringParagraph = ({ text, numberOfWords = 0 } : IProps) =>
     numberOfWords > 0 ? (
         <YellowWords text={text} numberOfWords={numberOfWords} />
     ) : (
