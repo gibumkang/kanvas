@@ -1,6 +1,8 @@
 const Extend = () => {
     return (
-        <div>Extend</div>
+        <div id="extend">
+            Extend
+        </div>
     )
 }
 

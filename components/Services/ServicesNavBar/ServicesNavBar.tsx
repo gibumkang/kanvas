@@ -1,11 +1,17 @@
 const ServicesNavBar = () => {
     return (
-        <div>
-            <div>Engage</div>
-            <div>Extend</div>
-            <div>Reward</div>
-        </div>
+        <ul>
+            <li>
+                <a href="#engage">Engage</a>
+            </li>
+            <li>
+                <a href="#extend">Extend</a>
+            </li>
+            <li>
+                <a href="#reward">Reward</a>
+            </li>
+        </ul>
     )
 }
 
-export default ServicesNavBar;
+export default ServicesNavBar
