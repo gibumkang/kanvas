@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5 {
         margin: 0;
         color: ${(props) => props.theme.colors.text};
-        font-weight: bold;
         letter-spacing: -.05rem;
         font-family: ${(props) => props.theme.fonts.header};
         padding: .75rem 0rem;

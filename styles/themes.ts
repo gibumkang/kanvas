@@ -4,7 +4,7 @@ const green = '#53B21F'
 export const theme = {
     fonts: {
         header: 'Bodoni Moda',
-        reading: '1.6rem',
+        main: 'DM Sans',
     },
     padding: '2.5rem',
     maxWidth: '144rem',

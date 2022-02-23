@@ -5,11 +5,15 @@ const ButtonWithExtraEffects = styled(GS.StyledButton)`
     cursor: pointer;
 `
 
+const StyledFlex = styled.div``
+
 const Landing = () => {
     return (
         <div>
             <h1>Raise Your Spirits</h1>
-            <h2><em>Creating environments to build lasting relationships</em></h2>
+            <h2>
+                <em>Creating environments to build lasting relationships</em>
+            </h2>
             <ButtonWithExtraEffects>
                 Our <strong>Services</strong>
             </ButtonWithExtraEffects>
