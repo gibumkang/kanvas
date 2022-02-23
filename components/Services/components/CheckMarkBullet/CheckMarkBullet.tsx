@@ -1,6 +1,6 @@
 import CheckMarkIcon from "./CheckMarkIcon/CheckMarkIcon";
 
-const CheckMarkBullets = ({ children }) => {
+const CheckMarkBullet = ({ children }) => {
     return (
         <div>
             <CheckMarkIcon />
@@ -9,4 +9,4 @@ const CheckMarkBullets = ({ children }) => {
     )
 }
 
-export default CheckMarkBullets;
+export default CheckMarkBullet;
