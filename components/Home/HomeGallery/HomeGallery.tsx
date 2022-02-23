@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import * as GS from '../../../styles/global'
 import Image from 'next/image'
+import Lightbox from '../../GeneralPurposeComponents/Lightbox/Lightbox'
+import { slider } from '../../../data/slider'
 
 const Grid = styled.div`
     display: grid;
@@ -33,6 +35,11 @@ const StyledImage = styled.div`
     transition: filter 0.25s ease-in-out;
     &:hover {
         filter: brightness(1);
+        cursor: pointer;
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 `
 
@@ -45,102 +52,119 @@ const SeeMoreButton = styled.span`
 `
 
 const HomeGallery = () => {
+    const [modalShow, setModalShow] = useState<boolean>(false)
+    const [imageSrc, setImageSrc] = useState<string>('')
+    const [imageAlt, setImageAlt] = useState<string>('')
+
+    const clickHandler = (e) => {
+        setImageSrc(e.target.src)
+        setImageAlt(e.target.alt)
+        setModalShow(true)
+    }
+
     return (
-        <Grid>
-            <div>
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div>
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div>
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div>
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div className="tablet">
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div className="tablet">
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div className="desktop">
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <div className="desktop">
-                <StyledImage>
-                    <Image
-                        src="https://picsum.photos/400/400"
-                        width="450"
-                        height="400"
-                        alt="Gallery Image"
-                        layout="responsive"
-                    />
-                </StyledImage>
-            </div>
-            <SeeMoreButton>
-                <GS.StyledButton>
-                    See <strong>More</strong>
-                </GS.StyledButton>
-            </SeeMoreButton>
-        </Grid>
+        <>
+            <Lightbox
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                image={imageSrc}
+                alt={imageAlt}
+            />
+            <Grid>
+                {slider.map((slide) => {
+                    return (
+                        <StyledImage
+                            onClick={(e) => clickHandler(e)}
+                            key={slide.name}
+                        >
+                            <img src={slide.src} alt={slide.alt} />
+                        </StyledImage>
+                    )
+                })}
+                {/* <div>
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/id/200/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div>
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/id/300/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div>
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div className="tablet">
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div className="tablet">
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div className="desktop">
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div>
+                <div className="desktop">
+                    <StyledImage>
+                        <Image
+                            src="https://picsum.photos/400/400"
+                            width="450"
+                            height="400"
+                            alt="Gallery Image"
+                            layout="responsive"
+                        />
+                    </StyledImage>
+                </div> */}
+                <SeeMoreButton>
+                    <GS.StyledButton>
+                        See <strong>More</strong>
+                    </GS.StyledButton>
+                </SeeMoreButton>
+            </Grid>
+        </>
     )
 }
 

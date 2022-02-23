@@ -481,3 +481,9 @@ export const StyledButton = styled.div`
         background: #f5db08;
     }
 `
+
+export const StyledBar = styled.div`
+    background: ${(props) => props.theme.colors.primary};
+    padding: 1rem 0rem;
+    width: 100%;
+`

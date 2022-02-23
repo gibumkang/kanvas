@@ -15,7 +15,7 @@ const StyledFlex = styled.div`
     display: flex;
     margin: 0 auto;
     padding: 3rem;
-    max-width: 90%;
+    max-width: ${(props) => props.theme.maxWidth};
     border-bottom: 0.1rem solid #999;
     gap: 3rem;
     & > div {
@@ -23,7 +23,7 @@ const StyledFlex = styled.div`
         &.logo-container {
             flex: 1.5;
             p {
-                max-width: 70rem;
+                max-width: 45rem;
             }
         }
         h3 {
@@ -52,10 +52,17 @@ const StyledFlex = styled.div`
 
 const StyledULNavLinks = styled(ULNavLinks)`
     list-style: none;
-    color: #fff;
     li {
         padding: 0.75rem 0rem;
-        color: #fff;
+        div,
+        a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                color: #fff;
+            }
+        }
     }
 `
 
@@ -97,11 +104,11 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h3>Contact Us</h3>
-                    <p>
-                        Address <br />
-                        Phone <br />
-                        Email
-                    </p>
+                    <ul>
+                        <li>Address</li>
+                        <li>Phone</li>
+                        <li>Email</li>
+                    </ul>
                 </div>
             </StyledFlex>
             <Copyright>

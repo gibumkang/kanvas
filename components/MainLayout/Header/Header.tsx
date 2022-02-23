@@ -8,7 +8,7 @@ const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background: #888;
+    position: absolute;
 `
 
 const LogoContainer = styled.div`
