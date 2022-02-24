@@ -1,11 +1,8 @@
-import CheckMarkBullet from '../components/GeneralPurposeComponents/CheckMarkBullet/CheckMarkBullet'
-import CircleCircleBullet from '../components/GeneralPurposeComponents/CircleCircleBullet/CircleCircleBullet'
-import YellowLetteringParagraph from '../components/GeneralPurposeComponents/YellowLetteringParagraph'
-import YellowUnderlineTitle from '../components/GeneralPurposeComponents/YellowUnderlineTitle'
 import Engage from '../components/Services/Engage/Engage'
 import Extend from '../components/Services/Extend/Extend'
 import Reward from '../components/Services/Reward/Reward'
 import ServicesHome from '../components/Services/ServicesHome'
+import { getSamplePosts } from '../lib/api'
 
 const Services = () => {
     return (
@@ -14,12 +11,6 @@ const Services = () => {
             <Engage />
             <Extend />
             <Reward />
-            <CheckMarkBullet><p>Hello</p></CheckMarkBullet>
-            <CircleCircleBullet index={1}>World</CircleCircleBullet>
-            <YellowLetteringParagraph text="This is an example" />
-            <YellowLetteringParagraph text="This is another example" numberOfWords={2} />
-            <YellowUnderlineTitle title="Left" left={true} />
-            <YellowUnderlineTitle title="Right" left={false} />
         </div>
     )
 }
