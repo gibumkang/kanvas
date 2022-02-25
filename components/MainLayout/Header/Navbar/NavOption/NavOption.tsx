@@ -32,6 +32,9 @@ const NavLinkBold = styled.a`
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
+    &:hover {
+        color: black;
+    }
 `
 
 export const NavLink = styled.a`

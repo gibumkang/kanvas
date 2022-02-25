@@ -3,11 +3,12 @@ import { getSamplePosts, getSampleSlugs } from '../lib/api'
 const APISample = ({ posts }) => {
     return (
         <div>
-            {posts.map(({ title, content }) => {
+            {posts.map(({ title, content, slug }) => {
                 return (
                     <div>
                         <h3>{title}</h3>
                         <div>{content}</div>
+                        <div>{slug}</div>
                     </div>
                 )
             })}

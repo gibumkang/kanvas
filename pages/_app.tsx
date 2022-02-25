@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import MainContextProvider from '../hooks/MainContext'
 import GlobalStyle from '../styles/styles'
@@ -10,6 +11,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 const MyApp = ({ Component, pageProps }) => {
     return (
         <>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+            </Head>
             <ThemeProvider theme={theme}>
                 {/* // easily implement dark mode here */}
                 <GlobalStyle />

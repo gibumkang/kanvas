@@ -52,5 +52,5 @@ export const getSampleSlugs = async () => {
         }
       }
     `)
-    return data?.posts?.nodes?.slug
+    return data?.posts?.nodes
 }
