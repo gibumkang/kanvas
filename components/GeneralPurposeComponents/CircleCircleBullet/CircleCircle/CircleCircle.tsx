@@ -2,12 +2,13 @@ import styled from 'styled-components'
 
 const Circle = styled.div`
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: 10px solid lightgray;
+    min-width: 120px;
+    height: 120px;
+    border: 18px solid lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 `
 
 const CircleCircle = ({ index }) => (

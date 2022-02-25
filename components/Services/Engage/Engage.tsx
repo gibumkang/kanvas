@@ -1,13 +1,15 @@
-import OneToOneContainer from "../../GeneralPurposeComponents/OneToOneContainer/OneToOneContainer";
+import Section1 from './Sections/Section1'
+import Section2 from './Sections/Section2'
+import Section3 from './Sections/Section3'
 
 const Engage = () => {
     return (
         <div id="engage">
-            <OneToOneContainer>
-                
-            </OneToOneContainer>
+            <Section1 />
+            <Section2 />
+            <Section3 />
         </div>
     )
 }
 
-export default Engage;
+export default Engage

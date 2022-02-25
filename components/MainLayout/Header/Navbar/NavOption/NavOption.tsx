@@ -32,13 +32,10 @@ const NavLinkBold = styled.a`
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
-<<<<<<< HEAD
     &:hover {
-        color: black;
+        color: #fff;
     }
-=======
     color: #fff;
->>>>>>> ben
 `
 
 export const NavLink = styled.a`
