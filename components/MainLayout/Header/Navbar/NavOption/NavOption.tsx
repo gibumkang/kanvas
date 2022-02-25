@@ -12,7 +12,7 @@ const NavOptionContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 7px;
+    gap: 0.7rem;
 `
 
 const CurrentPageIndicatorOn = styled.div`
@@ -32,23 +32,30 @@ const NavLinkBold = styled.a`
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
+<<<<<<< HEAD
     &:hover {
         color: black;
     }
+=======
+    color: #fff;
+>>>>>>> ben
 `
 
 export const NavLink = styled.a`
     text-decoration: none;
     cursor: pointer;
-    &:hover {
-        font-weight: bold;
-        color: black;
+    color: #ccc;
+    transition: color 0.25s ease-in-out;
+    &:hover,
+    &:visited {
+        color: #fff;
     }
 `
 
 const NavOption = ({ page }: INavOptionProps) => {
     const pathName = useRouter().pathname
-    const currentPage = pathName === "/" ? "HOME" : pathName.split("/")[1].toUpperCase();
+    const currentPage =
+        pathName === '/' ? 'HOME' : pathName.split('/')[1].toUpperCase()
 
     const isCurrentPage = currentPage === page
 
