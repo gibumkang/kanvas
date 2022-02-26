@@ -6,11 +6,29 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(3, 1fr);
 `
 
+const Text = styled.h4`
+    grid-column-start: ${(props) => (props.left ? 1 : 2)};
+    grid-column-end: span ${(props) => (props.left ? 2 : 3)};
+    text-align: ${props => props.left ? "right" : "left"};
+`
+
 const GoldBar = styled.div`
     height: 10px;
-    grid-column-start: ${(props) => props.left ? 1 : 2};
-    grid-column-end: span ${props => props.left ? 2 : 3};
-    grid-row-start: ${(props) => props.left ? 1 : 1};
+    grid-column-start: ${(props) => (props.left ? 1 : 2)};
+    grid-column-end: span ${(props) => (props.left ? 2 : 3)};
     background-color: gold;
 `
-// const YellowUnderlineTitle = ({ children ,left }) => <GridContainer><h4>{title}</h4><GoldBar left={left} /></GridContainer>
+
+interface IProps {
+    title : string
+    left : boolean
+}
+
+const YellowUnderlineTitle = ({ title, left } : IProps) => (
+    <GridContainer>
+        <Text left={left}>{title}</Text>
+        <GoldBar left={left} />
+    </GridContainer>
+)
+
+export default YellowUnderlineTitle

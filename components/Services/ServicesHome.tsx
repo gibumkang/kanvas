@@ -7,6 +7,7 @@ const PinToBottomNavBar = styled(MinFullPage)`
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    background-color: #000;
 `
 
 const ServicesHome = () => {

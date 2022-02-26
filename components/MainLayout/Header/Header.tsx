@@ -6,9 +6,10 @@ import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
 
 const HeaderContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between !important;
     padding: 20px 40px;
     position: absolute;
+    width: 100vw;
 `
 
 const LogoContainer = styled.div`

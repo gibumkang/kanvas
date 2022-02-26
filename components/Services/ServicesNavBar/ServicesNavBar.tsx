@@ -9,6 +9,7 @@ const ServiceNavList = styled.ul`
 
 const ServiceLink = styled.a`
     text-decoration: none;
+    color: #fff;
     font-size: 60px;
     padding-bottom: 20px;
     border-bottom: 10px solid rgba(gold, 0);
@@ -18,7 +19,7 @@ const ServiceLink = styled.a`
     transition: border 500ms ease-in-out;
     &:hover {
         border-bottom: 10px solid gold;
-        color: black;
+        color: #fff;
     }
 `
 
