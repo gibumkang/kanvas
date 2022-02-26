@@ -23,7 +23,6 @@ const Section2 = () => {
 
     return (
         <ThreeToTwoContainer left={false}>
-            <Placeholder />
             <FlexContainer>
                 <YellowUnderlineTitle
                     title="FOR CRAFT AND LUXURY BRANDS..."
@@ -38,6 +37,7 @@ const Section2 = () => {
                     ))}
                 </GridContainer>
             </FlexContainer>
+            <Placeholder />
         </ThreeToTwoContainer>
     )
 }

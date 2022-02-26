@@ -8,7 +8,7 @@ const CardContainer = styled.div`
     align-items: center;
 `
 
-const ButtonWithExtraEffects = styled(GS.StyledButton)`
+export const ButtonWithExtraEffects = styled(GS.StyledButton)`
     margin-top: 3rem;
     cursor: pointer;
     border-radius: 10px;
