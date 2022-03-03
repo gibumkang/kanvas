@@ -16,14 +16,14 @@ const BiggerBar = styled.div`
     height: 3px;
     width: 32px;
     border-radius: 25%;
-    background-color: black;
+    background-color: #fff;
 `
 
 const SmallerBar = styled.div`
     height: 3px;
     width: 16px;
     border-radius: 25%;
-    background-color: black;
+    background-color: #fff;
 `
 
 const OffCanvasMenuIcon = () => {

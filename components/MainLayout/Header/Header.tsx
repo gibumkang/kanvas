@@ -10,6 +10,10 @@ const HeaderContainer = styled.div`
     padding: 20px 40px;
     position: absolute;
     width: 100vw;
+
+    @media only screen and (max-width: 600px) {
+        justify-content: flex-end !important;
+    }
 `
 
 const LogoContainer = styled.div`
@@ -17,6 +21,10 @@ const LogoContainer = styled.div`
     gap: 20px;
     justify-content: center;
     align-items: center;
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 `
 
 const Header = () => {
