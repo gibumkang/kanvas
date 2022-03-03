@@ -62,7 +62,6 @@ const Contact = () => {
 
     const sendMailOnClickHandler = async () => {
         const res = await sendMail(formData)
-        console.log(res)
     }
 
     return (

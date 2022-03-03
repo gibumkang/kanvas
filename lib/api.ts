@@ -61,8 +61,8 @@ const formatAndSendEmailToWP = async (
     body,
     mutationId = 'contact'
 ) => {
-    const from = 'hello@studiokanvas.com'
-    const to = 'aaron@studiokanvas.com'
+    const from = 'aaron@studiokanvas.com'
+    const to = 'choicannon@gmail.com'
     const data = await fetchAPI(
         `
   mutation SendEmail($input: SendEmailInput!) {
