@@ -42,7 +42,7 @@ const AutoGrid = styled.div`
         padding: 0rem 1.5rem;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 768px) {
         margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -63,7 +63,7 @@ const AutoGrid = styled.div`
 `
 
 const Title = styled.h2`
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     margin-top: 50px;
 }
     `

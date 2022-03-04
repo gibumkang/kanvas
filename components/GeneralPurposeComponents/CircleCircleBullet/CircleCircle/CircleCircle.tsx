@@ -11,9 +11,9 @@ const Circle = styled.div`
     background-color: #fff;
 `
 
-const CircleCircle = ({ index }) => (
+const CircleCircle = ({ children }) => (
     <Circle>
-        <div>{index}</div>
+        {children}
     </Circle>
 )
 

@@ -21,21 +21,47 @@ const StyledFlex = styled.div`
     }
 `
 
+const CenterOnMobile = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+
+const MobileButtonWrapper = styled.div`
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+`
+
+const MobileH1 = styled.h1`
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
+`
+
+const MobileH2 = styled.h2`
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
+`
+
 const Landing = () => {
     return (
         <Container>
             <StyledFlex>
-                <div>
-                    <h1>Raise Your Spirits</h1>
-                    <h2>
+                <CenterOnMobile>
+                    <MobileH1>Raise Your Spirits</MobileH1>
+                    <MobileH2>
                         <em>
                             Creating environments to build lasting relationships
                         </em>
-                    </h2>
-                    <ButtonWithExtraEffects>
-                        Our <strong>Services</strong>
-                    </ButtonWithExtraEffects>
-                </div>
+                    </MobileH2>
+                    <MobileButtonWrapper>
+                        <ButtonWithExtraEffects>
+                            Our <strong>Services</strong>
+                        </ButtonWithExtraEffects>
+                    </MobileButtonWrapper>
+                </CenterOnMobile>
             </StyledFlex>
         </Container>
     )

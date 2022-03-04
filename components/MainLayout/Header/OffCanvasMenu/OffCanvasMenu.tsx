@@ -36,7 +36,7 @@ const OffCanvasMenu = () => {
     const { view, setView } = useHeaderContext()
 
     return (
-        <Offcanvas show={view} placement="end" onHide={()=>setView(false)}>
+        <Offcanvas show={view} placement="end" onHide={()=>setView(false)} zIndex={9999}>
             <Offcanvas.Header closeButton>Raise Your Spirits</Offcanvas.Header>
             <Body>
                 <OffCanvasMenuLinks />
