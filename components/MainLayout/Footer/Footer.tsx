@@ -51,6 +51,8 @@ const StyledFlex = styled.div`
             display: flex;
             flex-direction: column;
             gap: 50px;
+            justify-content: center;
+            align-items: center;
             p {
                 font-size: 20px;
                 padding: 0 40px;
