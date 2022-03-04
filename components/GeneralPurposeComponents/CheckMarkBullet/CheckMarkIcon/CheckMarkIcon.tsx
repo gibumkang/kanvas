@@ -1,19 +1,25 @@
+import styled from 'styled-components'
+
+const Container = styled.div`
+    height: 20px;
+    width: 20px;
+`
+
 const CheckMarkIcon = () => (
-    <svg
-        fill="none"
-        stroke="gold"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        height="20px"
-        width="20px"
-    >
-        <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-    </svg>
+    <Container>
+        <svg
+            fill="none"
+            stroke="gold"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+        </svg>
+    </Container>
 )
 
 export default CheckMarkIcon
