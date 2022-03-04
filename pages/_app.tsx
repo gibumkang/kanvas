@@ -7,7 +7,6 @@ import theme from '../styles/themes'
 import MainLayout from '../components/MainLayout/MainLayout'
 import HeaderContextProvider from '../hooks/HeaderContext'
 import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/OffCanvasFix.css'
 
 const MyApp = ({ Component, pageProps }) => {
     return (
