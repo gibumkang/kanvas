@@ -18,15 +18,15 @@ const StyledBody = styled(Modal.Body)`
 `
 
 const StyledHeader = styled(Modal.Header)`
-    background: transparent;
+    background: ${(props) => props.theme.colors.primary};
     .h4 {
         font-size: 2rem;
+        color: #000;
     }
 `
 
 const Lightbox: React.FC<LightboxProps> = (props) => {
     const { image, alt } = props
-    console.log('image link', image)
 
     return (
         <Modal
