@@ -14,7 +14,6 @@ const Navbar = () => {
             <NavOption page="HOME" />
             <NavOption page="SERVICES" />
             <NavOption page="GALLERY" />
-            <NavOption page="CLIENTS" />
             <NavOption page="STORY" />
             <NavOption page="CONTACT" />
         </NavbarContainer>

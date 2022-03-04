@@ -12,7 +12,7 @@ const StyledClients = styled.div`
         padding: 3rem 0rem;
         font-size: 4rem;
     }
-    .flex {
+    /* .flex {
         display: flex;
         gap: 3rem;
         max-width: 90rem;
@@ -28,14 +28,52 @@ const StyledClients = styled.div`
                 padding: 1.5rem 0rem;
             }
         }
+    } */
+`
+
+const AutoGrid = styled.div`
+    display: flex;
+    gap: 3rem;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding-bottom: 4rem;
+    & > div {
+        flex: 1;
+        padding: 0rem 1.5rem;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+        & > div {
+            flex: unset;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        &:nth-child(odd) {
+            justify-self: end;
+        }
+        &:nth-child(even) {
+            justify-self: start;
+        }
     }
 `
+
+const Title = styled.h2`
+@media only screen and (max-width: 768px) {
+    margin-top: 50px;
+}
+    `
 
 const Clients = () => {
     return (
         <StyledClients>
-            <h2>Our Previous Clients</h2>
-            <div className="flex">
+            <Title>Our Previous Clients</Title>
+            {/* <div className="flex"> */}
+            <AutoGrid>
                 <div>
                     <Image
                         src="https://picsum.photos/150/25"
@@ -71,7 +109,8 @@ const Clients = () => {
                         height="25"
                     />
                 </div>
-            </div>
+            </AutoGrid>
+            {/* </div> */}
         </StyledClients>
     )
 }

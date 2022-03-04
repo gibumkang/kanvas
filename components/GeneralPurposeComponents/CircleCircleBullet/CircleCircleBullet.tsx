@@ -4,13 +4,16 @@ import styled from 'styled-components'
 const CCBContainer = styled.div`
     display: flex;
     gap: 10px;
+
+    @media only screen and (max-width: 768px) {
+            justify-content: center;
+        }
 `
 
-const CircleCircleBullet = ({ children, index }) => {
+const CircleCircleBullet = ({ children }) => {
     return (
         <CCBContainer>
-            <CircleCircle index={index} />
-            {children}
+            <CircleCircle>{children}</CircleCircle>
         </CCBContainer>
     )
 }

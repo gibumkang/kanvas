@@ -7,11 +7,10 @@ const Padding = styled.div`
     padding: 0 10%;
 `
 
-const ContactUsButton = () => {
-    const router = useRouter()
+const ContactUsButton = ({onClick}) => {
     return (
         <Padding>
-            <ButtonWithExtraEffects onClick={() => router.push('/contact')}>
+            <ButtonWithExtraEffects onClick={onClick}>
                 <strong>Contact Us</strong> <ArrowIcon />
             </ButtonWithExtraEffects>
         </Padding>

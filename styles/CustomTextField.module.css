@@ -1,0 +1,213 @@
+.container {
+    --border-color: 255, 255, 255;
+    --focus-highlight: 255, 255, 255;
+    --text-line-color: 255, 255, 255;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    --padding-right: 10px;
+    --padding-left: 10px;
+    --textarea-height: 500px;
+    position: relative;
+    display: inline-block;
+    padding-top: 6px;
+    font-family: var(
+        --pure-material-font,
+        'Roboto',
+        'Segoe UI',
+        BlinkMacSystemFont,
+        system-ui,
+        -apple-system
+    );
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+
+/* Input, Textarea */
+.container > input,
+.container > textarea {
+    box-sizing: border-box;
+    margin: 0;
+    border: solid 1px; /* Safari */
+    border-color: rgba(var(--border-color), 0.6);
+    border-top-color: transparent;
+    border-radius: 4px;
+    padding: var(--padding-top) var(--padding-right) var(--padding-bottom)
+        var(--padding-left);
+    width: 100%;
+    height: inherit;
+    color: rgba(var(--border-color), 0.87);
+    background-color: transparent;
+    box-shadow: none; /* Firefox */
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    /* this is the color of the text line */
+    caret-color: rgb(var(--text-line-color));
+    transition: border 0.2s, box-shadow 0.2s;
+    resize: none;
+}
+
+.container > textarea {
+    min-height: var(--textarea-height);
+}
+
+/* Span */
+.container > input + span,
+.container > textarea + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    border-color: rgba(var(--border-color), 0.6);
+    width: 100%;
+    max-height: 100%;
+    color: rgba(var(--border-color), 0.6);
+    font-size: 75%;
+    line-height: 15px;
+    cursor: text;
+    transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+}
+
+/* Corners */
+.container > input + span::before,
+.container > input + span::after,
+.container > textarea + span::before,
+.container > textarea + span::after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    margin-top: 6px;
+    border-top: solid 1px;
+    border-top-color: rgba(var(--border-color), 0.6);
+    min-width: 10px;
+    height: 8px;
+    pointer-events: none;
+    box-shadow: inset 0 1px transparent;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.container > input + span::before,
+.container > textarea + span::before {
+    margin-right: 4px;
+    border-left: solid 1px transparent;
+    border-radius: 4px 0;
+}
+
+.container > input + span::after,
+.container > textarea + span::after {
+    flex-grow: 1;
+    margin-left: 4px;
+    border-right: solid 1px transparent;
+    border-radius: 0 4px;
+}
+
+/* Hover */
+.container:hover > input,
+.container:hover > textarea {
+    border-color: rgba(var(--border-color), 0.87);
+    border-top-color: transparent;
+}
+
+.container:hover > input + span::before,
+.container:hover > textarea + span::before,
+.container:hover > input + span::after,
+.container:hover > textarea + span::after {
+    border-top-color: rgba(var(--border-color), 0.87);
+}
+
+.container:hover > input:not(:focus):placeholder-shown,
+.container:hover > textarea:not(:focus):placeholder-shown {
+    border-color: rgba(var(--border-color), 0.87);
+}
+
+/* Placeholder-shown */
+.container > input:not(:focus):placeholder-shown,
+.container > textarea:not(:focus):placeholder-shown {
+    border-top-color: rgba(var(--border-color), 0.6);
+}
+
+.container > input:not(:focus):placeholder-shown + span,
+.container > textarea:not(:focus):placeholder-shown + span {
+    font-size: inherit;
+    line-height: 68px;
+}
+
+.container > input:not(:focus):placeholder-shown + span::before,
+.container > textarea:not(:focus):placeholder-shown + span::before,
+.container > input:not(:focus):placeholder-shown + span::after,
+.container > textarea:not(:focus):placeholder-shown + span::after {
+    border-top-color: transparent;
+}
+
+/* Focus */
+.container > input:focus,
+.container > textarea:focus {
+    border-color: rgb(var(--focus-highlight));
+    border-top-color: transparent;
+    box-shadow: inset 1px 0 rgb(var(--focus-highlight)),
+        inset -1px 0 rgb(var(--focus-highlight)),
+        inset 0 -1px rgb(var(--focus-highlight));
+    outline: none;
+}
+
+.container > input:focus + span,
+.container > textarea:focus + span {
+    color: rgb(var(--focus-highlight));
+}
+
+.container > input:focus + span::before,
+.container > input:focus + span::after,
+.container > textarea:focus + span::before,
+.container > textarea:focus + span::after {
+    border-top-color: var(--focus-highlight) !important;
+    box-shadow: inset 0 1px var(--focus-highlight);
+}
+
+/* Disabled */
+.container > input:disabled,
+.container > input:disabled + span,
+.container > textarea:disabled,
+.container > textarea:disabled + span {
+    border-color: rgba(var(--focus-highlight), 0.38) !important;
+    border-top-color: transparent !important;
+    color: rgba(var(--focus-highlight), 0.38);
+    pointer-events: none;
+}
+
+.container > input:disabled + span::before,
+.container > input:disabled + span::after,
+.container > textarea:disabled + span::before,
+.container > textarea:disabled + span::after {
+    border-top-color: rgba(var(--focus-highlight, 0, 0, 0), 0.38) !important;
+}
+
+.container > input:disabled:placeholder-shown,
+.container > input:disabled:placeholder-shown + span,
+.container > textarea:disabled:placeholder-shown,
+.container > textarea:disabled:placeholder-shown + span {
+    border-top-color: rgba(var(--focus-highlight), 0.38) !important;
+}
+
+.container > input:disabled:placeholder-shown + span::before,
+.container > input:disabled:placeholder-shown + span::after,
+.container > textarea:disabled:placeholder-shown + span::before,
+.container > textarea:disabled:placeholder-shown + span::after {
+    border-top-color: transparent !important;
+}
+
+/* Faster transition in Safari for less noticable fractional font-size issue */
+@media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+        .container > input,
+        .container > input + span,
+        .container > textarea,
+        .container > textarea + span,
+        .container > input + span::before,
+        .container > input + span::after,
+        .container > textarea + span::before,
+        .container > textarea + span::after {
+            transition-duration: 0.1s;
+        }
+    }
+}

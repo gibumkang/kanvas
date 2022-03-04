@@ -1,39 +1,31 @@
 import styled from 'styled-components'
 import { useHeaderContext } from '../../../../../hooks/HeaderContext'
 
-const BurgerContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    justify-content: flex-end;
-    align-items: flex-end;
+const SVG = styled.svg`
     &:hover {
         cursor: pointer;
     }
-`
-
-const BiggerBar = styled.div`
-    height: 3px;
-    width: 32px;
-    border-radius: 25%;
-    background-color: black;
-`
-
-const SmallerBar = styled.div`
-    height: 3px;
-    width: 16px;
-    border-radius: 25%;
-    background-color: black;
 `
 
 const OffCanvasMenuIcon = () => {
     const { setView } = useHeaderContext()
 
     return (
-        <BurgerContainer onClick={() => setView(true)}>
-            <BiggerBar />
-            <SmallerBar />
-        </BurgerContainer>
+        <SVG
+            onClick={() => setView(true)}
+            fill="none"
+            stroke="#fff"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            height="30px"
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+            />
+        </SVG>
     )
 }
 

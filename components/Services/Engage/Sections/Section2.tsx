@@ -15,13 +15,25 @@ const FormattedH3 = styled.h3`
     padding: 70px;
 `
 
-const BulletsContainer = styled.div`
+export const BulletsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     gap: 100px;
-    max-width: min(80vw, 1900px);
+    max-width: 100%;
+    background-color: #000;
 `
-const FormattedP = styled.p`
+export const FormattedBulletContainer = styled.div`
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
+
+export const FormattedP = styled.p`
     color: #fff;
     padding: 0 35px;
 `
@@ -39,9 +51,12 @@ const Section2 = () => {
             <FormattedH3>HOW IT WORKS</FormattedH3>
             <BulletsContainer>
                 {textBlocks.map((text, index) => (
-                    <CircleCircleBullet index={index + 1}>
+                    <FormattedBulletContainer>
+                        <CircleCircleBullet>
+                            <div>{index + 1}</div>
+                        </CircleCircleBullet>
                         <FormattedP>{text}</FormattedP>
-                    </CircleCircleBullet>
+                    </FormattedBulletContainer>
                 ))}
             </BulletsContainer>
         </Container>

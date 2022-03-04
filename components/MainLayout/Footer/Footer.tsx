@@ -46,7 +46,21 @@ const StyledFlex = styled.div`
         }
     }
     @media screen and (max-width: ${(props) => props.theme.smWidth}) {
-        display: block;
+        border-bottom: unset;
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-size: 20px;
+                padding: 0 40px;
+            }
+        }
+        .disappear {
+            display: none;
+        }
     }
 `
 
@@ -75,6 +89,17 @@ const Copyright = styled.div`
         color: #fff;
         text-align: center;
     }
+    @media screen and (max-width: ${(props) => props.theme.smWidth}) {
+        display: none;
+    }
+`
+
+const ResponsiveImage = styled(GS.Image)`
+    @media screen and (max-width: ${(props) => props.theme.smWidth}) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const Footer: React.FC = () => {
@@ -83,13 +108,13 @@ const Footer: React.FC = () => {
         <StyledFooter>
             <StyledFlex>
                 <div className="logo-container">
-                    <GS.Image>
+                    <ResponsiveImage>
                         <Image
                             src="https://picsum.photos/200/300"
                             width="140"
                             height="90"
                         />
-                    </GS.Image>
+                    </ResponsiveImage>
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing
                         elit. Labore ab eaque laborum consequatur voluptatem,
@@ -98,11 +123,11 @@ const Footer: React.FC = () => {
                         quam nemo mollitia?
                     </p>
                 </div>
-                <div>
+                <div className="disappear">
                     <h3>Helpful Links</h3>
                     <StyledULNavLinks />
                 </div>
-                <div>
+                <div className="disappear">
                     <h3>Contact Us</h3>
                     <ul>
                         <li>Address</li>
@@ -111,7 +136,7 @@ const Footer: React.FC = () => {
                     </ul>
                 </div>
             </StyledFlex>
-            <Copyright>
+            <Copyright className="disappear">
                 <p>&copy; {year} Raise Your Spirits. All Rights Reserved.</p>
             </Copyright>
         </StyledFooter>

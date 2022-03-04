@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import MinFullPage from '../../../../GeneralPurposeComponents/MinFullPage'
 import YellowLetteringParagraph from '../../../../GeneralPurposeComponents/YellowLetteringParagraph'
@@ -12,6 +13,13 @@ const ContentContainer = styled.div`
 `
 
 const Section4 = () => {
+
+    const router = useRouter();
+
+    const routeToContactsOnClickHandler = () => {
+        router.push('/contact')
+    }
+
     const text = `As the ability to attract, retain, and incentivize talented sales personnel grows ever more challenging, RYS' destination Experiences ("Experience(s)") serve as turnkey alternatives to the traditional incentive options. These Experiences not only streamline execution and timing for your internal staff, but they are also  tool to attract executive and high-performing salespersons. This is the ultimate convergence of craft spirits and leisure travel. Through our exclusiv relationships with various craft distilleries and other locations such as Kentucky, La Vegas, our group coordinates private distillery tours, luxury accommodations; dining Experiences at the distillery, transportation and other VIP services.`
 
     return (
@@ -22,7 +30,7 @@ const Section4 = () => {
                     left={true}
                 />
                 <YellowLetteringParagraph text={text} />
-                <ContactUsButton />
+                <ContactUsButton onClick={routeToContactsOnClickHandler} />
             </ContentContainer>
         </MinFullPage>
     )
