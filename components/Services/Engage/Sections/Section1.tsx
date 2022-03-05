@@ -7,10 +7,16 @@ export const FullPageSection = styled.div`
     grid-template-columns: 1fr 1fr;
     min-height: 50vh;
     place-items: stretch;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const PlaceHolder = styled.div`
     background-color: hsl(31, 35%, 51%);
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
 `
 
 export const ContentSection = styled.div`

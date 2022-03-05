@@ -4,11 +4,18 @@ const ServiceNavList = styled.ul`
     display: flex;
     gap: 50px;
     list-style-type: none;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const ServiceLink = styled.a`
     text-decoration: none;
+    font-family: 'Bodoni Moda';
     color: #fff;
     font-size: 60px;
     padding-bottom: 20px;

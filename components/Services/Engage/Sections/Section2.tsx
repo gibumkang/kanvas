@@ -30,12 +30,21 @@ export const FormattedBulletContainer = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 10px 60px;
     }
 `
 
 export const FormattedP = styled.p`
     color: #fff;
     padding: 0 35px;
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
+`
+
+const FormattedNumber = styled.div`
+    font-family: 'Bodoni Moda';
+    font-size: 30px;
 `
 
 const Section2 = () => {
@@ -53,7 +62,7 @@ const Section2 = () => {
                 {textBlocks.map((text, index) => (
                     <FormattedBulletContainer>
                         <CircleCircleBullet>
-                            <div>{index + 1}</div>
+                            <FormattedNumber>{index + 1}</FormattedNumber>
                         </CircleCircleBullet>
                         <FormattedP>{text}</FormattedP>
                     </FormattedBulletContainer>

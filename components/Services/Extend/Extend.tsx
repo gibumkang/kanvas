@@ -5,6 +5,12 @@ import Section2 from './Sections/Section2'
 export const FormattedH2 = styled.h2`
     background-color: #000;
     font-size: 100px;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 50px;
+    }
 `
 
 const Extend = () => {

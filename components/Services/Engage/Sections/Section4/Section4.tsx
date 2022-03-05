@@ -20,6 +20,11 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(3, minmax(410px, 1fr));
     gap: 35px;
     justify-content: center;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+        gap: 50px;
+        padding: 75px 0;
+    }
 `
 
 const Section4 = () => {

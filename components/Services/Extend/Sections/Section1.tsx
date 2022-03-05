@@ -23,7 +23,9 @@ export const GridContainer = styled.div`
 
 export const FormattedP = styled.p`
     color: #fff;
-
+    @media only screen and (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 const Section1 = () => {

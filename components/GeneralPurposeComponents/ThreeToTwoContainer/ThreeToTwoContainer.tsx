@@ -6,6 +6,14 @@ const ThreeToTwoGrid = styled.div`
     padding: 5%;
     padding-bottom: 0;
     background-color: #000;
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+        justify-content: center;
+        align-items: center;
+    }
 `
 
 const ThreeToTwoContainer = ({ children, left = true }) => (

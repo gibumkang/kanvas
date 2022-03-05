@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Yellowize = styled.span`
     font-size: ${(props) => (props?.keepFontSize ? '30px' : 'unset')};
     color: gold;
-    font-family: 'Bodoni Moda';
+    font-family: ${(props) => (props?.keepFontSize ? 'Bodoni Moda' : 'unset')};
 `
 const WhiteText = styled.p`
     color: #fff;
