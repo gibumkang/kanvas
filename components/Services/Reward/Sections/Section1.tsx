@@ -1,28 +1,68 @@
 import styled from 'styled-components'
+import { Container, FormattedP } from '../../Extend/Sections/Section1'
 
-import ThreeToTwoContainer from '../../../GeneralPurposeComponents/ThreeToTwoContainer/ThreeToTwoContainer'
-import { FormattedP } from '../../Extend/Sections/Section1'
+const RightContainer = styled(Container)`
+    grid-template-areas: 'image content';
+    grid-template-columns: 3fr 2fr;
+    background: no-repeat url('https://picsum.photos/id/240/400/400');
+    background-size: 70%;
+    box-shadow: inset -50vw 40px 1000px #000;
+    background-color: #000;
+    @media only screen and (max-width: 768px) {
+        background: #000;
+        box-shadow: unset;
+        background-size: unset;
+        display: flex;
+        grid-template-areas: unset;
+        flex-direction: column;
+    }
+`
+
+const Image = styled.div`
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        min-height: 200px;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        background-image: no-repeat url('https://picsum.photos/id/240/400/400');
+    }
+`
 
 const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    grid-area: content;
 `
 
 const FormattedH3 = styled.div`
     color: gold;
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-family: 'Bodoni Moda';
+    @media only screen and (max-width: 768px) {
+        font-size: 30px;
+    }
 `
 
 const UpdatedP = styled(FormattedP)`
     padding-right: 20%;
+    @media only screen and (max-width: 768px) {
+        padding-right: unset;
+    }
+`
+const ParagraphContainer = styled.div`
+    max-width: 800px;
 `
 
 const Paragraph = ({ title, text }) => {
     return (
-        <div>
+        <ParagraphContainer>
             <FormattedH3>{title}</FormattedH3>
             <UpdatedP>{text}</UpdatedP>
-        </div>
+        </ParagraphContainer>
     )
 }
 
@@ -41,8 +81,8 @@ const Section1 = () => {
     }
 
     return (
-        <ThreeToTwoContainer>
-            <div></div>
+        <RightContainer>
+            <Image />
             <ContentContainer>
                 <Paragraph
                     title={content.p1.title}
@@ -53,7 +93,7 @@ const Section1 = () => {
                     text={content.p2.paragraph}
                 />
             </ContentContainer>
-        </ThreeToTwoContainer>
+        </RightContainer>
     )
 }
 

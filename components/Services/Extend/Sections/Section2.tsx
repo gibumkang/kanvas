@@ -12,13 +12,12 @@ import {
 } from './Section1'
 
 const LeftContainer = styled(Container)`
+    grid-template-columns: 3fr 2fr;
     grid-template-areas:
-        'title title title image image'
-        'content content content image image'
-        'content content content image image'
-        'content content content image image'
-        'content content content image image';
+        'title image'
+        'content image';
     @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
         grid-template-areas:
             'title'
             'image'

@@ -34,13 +34,13 @@ const ServicesNavBar = () => {
     return (
         <ServiceNavList>
             <li>
-                <ServiceLink href="#engage">Engage</ServiceLink>
+                <ServiceLink href="#engage">ENGAGE</ServiceLink>
             </li>
             <li>
-                <ServiceLink href="#extend">Extend</ServiceLink>
+                <ServiceLink href="#extend">EXTEND</ServiceLink>
             </li>
             <li>
-                <ServiceLink href="#reward">Reward</ServiceLink>
+                <ServiceLink href="#reward">REWARD</ServiceLink>
             </li>
         </ServiceNavList>
     )

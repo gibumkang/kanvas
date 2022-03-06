@@ -6,17 +6,16 @@ import YellowUnderlineTitle from '../../../GeneralPurposeComponents/YellowUnderl
 export const Container = styled.div`
     display: grid;
     background-color: #000;
-    padding: 100px;
+    padding: 100px 50px;
     min-height: min(1000px, 100vh);
 `
 const RightContainer = styled(Container)`
+    grid-template-columns: 2fr 3fr;
     grid-template-areas:
-        'image image title title title'
-        'image image content content content'
-        'image image content content content'
-        'image image content content content'
-        'image image content content content';
+        'image title'
+        'image content';
     @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
         grid-template-areas:
             'title'
             'image'
