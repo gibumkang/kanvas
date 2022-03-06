@@ -1,19 +1,31 @@
 import styled from 'styled-components'
 import CheckMarkBullet from '../../../GeneralPurposeComponents/CheckMarkBullet/CheckMarkBullet'
-import ThreeToTwoContainer from '../../../GeneralPurposeComponents/ThreeToTwoContainer/ThreeToTwoContainer'
 import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLetteringParagraph'
 import YellowUnderlineTitle from '../../../GeneralPurposeComponents/YellowUnderlineTitle'
 import {
     GridContainer,
     Placeholder,
-    FlexContainer,
     FormattedP,
+    Container,
+    Title,
+    Content,
 } from './Section1'
 
-const Container = styled(ThreeToTwoContainer)`
+const LeftContainer = styled(Container)`
+    grid-template-areas:
+        'title title title image image'
+        'content content content image image'
+        'content content content image image'
+        'content content content image image'
+        'content content content image image';
     @media only screen and (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
+        grid-template-areas:
+            'title'
+            'image'
+            'content';
+        place-items: center;
+        gap: 20px;
+        padding: 50px 30px;
     }
 `
 
@@ -30,12 +42,15 @@ const Section2 = () => {
     ]
 
     return (
-        <Container left={false}>
-            <FlexContainer>
+        <LeftContainer>
+            <Placeholder />
+            <Title>
                 <YellowUnderlineTitle
                     title="FOR CRAFT AND LUXURY BRANDS..."
                     left={false}
                 />
+            </Title>
+            <Content>
                 <YellowLetteringParagraph text={paragraph} />
                 <GridContainer>
                     {bullets.map((bullet) => (
@@ -44,9 +59,8 @@ const Section2 = () => {
                         </CheckMarkBullet>
                     ))}
                 </GridContainer>
-            </FlexContainer>
-            <Placeholder />
-        </Container>
+            </Content>
+        </LeftContainer>
     )
 }
 
