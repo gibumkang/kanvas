@@ -6,6 +6,10 @@ import YellowUnderlineTitle from '../../../GeneralPurposeComponents/YellowUnderl
 
 export const Placeholder = styled.div`
     background-color: #fff;
+    @media only screen and (max-width: 768px) {
+        width: 80%;
+        height: 40vh;
+    }
 `
 
 export const FlexContainer = styled.div`

@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 import CheckMarkBullet from '../../../GeneralPurposeComponents/CheckMarkBullet/CheckMarkBullet'
 import ThreeToTwoContainer from '../../../GeneralPurposeComponents/ThreeToTwoContainer/ThreeToTwoContainer'
 import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLetteringParagraph'
@@ -8,6 +9,13 @@ import {
     FlexContainer,
     FormattedP,
 } from './Section1'
+
+const Container = styled(ThreeToTwoContainer)`
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+    }
+`
 
 const Section2 = () => {
     const paragraph =
@@ -22,7 +30,7 @@ const Section2 = () => {
     ]
 
     return (
-        <ThreeToTwoContainer left={false}>
+        <Container left={false}>
             <FlexContainer>
                 <YellowUnderlineTitle
                     title="FOR CRAFT AND LUXURY BRANDS..."
@@ -38,7 +46,7 @@ const Section2 = () => {
                 </GridContainer>
             </FlexContainer>
             <Placeholder />
-        </ThreeToTwoContainer>
+        </Container>
     )
 }
 

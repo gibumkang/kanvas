@@ -17,10 +17,18 @@ const FormattedH3 = styled.h3`
 
 export const BulletsContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: 500px 500px;
     gap: 100px;
     max-width: 100%;
     background-color: #000;
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: unset;
+        padding: 10px;
+    }
 `
 export const FormattedBulletContainer = styled.div`
     display: flex;
@@ -37,6 +45,7 @@ export const FormattedBulletContainer = styled.div`
 export const FormattedP = styled.p`
     color: #fff;
     padding: 0 35px;
+    font-size: 20px;
     @media only screen and (max-width: 768px) {
         text-align: center;
     }
