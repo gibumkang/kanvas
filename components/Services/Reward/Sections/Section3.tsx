@@ -4,7 +4,14 @@ import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLe
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background-image: url('https://picsum.photos/id/210/400/400');
     background-color: #000;
+    @media only screen and (max-width: 768px) {
+        background-image: unset;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
 `
 
 const Title = styled.h3`
@@ -15,6 +22,27 @@ const Title = styled.h3`
 const DoubleGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+`
+
+const Image = styled.div`
+    background-color: #000;
+    max-width: 100vw;
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display: inline-block;
+    }
+`
+
+const Placeholder = styled.div`
+    height: 200px;
+    width: auto;
+    background-image: url('https://picsum.photos/id/210/400/400');
+    background-color: #fff;
 `
 
 const Section3 = () => {
@@ -26,6 +54,9 @@ const Section3 = () => {
             <Title>OWN A BARREL</Title>
             <DoubleGrid>
                 <YellowLetteringParagraph text={text} />
+                <Image>
+                    <Placeholder />
+                </Image>
             </DoubleGrid>
         </Container>
     )
