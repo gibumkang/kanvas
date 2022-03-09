@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import CircleCircleBullet from '../../../GeneralPurposeComponents/CircleCircleBullet/CircleCircleBullet'
-import {
-    BulletsContainer,
-    FormattedBulletContainer,
-    FormattedP,
-} from '../../../Services/Engage/Sections/Section2'
+import { FormattedBulletContainer } from '../../../Services/Engage/Sections/Section2'
 import BulletContent from './BulletContent/BulletContent'
 
 const ResponsiveContainer = styled.div`
@@ -14,8 +10,8 @@ const ResponsiveContainer = styled.div`
     padding: 150px 0;
 
     @media only screen and (max-width: 768px) {
-        padding: 50px 0 ;
-        }
+        padding: 50px 0;
+    }
 `
 const Flex1 = styled.div`
     flex-grow: 1;
@@ -64,19 +60,19 @@ const Bullets = () => {
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[0]}/>
+                    <BulletContent {...bulletsContent[0]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[1]}/>
+                    <BulletContent {...bulletsContent[1]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[2]}/>
+                    <BulletContent {...bulletsContent[2]} />
                 </FormattedBulletContainer>
             </Flex3>
             <Flex1></Flex1>
