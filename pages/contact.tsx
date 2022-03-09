@@ -12,6 +12,12 @@ const Container = styled.div`
     grid-template-columns: 1fr 64ch 1fr;
     background-color: #000;
     place-items: stretch;
+    @media only screen and (max-width: 768px) {
+        padding: 20px;
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+    }
 `
 const FlexContainer = styled.div`
     display: flex;
@@ -30,15 +36,25 @@ const DoubleLayout = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: ${gap};
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 const Title = styled.h1`
-    width: 100%;
     text-align: center;
 `
 
 const FormattedContactUs = styled(ContactUsButton)`
-    padding: unset;
+    @media only screen and (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+    }
 `
 
 const Contact = () => {

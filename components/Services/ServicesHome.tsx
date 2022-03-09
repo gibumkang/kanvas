@@ -8,6 +8,7 @@ const PinToBottomNavBar = styled(MinFullPage)`
     justify-content: space-between;
     align-items: center;
     background-color: #000;
+    
     h1 {
         font-size: 80px;
         margin-top: 150px;

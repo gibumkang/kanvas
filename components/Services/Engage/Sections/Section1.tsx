@@ -12,6 +12,7 @@ export const FullPageSection = styled.div`
 
 const PlaceHolder = styled.div`
     background-color: hsl(31, 35%, 51%);
+    min-height: 80vh;
 `
 
 export const ContentSection = styled.div`
@@ -20,6 +21,7 @@ export const ContentSection = styled.div`
     flex-direction: column;
     gap: 40px;
     padding: 50px 0;
+    justify-content: center;
 `
 
 const Section1 = () => {

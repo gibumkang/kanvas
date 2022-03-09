@@ -1,19 +1,12 @@
-import { useRouter } from 'next/router'
-import styled from 'styled-components'
 import { ButtonWithExtraEffects } from '../../../../Engage/Sections/Section4/Card/Card'
 import ArrowIcon from './ArrowIcon'
 
-const Padding = styled.div`
-    padding: 0 10%;
-`
-
-const ContactUsButton = ({onClick}) => {
+const ContactUsButton = ({className, onClick}) => {
+    const props = {className, onClick}
     return (
-        <Padding>
-            <ButtonWithExtraEffects onClick={onClick}>
+            <ButtonWithExtraEffects {...props}>
                 <strong>Contact Us</strong> <ArrowIcon />
             </ButtonWithExtraEffects>
-        </Padding>
     )
 }
 

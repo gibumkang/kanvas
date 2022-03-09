@@ -6,12 +6,19 @@ import YellowUnderlineTitle from '../../../../GeneralPurposeComponents/YellowUnd
 import ContactUsButton from './ContactUsButton/ContactUsButton'
 
 const Container = styled(MinFullPage)`
-    background-image: url('https://picsum.photos/id/230/400/400');
+    background-image: linear-gradient(to bottom right, #000 30%, transparent),
+        url('https://picsum.photos/id/230/400/400');
     background-size: 100% 100%;
     background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @media only screen and (max-width: 768px) {
-        background-image: unset;
+        background-image: linear-gradient(to bottom, #000 80%, transparent),
+            url('https://picsum.photos/id/230/400/400');
+        justify-content: unset;
         padding-top: 50px;
+        align-items: center;
     }
 `
 
@@ -24,6 +31,14 @@ const ContentContainer = styled.div`
         max-width: unset;
         justify-content: center;
         align-items: center;
+    }
+`
+
+const FormattedContactUsButton = styled(ContactUsButton)`
+    max-width: fit-content;
+    margin-left: 10%;
+    @media only screen and (max-width: 768px) {
+        margin: unset;
     }
 `
 
@@ -44,7 +59,10 @@ const Section4 = () => {
                     left={true}
                 />
                 <YellowLetteringParagraph text={text} />
-                <ContactUsButton onClick={routeToContactsOnClickHandler} />
+                <FormattedContactUsButton
+                    className=""
+                    onClick={routeToContactsOnClickHandler}
+                />
             </ContentContainer>
         </Container>
     )
