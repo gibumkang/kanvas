@@ -24,13 +24,18 @@ const Flex1 = styled.div`
 const Flex3 = styled.div`
     flex-grow: 2;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     justify-content: space-around;
 
-    @media only screen and (max-width: 768px) {
-        flex-direction: column;
+    @media only screen and (max-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: unset;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 `

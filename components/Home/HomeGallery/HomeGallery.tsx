@@ -17,13 +17,13 @@ const Grid = styled.div`
         margin: 0 auto;
     }
     @media screen and (max-width: 1200px) {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         .desktop {
             display: none;
         }
     }
     @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         .tablet {
             display: none;
         }
@@ -49,6 +49,18 @@ const SeeMoreButton = styled.span`
     right: 0;
     z-index: 2;
     cursor: pointer;
+    @media screen and (max-width: 768px) {
+        display: block;
+        position: static;
+        z-index: unset;
+        bottom: unset;
+        right: unset;
+        grid-column: 1 / span 2;
+        div {
+            width: 100%;
+            text-align: center;
+        }
+    }
 `
 
 const HomeGallery = () => {
@@ -71,11 +83,12 @@ const HomeGallery = () => {
                 alt={imageAlt}
             />
             <Grid>
-                {slider.map((slide) => {
+                {slider.map((slide, index) => {
                     return (
                         <StyledImage
                             onClick={(e) => clickHandler(e)}
                             key={slide.name}
+                            className={index > 3 ? 'desktop tablet' : ''}
                         >
                             <img src={slide.src} alt={slide.alt} />
                         </StyledImage>
