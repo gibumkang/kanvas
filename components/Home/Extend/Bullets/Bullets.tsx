@@ -1,10 +1,6 @@
 import styled from 'styled-components'
 import CircleCircleBullet from '../../../GeneralPurposeComponents/CircleCircleBullet/CircleCircleBullet'
-import {
-    BulletsContainer,
-    FormattedBulletContainer,
-    FormattedP,
-} from '../../../Services/Engage/Sections/Section2'
+import { FormattedBulletContainer } from '../../../Services/Engage/Sections/Section2'
 import BulletContent from './BulletContent/BulletContent'
 
 const ResponsiveContainer = styled.div`
@@ -14,8 +10,8 @@ const ResponsiveContainer = styled.div`
     padding: 150px 0;
 
     @media only screen and (max-width: 768px) {
-        padding: 50px 0 ;
-        }
+        padding: 50px 0;
+    }
 `
 const Flex1 = styled.div`
     flex-grow: 1;
@@ -24,13 +20,18 @@ const Flex1 = styled.div`
 const Flex3 = styled.div`
     flex-grow: 2;
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     justify-content: space-around;
 
-    @media only screen and (max-width: 768px) {
-        flex-direction: column;
+    @media only screen and (max-width: 1200px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: unset;
+    }
+
+    @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 `
@@ -59,19 +60,19 @@ const Bullets = () => {
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[0]}/>
+                    <BulletContent {...bulletsContent[0]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[1]}/>
+                    <BulletContent {...bulletsContent[1]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
                         <p>hello</p>
                     </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[2]}/>
+                    <BulletContent {...bulletsContent[2]} />
                 </FormattedBulletContainer>
             </Flex3>
             <Flex1></Flex1>

@@ -4,17 +4,69 @@ import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLe
 const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background-image: url('https://picsum.photos/id/210/400/400');
     background-color: #000;
+    min-height: 100vh;
+    @media only screen and (max-width: 768px) {
+        background-image: unset;
+        min-height: unset;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
 `
 
 const Title = styled.h3`
     color: #fff;
     text-align: center;
+    padding-top: 10%;
+    @media only screen and (max-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 50px;
+    }
 `
 
 const DoubleGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    .center-text {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20%;
+    }
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: flex-start;
+        align-items: flex-start; */
+        .center-text {
+            padding-bottom: 0;
+            justify-content: unset;
+            min-height: unset;
+            order: 1;
+        }
+    }
+`
+
+const Image = styled.div`
+    background-color: #000;
+    max-width: 100vw;
+    display: none;
+    @media only screen and (max-width: 768px) {
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+`
+
+const Placeholder = styled.div`
+    height: 200px;
+    width: auto;
+    background-image: url('https://picsum.photos/id/210/400/400');
+    background-color: #fff;
 `
 
 const Section3 = () => {
@@ -25,7 +77,12 @@ const Section3 = () => {
         <Container>
             <Title>OWN A BARREL</Title>
             <DoubleGrid>
-                <YellowLetteringParagraph text={text} />
+                <div className="center-text">
+                    <YellowLetteringParagraph text={text} />
+                </div>
+                <Image>
+                    <Placeholder />
+                </Image>
             </DoubleGrid>
         </Container>
     )

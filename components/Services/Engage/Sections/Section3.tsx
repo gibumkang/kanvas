@@ -14,6 +14,10 @@ const Page = styled(MinFullPage)`
     justify-content: center;
     align-items: center;
     padding: 0 20%;
+
+    @media only screen and (max-width: 768px) {
+        padding: 0;
+    }
 `
 
 const FormattedParagraph = styled.p`

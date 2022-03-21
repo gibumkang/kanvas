@@ -5,19 +5,23 @@ import YellowUnderlineTitle from '../../../GeneralPurposeComponents/YellowUnderl
 export const FullPageSection = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 50vh;
-    place-items: stretch;
+    @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
 `
 
 const PlaceHolder = styled.div`
     background-color: hsl(31, 35%, 51%);
+    min-height: 80vh;
 `
 
 export const ContentSection = styled.div`
     background-color: hsl(175, 44%, 15%);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 40px;
+    padding: 50px 0;
+    justify-content: center;
 `
 
 const Section1 = () => {
