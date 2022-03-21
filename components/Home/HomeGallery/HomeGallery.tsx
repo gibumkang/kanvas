@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import * as GS from '../../../styles/global'
-import Image from 'next/image'
 import Lightbox from '../../GeneralPurposeComponents/Lightbox/Lightbox'
 import { slider } from '../../../data/slider'
 
@@ -77,87 +76,10 @@ const HomeGallery = () => {
                             onClick={(e) => clickHandler(e)}
                             key={slide.name}
                         >
-                            <img src={slide.src} alt={slide.alt} />
+                            <img src={slide.src} alt={slide.alt} className={slide.class ? slide.class : ''} />
                         </StyledImage>
                     )
                 })}
-                {/* <div>
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/id/200/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div>
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/id/300/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div>
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div className="tablet">
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div className="tablet">
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div className="desktop">
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div>
-                <div className="desktop">
-                    <StyledImage>
-                        <Image
-                            src="https://picsum.photos/400/400"
-                            width="450"
-                            height="400"
-                            alt="Gallery Image"
-                            layout="responsive"
-                        />
-                    </StyledImage>
-                </div> */}
                 <SeeMoreButton>
                     <GS.StyledButton>
                         See <strong>More</strong>

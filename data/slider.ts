@@ -23,20 +23,24 @@ export const slider = [
         name: 'Stock photo 5',
         src: 'https://picsum.photos/id/220/400/400',
         alt: 'This is my stock alternative message',
+        class: 'tablet',
     },
     {
         name: 'Stock photo 6',
         src: 'https://picsum.photos/id/230/400/400',
         alt: 'This is my stock alternative message',
+        class: 'tablet',
     },
     {
         name: 'Stock photo 7',
         src: 'https://picsum.photos/id/240/400/400',
         alt: 'This is my stock alternative message',
+        class: 'desktop',
     },
     {
         name: 'Stock photo 8',
         src: 'https://picsum.photos/id/250/400/400',
         alt: 'This is my stock alternative message',
+        class: 'desktop',
     },
 ]
