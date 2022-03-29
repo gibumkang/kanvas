@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { useState } from 'react'
 import CustomTextField from '../components/Contact/CustomTextField'
-import ContactUsButton from '../components/Services/Reward/Sections/Section4/ContactUsButton/ContactUsButton'
 import { sendMail } from '../lib/api'
 
 const gap = '30px'
@@ -79,23 +78,36 @@ const Contact = () => {
         })
     }
 
+    const [buttonText, setButtonText] = useState<string>('Submit')
+    const [submitting, setSubmitting] = useState<boolean>(false)
+    const [wasMailSent, setWasMailSent] = useState<boolean>(true)
+
     const sendMailOnClickHandler = async (e) => {
         e.preventDefault()
+        setSubmitting(true)
+        setButtonText('Please wait...')
         const emailContent = `
-            Message received from <strong>${formData.first + ' ' + formData.last}</strong>.
+            From: <strong>${formData.first + ' ' + formData.last}</strong>.
             <br /> 
-            Their email address is <strong>${formData.email}</strong>.<br />
-            Their desired dates are ${formData.desiredDates}. <br />
-            The approximate number of attendees would be ${formData.attendees}.<br />
-            Specified location: ${formData.locations}.<br />
-            <h3>${formData.subject}</h3>
+            Email: <strong>${formData.email}</strong>.
+            <br />
+            The desired date for the event is: ${formData.desiredDates}.
+            <br />
+            The approximate number of attendees: ${formData.attendees}.
+            <br />
+            Specified location: ${formData.locations}.
+            <br />
+            <h3>Subject Line: ${formData.subject}</h3>
             ${formData.message}
         `
-        const data = await sendMail('New message from raiseyourspirits.net!', emailContent)
+        const data = await sendMail('You recieved an inquiry from raiseyourspirits.net!', emailContent)
         if(data.sent){
-            console.log('success!')
+            setSubmitting(false)
+            setButtonText('Sent!')
         }else{
-            console.log('failed, see results: ', data)
+            setSubmitting(false)
+            setButtonText('Submit')
+            setWasMailSent(false)
         }
     }
 
@@ -170,7 +182,8 @@ const Contact = () => {
                             element="input"
                         />
                     </ContentContainer>
-                    <FormattedContactUs type="submit">Submit</FormattedContactUs>
+                    <FormattedContactUs type="submit" disabled={submitting}>{buttonText}</FormattedContactUs>
+                    {!wasMailSent && <p>Your message did not send. Please try again.</p>}
                 </form>
             </FlexContainer>
             <div></div>

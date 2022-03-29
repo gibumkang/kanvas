@@ -2,6 +2,8 @@ interface IVariables {
     variables?: object
 }
 
+const API_URL = process.env.WP_API_URL
+
 async function fetchAPI(query: string, { variables }: IVariables = {}) {
     // Set up some headers to tell the fetch call
     // that this is an application/json type
@@ -10,7 +12,7 @@ async function fetchAPI(query: string, { variables }: IVariables = {}) {
     // build out the fetch() call using the API_URL
     // environment variable pulled in at the start
     // Note the merging of the query and variables
-    const res = await fetch('https://raiseyourspirits.net/graphql/', {
+    const res = await fetch(API_URL, {
         method: 'POST',
         headers,
         body: JSON.stringify({ query, variables }),
