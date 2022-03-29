@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLetteringParagraph'
 
@@ -56,7 +57,9 @@ const Section3 = () => {
 
     return (
         <Container>
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: .5}}}>
             <Title>OWN A BARREL</Title>
+            </motion.div>
             <DoubleGrid>
                 <div className="center-text">
                     <StyledWrapper><YellowLetteringParagraph text={text} /></StyledWrapper>

@@ -11,8 +11,13 @@ const PinToBottomNavBar = styled.div`
     background-size: cover;
     
     h1 {
-        font-size: 80px;
-        margin-top: 150px;
+        font-size: 8rem;
+        margin-top: 15rem;
+    }
+    @media screen and (max-width: 768px){
+        h1 {
+            font-size: 5rem;
+        }
     }
 `
 

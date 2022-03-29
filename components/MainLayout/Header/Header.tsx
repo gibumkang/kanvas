@@ -9,6 +9,7 @@ const HeaderContainer = styled.div`
     padding: 20px 40px;
     position: absolute;
     width: auto;
+    z-index: 3;
     min-width: 100%;
     max-width: 100vw;
     align-items: stretch;

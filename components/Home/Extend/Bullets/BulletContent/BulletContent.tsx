@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -27,8 +28,11 @@ const Content = styled.p`
 const ReadMore = styled.div`
     color: gold;
     font-size: 19px;
+    font-weight: bold;
+    transition: all .25s ease-in-out;
     &:hover {
         cursor: pointer;
+        color: #fff;
     }
 
     @media only screen and (max-width: 768px) {
@@ -36,12 +40,12 @@ const ReadMore = styled.div`
     }
 `
 
-const BulletContent = ({ title, content }) => {
+const BulletContent = ({ title, content, link }) => {
     return (
         <Container>
             <Title>{title}</Title>
             <Content>{content}</Content>
-            <ReadMore>Read More</ReadMore>
+            <Link href={link}><ReadMore>Read More</ReadMore></Link>
         </Container>
     )
 }

@@ -20,10 +20,11 @@ const GridContainer = styled.div`
     grid-template-columns: repeat(3, minmax(410px, 1fr));
     gap: 3.5rem;
     justify-content: center;
-    @media only screen and (max-width: 768px) {
-        grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
-        gap: 5rem;
-        padding: 7.5rem 0;
+    @media only screen and (max-width: 1200px) {
+        display: block;
+        & > div {
+            padding-bottom: 4rem;
+        }
     }
 `
 

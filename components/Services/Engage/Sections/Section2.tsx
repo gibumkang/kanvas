@@ -1,10 +1,12 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import CircleCircleBullet from '../../../GeneralPurposeComponents/CircleCircleBullet/CircleCircleBullet'
 
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
+    padding: 3rem;
     justify-content: space-evenly;
     align-items: center;
     background-color: #000;
@@ -15,13 +17,13 @@ const FormattedH3 = styled.h3`
     padding: 70px;
 `
 
-export const BulletsContainer = styled.div`
+export const BulletsContainer = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     max-width: 150rem;
     background-color: #000;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 940px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -30,7 +32,7 @@ export const BulletsContainer = styled.div`
         padding: 10px;
     }
 `
-export const FormattedBulletContainer = styled.div`
+export const FormattedBulletContainer = styled(motion.div)`
     display: flex;
     gap: 30px;
     padding: 10px;
@@ -56,6 +58,28 @@ const FormattedNumber = styled.div`
     font-size: 30px;
 `
 
+const container = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: .5,
+        }
+    }
+}
+
+const item = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+    }
+}
+
+
 const Section2 = () => {
     const textBlocks = [
         'We collaborate with you to select the spirits category you would like to present, then we source and purchase recommended expressions. Any distilled spirit is fair game (We can source expressions ranging from $40-$3,000)',
@@ -67,12 +91,14 @@ const Section2 = () => {
     return (
         <Container>
             <FormattedH3>HOW IT WORKS</FormattedH3>
-            <BulletsContainer>
+            <BulletsContainer variants={container} initial="initial" whileInView="animate">
                 {textBlocks.map((text, index) => (
                     <FormattedBulletContainer key={index}>
-                        <CircleCircleBullet>
-                            <FormattedNumber>{index + 1}</FormattedNumber>
-                        </CircleCircleBullet>
+                        <motion.div variants={item}>
+                            <CircleCircleBullet>
+                                <FormattedNumber>{index + 1}</FormattedNumber>
+                            </CircleCircleBullet>
+                        </motion.div>
                         <FormattedP>{text}</FormattedP>
                     </FormattedBulletContainer>
                 ))}

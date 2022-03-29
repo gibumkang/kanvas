@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 const Component = styled.div`
-    padding: 7rem 0rem;
+    padding: 7rem 0rem 0rem 0rem;
     h2 {
         //max-width: 90rem;
         max-width: 120rem;
@@ -27,7 +27,7 @@ const Component = styled.div`
         }
     }
     @media only screen and (max-width: 768px) {
-        padding: 50px 0 0 0;
+        padding: 5rem 0 0 0;
             h2 {
                 font-size: 4rem;
                 max-width: 90%;

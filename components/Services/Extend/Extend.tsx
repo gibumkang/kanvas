@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import Section1 from './Sections/Section1'
 import Section2 from './Sections/Section2'
 
-export const FormattedH2 = styled.h2`
-    background-color: #000;
+export const FormattedH2 = styled(motion.h2)`
     font-size: 100px;
     padding: 50px;
 
@@ -14,13 +14,17 @@ export const FormattedH2 = styled.h2`
     }
 `
 
+const StyledContainer = styled.div`
+    background: #000;
+`
+
 const Extend = () => {
     return (
-        <div id="extend">
-            <FormattedH2>EXTEND</FormattedH2>
+        <StyledContainer id="extend">
+            <FormattedH2 initial={{ x: -50, opacity: 0}} whileInView={{ x: 0, opacity: 1, transition: { duration: 1} }}>EXTEND</FormattedH2>
             <Section1 />
             <Section2 />
-        </div>
+        </StyledContainer>
     )
 }
 

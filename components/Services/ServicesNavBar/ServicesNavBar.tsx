@@ -1,6 +1,7 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-const ServiceNavList = styled.ul`
+const ServiceNavList = styled(motion.ul)`
     display: flex;
     gap: 5rem;
     list-style-type: none;
@@ -28,20 +29,45 @@ const ServiceLink = styled.a`
         border-bottom: 1rem solid gold;
         color: #fff;
     }
+    @media screen and (max-width: 768px){
+        font-size: 3rem;
+        padding: 0rem;
+    }
 `
+
+const navVariant = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            staggerChildren: .5,
+        }
+    }
+}
+
+const navListVariant = {
+    initial: {
+        opacity: 0,
+    },
+    animate: {
+        opacity: 1,
+    }
+}
 
 const ServicesNavBar = () => {
     return (
-        <ServiceNavList>
-            <li>
-                <ServiceLink href="#engage">ENGAGE</ServiceLink>
-            </li>
-            <li>
-                <ServiceLink href="#extend">EXTEND</ServiceLink>
-            </li>
-            <li>
-                <ServiceLink href="#reward">REWARD</ServiceLink>
-            </li>
+        <ServiceNavList variants={navVariant} initial="initial" whileInView="animate">
+                <motion.li variants={navListVariant}>
+                    <ServiceLink href="#engage">ENGAGE</ServiceLink>
+                </motion.li>
+                <motion.li variants={navListVariant}>
+                    <ServiceLink href="#extend">EXTEND</ServiceLink>
+                </motion.li>
+                <motion.li variants={navListVariant}>
+                    <ServiceLink href="#reward">REWARD</ServiceLink>
+                </motion.li>
         </ServiceNavList>
     )
 }

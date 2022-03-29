@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import MinFullPage from '../../../../GeneralPurposeComponents/MinFullPage'
@@ -57,10 +58,12 @@ const Section4 = () => {
     return (
         <Container>
             <ContentContainer>
-                <YellowUnderlineTitle
-                    title="DESTINATION EXPERIENCES"
-                    left={true}
-                />
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: .5}}}>
+                    <YellowUnderlineTitle
+                        title="DESTINATION EXPERIENCES"
+                        left={true}
+                    />
+                </motion.div>
                 <StyledWrapper>
                     <YellowLetteringParagraph text={text} />
                     <FormattedContactUsButton

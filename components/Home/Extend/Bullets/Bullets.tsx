@@ -5,6 +5,7 @@ import BulletContent from './BulletContent/BulletContent'
 import {BsChatRightText} from 'react-icons/bs'
 import {FaHandSparkles} from 'react-icons/fa'
 import {BsCashCoin} from 'react-icons/bs'
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -45,14 +46,17 @@ const Bullets = () => {
         {
             title: 'ENGAGE',
             content: 'Build and maintain quality relationships',
+            link: '/services#engage',
         },
         {
             title: 'EXTEND',
             content: 'Drive quality sales for your business',
+            link: '/services#extend',
         },
         {
             title: 'REWARD',
             content: 'Offer exclusive gifts to your top clients',
+            link: '/services#reward',
         },
     ]
 
@@ -60,24 +64,24 @@ const Bullets = () => {
         <ResponsiveContainer>
             <Flex1></Flex1>
             <Flex3>
-                <FormattedBulletContainer>
-                    <CircleCircleBullet>
-                        <BsChatRightText />
-                    </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[0]} />
-                </FormattedBulletContainer>
-                <FormattedBulletContainer>
-                    <CircleCircleBullet>
-                        <FaHandSparkles />
-                    </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[1]} />
-                </FormattedBulletContainer>
-                <FormattedBulletContainer>
-                    <CircleCircleBullet>
-                        <BsCashCoin />
-                    </CircleCircleBullet>
-                    <BulletContent {...bulletsContent[2]} />
-                </FormattedBulletContainer>
+                    <FormattedBulletContainer initial={{ opacity: 0, scale: 1.25 }} whileInView={{ opacity: 1, scale: 1, transition: {duration: 1}}} viewport={{ once: true}}>
+                        <CircleCircleBullet>
+                            <BsChatRightText />
+                        </CircleCircleBullet>
+                        <BulletContent {...bulletsContent[0]} />
+                    </FormattedBulletContainer>
+                    <FormattedBulletContainer initial={{ opacity: 0, scale: 1.25 }} whileInView={{ opacity: 1, scale: 1, transition: {duration: 1, delay: .5}}} viewport={{ once: true}}>
+                        <CircleCircleBullet>
+                            <FaHandSparkles />
+                        </CircleCircleBullet>
+                        <BulletContent {...bulletsContent[1]} />
+                    </FormattedBulletContainer>
+                    <FormattedBulletContainer initial={{ opacity: 0, scale: 1.25 }} whileInView={{ opacity: 1, scale: 1, transition: {duration: 1, delay: .75}}} viewport={{ once: true}}>
+                        <CircleCircleBullet>
+                            <BsCashCoin />
+                        </CircleCircleBullet>
+                        <BulletContent {...bulletsContent[2]} />
+                    </FormattedBulletContainer>
             </Flex3>
             <Flex1></Flex1>
         </ResponsiveContainer>

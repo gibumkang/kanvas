@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import * as GS from '../../../styles/global'
+import {motion} from 'framer-motion'
+import Link from 'next/link'
 
 const ButtonWithExtraEffects = styled(GS.StyledButton)`
     margin-top: 3rem;
@@ -8,14 +10,35 @@ const ButtonWithExtraEffects = styled(GS.StyledButton)`
 
 const Container = styled.div`
     width: 100%;
-    background: url('/homepage-background.webp') no-repeat center right #000;
-    background-size: contain;
+    position: relative;
+    z-index: 1;
+`
+
+const StyledVideo = styled.div`
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+    }
 `
 
 const StyledFlex = styled.div`
     display: flex;
     padding: 25rem 4rem;
     margin: 0 auto;
+    align-items: center;
+    height: 100vh;
     max-width: ${(props) => props.theme.maxWidth};
     h2 {
         font-size: 2.4rem;
@@ -46,22 +69,61 @@ const MobileH2 = styled.h2`
     }
 `
 
+const copyVariant = {
+    initial: {
+        opacity: 0
+    },
+    animate: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            delay: 1.5,
+        }
+    }
+}
+
+const buttonVariant = {
+    initial: {
+        opacity: 0,
+        y: 20
+    },
+    animate: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            delay: 2.5,
+        }
+    }
+}
+
 const Landing = () => {
     return (
         <Container>
+            <StyledVideo>
+                <video autoPlay muted loop>
+                    <source src="/video.mp4" type="video/mp4" />
+                </video>
+            </StyledVideo>
             <StyledFlex>
                 <CenterOnMobile>
-                    <MobileH1>Raise Your Spirits</MobileH1>
-                    <MobileH2>
-                        <em>
-                            Creating environments to build lasting relationships
-                        </em>
-                    </MobileH2>
-                    <MobileButtonWrapper>
-                        <ButtonWithExtraEffects>
-                            Our <strong>Services</strong>
-                        </ButtonWithExtraEffects>
-                    </MobileButtonWrapper>
+                    <motion.div variants={copyVariant} initial="initial" animate="animate">
+                        <MobileH1>Raise Your Spirits</MobileH1>
+                        <MobileH2>
+                            <em>
+                                Creating environments to build lasting relationships
+                            </em>
+                        </MobileH2>
+                    </motion.div>
+                    <motion.div variants={buttonVariant} initial="initial" animate="animate">
+                        <MobileButtonWrapper>
+                            <Link href="/services">
+                                <ButtonWithExtraEffects>
+                                    Our <strong>Services</strong>
+                                </ButtonWithExtraEffects>
+                            </Link>
+                        </MobileButtonWrapper>
+                    </motion.div>
                 </CenterOnMobile>
             </StyledFlex>
         </Container>

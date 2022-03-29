@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import CheckMarkBullet from '../../../GeneralPurposeComponents/CheckMarkBullet/CheckMarkBullet'
 import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLetteringParagraph'
@@ -99,10 +100,12 @@ const Section1 = () => {
         <RightContainer>
             <Placeholder />
             <Title>
-                <YellowUnderlineTitle
-                    title="FOR SPIRITS SUPPLIERS"
-                    left={true}
-                />
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { delay: .5}}}>
+                    <YellowUnderlineTitle
+                        title="FOR SPIRITS SUPPLIERS"
+                        left={true}
+                    />
+                </motion.div>
             </Title>
             <Content>
                 <StyledWrapper><YellowLetteringParagraph text={paragraph} /></StyledWrapper>
