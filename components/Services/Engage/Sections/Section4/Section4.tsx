@@ -36,14 +36,18 @@ const Section4 = () => {
                     <Card
                         src="/modal1.webp"
                         text="Experiential sales support services"
+                        link="/contact"
+                        btnText="Contact Us"
                     />
                     <Card
                         src="/modal2.webp"
                         text="Donor and constituent engagement"
+                        link="http://nebula.wsimg.com/921d0065377ea386457150138f7d6d0c?AccessKeyId=F68F98D42A8D2815BD23&disposition=0&alloworigin=1"
                     />
                     <Card
                         src="/modal3.webp"
                         text="Colleges and universities"
+                        link="http://nebula.wsimg.com/785f6c183d54229d6af37da2b1a40978?AccessKeyId=F68F98D42A8D2815BD23&disposition=0&alloworigin=1"
                     />
                 </GridContainer>
             </Component>

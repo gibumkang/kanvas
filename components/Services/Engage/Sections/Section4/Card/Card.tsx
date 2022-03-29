@@ -24,12 +24,13 @@ const FormattedImage = styled.img`
     height: auto;
 `
 
-const Card = ({ src, text }) => {
+const Card = (props) => {
+    const {src, text, link, btnText} = props
     return (
         <CardContainer>
             <FormattedImage src={src} />
             <h4>{text}</h4>
-            <ButtonWithExtraEffects>Read More</ButtonWithExtraEffects>
+            <a href={link} target="_blank"><ButtonWithExtraEffects>{btnText ? btnText : 'Read More'}</ButtonWithExtraEffects></a>
         </CardContainer>
     )
 }

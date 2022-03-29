@@ -56,23 +56,19 @@ export const getSampleSlugs = async () => {
     return data?.posts?.nodes
 }
 
-const formatAndSendEmailToWP = async (
-    subject,
-    body,
-    mutationId = 'contact'
-) => {
+export const sendMail = async (subject, body, mutationId = 'contact') => {
     const from = 'aaron@studiokanvas.com'
     const to = 'hello@studiokanvas.com'
     const data = await fetchAPI(
         `
-  mutation SendEmail($input: SendEmailInput!) {
-      sendEmail(input: $input) {
-          message
-          origin
-          sent
-      }
-  }
-`,
+            mutation SendEmail($input: SendEmailInput!) {
+                sendEmail(input: $input) {
+                    message
+                    origin
+                    sent
+                }
+            }
+        `,
         {
             variables: {
                 input: {
@@ -85,36 +81,5 @@ const formatAndSendEmailToWP = async (
             },
         }
     )
-
     return data?.sendEmail
-}
-
-export const sendMail = async (mailDetails) => {
-    const {
-        first,
-        last,
-        email,
-        subject,
-        message,
-        desiredDates,
-        attendees,
-        locations,
-    } = mailDetails
-
-    const emailContent = `
-      Message received form <strong>${
-          first + ' ' + last
-      }</strong>.<br /> Their email address is <strong>${email}</strong>.<br />
-      Their desired dates are ${desiredDates}. <br />
-      The approximate number of attendees would be ${attendees}.<br />
-      Their preferred locale: ${locations}.<br />
-      <h3>${subject}</h3>
-      ${message}
-    `
-    const status = await formatAndSendEmailToWP(
-        'New message from website contact form',
-        emailContent
-    )
-
-    return status?.sent
 }

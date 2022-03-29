@@ -47,13 +47,16 @@ const Title = styled.h1`
     text-align: center;
 `
 
-const FormattedContactUs = styled(ContactUsButton)`
-    @media only screen and (max-width: 768px) {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
+const FormattedContactUs = styled.button`
+    background: ${(props) => props.theme.colors.primary};
+    transition: all 0.25s ease-in-out;
+    padding: 1.5rem 3rem;
+    font-size: 1.9rem;
+    border: none;
+    display: inline-block;
+    margin-top: 3rem;
+    &:hover {
+        background: #f5db08;
     }
 `
 
@@ -76,8 +79,24 @@ const Contact = () => {
         })
     }
 
-    const sendMailOnClickHandler = async () => {
-        const res = await sendMail(formData)
+    const sendMailOnClickHandler = async (e) => {
+        e.preventDefault()
+        const emailContent = `
+            Message received from <strong>${formData.first + ' ' + formData.last}</strong>.
+            <br /> 
+            Their email address is <strong>${formData.email}</strong>.<br />
+            Their desired dates are ${formData.desiredDates}. <br />
+            The approximate number of attendees would be ${formData.attendees}.<br />
+            Specified location: ${formData.locations}.<br />
+            <h3>${formData.subject}</h3>
+            ${formData.message}
+        `
+        const data = await sendMail('New message from raiseyourspirits.net!', emailContent)
+        if(data.sent){
+            console.log('success!')
+        }else{
+            console.log('failed, see results: ', data)
+        }
     }
 
     return (
@@ -85,7 +104,7 @@ const Contact = () => {
             <div></div>
             <FlexContainer>
                 <Title>Contact Us</Title>
-                <form>
+                <form onSubmit={sendMailOnClickHandler}>
                     <ContentContainer>
                         <DoubleLayout>
                             <CustomTextField
@@ -151,7 +170,7 @@ const Contact = () => {
                             element="input"
                         />
                     </ContentContainer>
-                    <FormattedContactUs onClick={sendMailOnClickHandler} />
+                    <FormattedContactUs type="submit">Submit</FormattedContactUs>
                 </form>
             </FlexContainer>
             <div></div>
