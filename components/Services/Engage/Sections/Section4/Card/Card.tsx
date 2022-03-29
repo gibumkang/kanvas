@@ -30,7 +30,7 @@ const Card = (props) => {
         <CardContainer>
             <FormattedImage src={src} />
             <h4>{text}</h4>
-            <a href={link} target="_blank"><ButtonWithExtraEffects>{btnText ? btnText : 'Read More'}</ButtonWithExtraEffects></a>
+            <a href={link} target="_blank" rel="noreferrer"><ButtonWithExtraEffects>{btnText ? btnText : 'Read More'}</ButtonWithExtraEffects></a>
         </CardContainer>
     )
 }
