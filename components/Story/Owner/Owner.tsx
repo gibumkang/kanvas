@@ -18,12 +18,12 @@ const Text = styled.div`
     color: #fff;
 `
 
-const Owner = ({ src, alt, width, height, title, children }) => {
-    const imageProps = { src, alt, width, height }
+const Owner = ({ alt, width, height, title, children }) => {
+    const imageProps = { alt, width, height }
 
     return (
         <Container>
-            <Image {...imageProps} />
+            {/* <Image {...imageProps} /> */}
             <Title>{title}</Title>
             <Text>{children}</Text>
         </Container>

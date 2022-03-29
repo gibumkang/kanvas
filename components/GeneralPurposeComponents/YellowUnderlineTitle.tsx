@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const GridContainer = styled.div`
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     @media only screen and (max-width: 768px) {
         display: flex;
@@ -13,8 +13,8 @@ const GridContainer = styled.div`
 `
 
 const Text = styled.h4`
-    grid-column-start: ${(props) => (props.left ? 1 : 2)};
-    grid-column-end: span ${(props) => (props.left ? 2 : 3)};
+    grid-column-start: ${(props) => (props.left ? 2 : 2)};
+    grid-column-end: span ${(props) => (props.left ? 2 : 2)};
     text-align: ${props => props.left ? "right" : "left"};
 
     @media only screen and (max-width: 768px) {
@@ -27,7 +27,7 @@ const Text = styled.h4`
 const GoldBar = styled.div`
     height: 10px;
     grid-column-start: ${(props) => (props.left ? 1 : 2)};
-    grid-column-end: span ${(props) => (props.left ? 2 : 3)};
+    grid-column-end: span ${(props) => (props.left ? 3 : 4)};
     background-color: gold;
 
     @media only screen and (max-width: 768px) {

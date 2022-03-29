@@ -7,7 +7,8 @@ const PinToBottomNavBar = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background: url('/services-bg.webp') no-repeat center;
+    background-size: cover;
     
     h1 {
         font-size: 80px;

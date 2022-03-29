@@ -12,8 +12,8 @@ const Container = styled.div`
     grid-template-columns: 1fr 64ch 1fr;
     background-color: #000;
     place-items: stretch;
+    padding: 5rem;
     @media only screen and (max-width: 768px) {
-        padding: 20px;
         grid-template-columns: unset;
         display: flex;
         flex-direction: column;

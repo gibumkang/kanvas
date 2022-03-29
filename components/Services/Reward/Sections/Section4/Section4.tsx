@@ -6,20 +6,11 @@ import YellowUnderlineTitle from '../../../../GeneralPurposeComponents/YellowUnd
 import ContactUsButton from './ContactUsButton/ContactUsButton'
 
 const Container = styled(MinFullPage)`
-    background-image: linear-gradient(to bottom right, #000 30%, transparent),
-        url('https://picsum.photos/id/230/400/400');
-    background-size: 100% 100%;
-    background-color: #000;
+    background: url('/services-destination.webp') no-repeat center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    @media only screen and (max-width: 768px) {
-        background-image: linear-gradient(to bottom, #000 80%, transparent),
-            url('https://picsum.photos/id/230/400/400');
-        justify-content: unset;
-        padding-top: 50px;
-        align-items: center;
-    }
 `
 
 const ContentContainer = styled.div`
@@ -31,6 +22,7 @@ const ContentContainer = styled.div`
         max-width: unset;
         justify-content: center;
         align-items: center;
+        padding: 3rem;
     }
 `
 
@@ -39,6 +31,17 @@ const FormattedContactUsButton = styled(ContactUsButton)`
     margin-left: 10%;
     @media only screen and (max-width: 768px) {
         margin: unset;
+    }
+`
+
+const StyledWrapper = styled.div`
+    max-width: 80rem;
+    margin: 0 auto;
+    @media only screen and (max-width: 768px) {
+        .button {
+            margin: 4rem auto;
+            display: block;
+        }
     }
 `
 
@@ -58,11 +61,13 @@ const Section4 = () => {
                     title="DESTINATION EXPERIENCES"
                     left={true}
                 />
-                <YellowLetteringParagraph text={text} />
-                <FormattedContactUsButton
-                    className=""
-                    onClick={routeToContactsOnClickHandler}
-                />
+                <StyledWrapper>
+                    <YellowLetteringParagraph text={text} />
+                    <FormattedContactUsButton
+                        className="button"
+                        onClick={routeToContactsOnClickHandler}
+                    />
+                </StyledWrapper>
             </ContentContainer>
         </Container>
     )

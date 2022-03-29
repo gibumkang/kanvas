@@ -17,9 +17,9 @@ const FormattedH3 = styled.h3`
 
 export const BulletsContainer = styled.div`
     display: grid;
-    grid-template-columns: 500px 500px;
-    gap: 100px;
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    max-width: 150rem;
     background-color: #000;
     @media only screen and (max-width: 768px) {
         display: flex;
@@ -69,7 +69,7 @@ const Section2 = () => {
             <FormattedH3>HOW IT WORKS</FormattedH3>
             <BulletsContainer>
                 {textBlocks.map((text, index) => (
-                    <FormattedBulletContainer>
+                    <FormattedBulletContainer key={index}>
                         <CircleCircleBullet>
                             <FormattedNumber>{index + 1}</FormattedNumber>
                         </CircleCircleBullet>

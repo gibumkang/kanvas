@@ -28,8 +28,13 @@ const RightContainer = styled(Container)`
 
 export const Placeholder = styled.div`
     grid-area: image;
-    background-color: #fff;
     min-width: 40vw;
+    background: url('/wine.webp') no-repeat center;
+    background-size: cover;
+    &.car {
+        background: url('/supercar.webp') no-repeat center;
+        background-size: cover;
+    }
     @media only screen and (max-width: 768px) {
         width: 100%;
         height: 40vh;
@@ -44,9 +49,9 @@ export const Content = styled.div`
     @media only screen and (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 5rem;
         p {
-            padding: 0;
+            padding: 0rem;
         }
     }
 `
@@ -54,9 +59,11 @@ export const Content = styled.div`
 export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 0 10%;
-    @media only screen and (max-width: 768px) {
+    gap: 2rem;
+    padding: 3rem 5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    @media only screen and (max-width: 940px) {
         grid-template-columns: unset;
         display: flex;
         flex-direction: column;
@@ -67,6 +74,12 @@ export const FormattedP = styled.p`
     color: #fff;
     @media only screen and (max-width: 768px) {
         text-align: left;
+    }
+`
+
+const StyledWrapper = styled.div`
+    @media screen and (max-width: 1550px){
+        padding: 3rem 0rem;
     }
 `
 
@@ -92,10 +105,10 @@ const Section1 = () => {
                 />
             </Title>
             <Content>
-                <YellowLetteringParagraph text={paragraph} />
+                <StyledWrapper><YellowLetteringParagraph text={paragraph} /></StyledWrapper>
                 <GridContainer>
                     {bullets.map((bullet) => (
-                        <CheckMarkBullet>
+                        <CheckMarkBullet key={bullet}>
                             <FormattedP>{bullet}</FormattedP>
                         </CheckMarkBullet>
                     ))}

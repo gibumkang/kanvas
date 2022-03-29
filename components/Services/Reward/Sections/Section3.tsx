@@ -4,25 +4,19 @@ import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLe
 const Container = styled.div`
     display: flex;
     flex-direction: column;
-    background-image: url('https://picsum.photos/id/210/400/400');
-    background-color: #000;
-    min-height: 100vh;
-    @media only screen and (max-width: 768px) {
-        background-image: unset;
-        min-height: unset;
-        justify-content: center;
-        align-items: center;
-        padding-top: 50px;
+    background: url('/services-rewards-barrel.webp') no-repeat center;
+    background-size: cover;
+    @media screen and (max-width: 768px){
+        box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.8);
     }
 `
 
 const Title = styled.h3`
     color: #fff;
     text-align: center;
-    padding-top: 10%;
+    padding: 15rem 0rem;
     @media only screen and (max-width: 768px) {
-        padding-top: 0;
-        padding-bottom: 50px;
+        padding: 7.5rem 0rem;
     }
 `
 
@@ -41,8 +35,6 @@ const DoubleGrid = styled.div`
         grid-template-columns: unset;
         display: flex;
         flex-direction: column;
-        /* justify-content: flex-start;
-        align-items: flex-start; */
         .center-text {
             padding-bottom: 0;
             justify-content: unset;
@@ -52,21 +44,10 @@ const DoubleGrid = styled.div`
     }
 `
 
-const Image = styled.div`
-    background-color: #000;
-    max-width: 100vw;
-    display: none;
-    @media only screen and (max-width: 768px) {
-        display: inline-block;
-        padding-bottom: 20px;
+const StyledWrapper = styled.div`
+    @media screen and (max-width: 768px){
+        padding: 5rem 0rem;
     }
-`
-
-const Placeholder = styled.div`
-    height: 200px;
-    width: auto;
-    background-image: url('https://picsum.photos/id/210/400/400');
-    background-color: #fff;
 `
 
 const Section3 = () => {
@@ -78,11 +59,8 @@ const Section3 = () => {
             <Title>OWN A BARREL</Title>
             <DoubleGrid>
                 <div className="center-text">
-                    <YellowLetteringParagraph text={text} />
+                    <StyledWrapper><YellowLetteringParagraph text={text} /></StyledWrapper>
                 </div>
-                <Image>
-                    <Placeholder />
-                </Image>
             </DoubleGrid>
         </Container>
     )

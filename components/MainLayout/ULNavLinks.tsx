@@ -20,13 +20,13 @@ const ULNavLinks = ({ className }: IProps) => (
                 </a>
             </Link>
         </li>
-        <li>
+        {/* <li>
             <Link href="/gallery">
                 <a>
                     <div>Gallery</div>
                 </a>
             </Link>
-        </li>
+        </li> */}
         <li>
             <Link href="/story">
                 <a>

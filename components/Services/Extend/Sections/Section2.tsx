@@ -28,6 +28,12 @@ const LeftContainer = styled(Container)`
     }
 `
 
+const StyledWrapper = styled.div`
+    @media screen and (max-width: 1550px){
+        padding: 3rem 0rem;
+    }
+`
+
 const Section2 = () => {
     const paragraph =
         'For luxury goods or craft products, retailers that place a high value on their customers are looking for innovative ways to show appreciation for their patronage. RYS seamlessly integrates these brands into Experiences and into complementary channels for their target consumer'
@@ -42,7 +48,7 @@ const Section2 = () => {
 
     return (
         <LeftContainer>
-            <Placeholder />
+            <Placeholder className="car" />
             <Title>
                 <YellowUnderlineTitle
                     title="FOR CRAFT AND LUXURY BRANDS..."
@@ -50,10 +56,10 @@ const Section2 = () => {
                 />
             </Title>
             <Content>
-                <YellowLetteringParagraph text={paragraph} />
+                <StyledWrapper><YellowLetteringParagraph text={paragraph} /></StyledWrapper>
                 <GridContainer>
                     {bullets.map((bullet) => (
-                        <CheckMarkBullet>
+                        <CheckMarkBullet key={bullet}>
                             <FormattedP>{bullet}</FormattedP>
                         </CheckMarkBullet>
                     ))}

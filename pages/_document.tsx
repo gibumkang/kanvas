@@ -6,7 +6,7 @@ class MyDocument extends Document {
             <Html lang='en'>
                 <Head>
                     <meta charSet="UTF-8" />
-                    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                     <link
                         rel="preconnect"
                         href="https://fonts.googleapis.com"
@@ -20,6 +20,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
                         rel="stylesheet"
                     />
+                    <meta name="description" content="Extend your brand beyond the physical to the experiential with Raise Your Spirits." />
                 </Head>
                 <body>
                     <Main />

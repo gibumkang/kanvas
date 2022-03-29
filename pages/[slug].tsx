@@ -5,7 +5,7 @@ const APISample = ({ posts }) => {
         <div>
             {posts.map(({ title, content, slug }) => {
                 return (
-                    <div>
+                    <div key={slug}>
                         <h3>{title}</h3>
                         <div>{content}</div>
                         <div>{slug}</div>

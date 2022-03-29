@@ -2,12 +2,10 @@ import CircleCircle from './CircleCircle/CircleCircle'
 import styled from 'styled-components'
 
 const CCBContainer = styled.div`
-    display: flex;
-    gap: 10px;
-
-    @media only screen and (max-width: 768px) {
-            justify-content: center;
-        }
+    svg {
+        width: 3rem;
+        height: auto;
+    }
 `
 
 const CircleCircleBullet = ({ children }) => {

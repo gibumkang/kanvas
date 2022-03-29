@@ -16,6 +16,7 @@ const MyApp = ({ Component, pageProps }) => {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
+                <title>Raise Your Spirits</title>
             </Head>
             <ThemeProvider theme={theme}>
                 {/* // easily implement dark mode here */}

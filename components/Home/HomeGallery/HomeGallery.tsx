@@ -89,7 +89,7 @@ const HomeGallery = () => {
                             key={slide.name}
                             className={index > 3 ? 'desktop tablet' : ''}
                         >
-                            <img src={slide.src} alt={slide.alt} className={slide.class ? slide.class : ''} />
+                            {/* <img src={slide.src} alt={slide.alt} className={slide.class ? slide.class : ''} /> */}
                         </StyledImage>
                     )
                 })}

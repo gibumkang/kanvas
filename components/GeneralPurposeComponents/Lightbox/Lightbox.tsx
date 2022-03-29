@@ -41,7 +41,7 @@ const Lightbox: React.FC<LightboxProps> = (props) => {
                 </Modal.Title>
             </StyledHeader>
             <StyledBody>
-                <img src={image} alt={alt} />
+                {/* <img src={image} alt={alt} /> */}
             </StyledBody>
         </Modal>
     )

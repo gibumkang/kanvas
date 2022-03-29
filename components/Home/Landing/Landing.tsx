@@ -8,7 +8,8 @@ const ButtonWithExtraEffects = styled(GS.StyledButton)`
 
 const Container = styled.div`
     width: 100%;
-    background: #000;
+    background: url('/homepage-background.webp') no-repeat center right #000;
+    background-size: contain;
 `
 
 const StyledFlex = styled.div`

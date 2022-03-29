@@ -26,6 +26,11 @@ const StyledFlex = styled.div`
                 max-width: 45rem;
             }
         }
+        &.footer-links {
+            a {
+                text-decoration: none;
+            }
+        }
         h3 {
             font-size: 2rem;
             font-family: 'DM Sans', sans-serif;
@@ -110,29 +115,25 @@ const Footer: React.FC = () => {
                 <div className="logo-container">
                     <ResponsiveImage>
                         <Image
-                            src="https://picsum.photos/200/300"
+                            src="/logo.png"
                             width="140"
                             height="90"
+                            alt="Raise Your Spirits"
                         />
                     </ResponsiveImage>
                     <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Labore ab eaque laborum consequatur voluptatem,
-                        explicabo veniam nostrum blanditiis iure a debitis
-                        molestias soluta reprehenderit nobis asperiores omnis
-                        quam nemo mollitia?
+                        Creating environments to build lasting relationships.
                     </p>
                 </div>
                 <div className="disappear">
                     <h3>Helpful Links</h3>
                     <StyledULNavLinks />
                 </div>
-                <div className="disappear">
+                <div className="disappear footer-links">
                     <h3>Contact Us</h3>
                     <ul>
-                        <li>Address</li>
-                        <li>Phone</li>
-                        <li>Email</li>
+                        <li><a href="tel:7247993542">724-799-3542</a></li>
+                        <li><a href="mailto:info@raiseyourspirits.net">info@raiseyourspirits.net</a></li>
                     </ul>
                 </div>
             </StyledFlex>

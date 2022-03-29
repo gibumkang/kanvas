@@ -18,12 +18,12 @@ const Component = styled.div`
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(410px, 1fr));
-    gap: 35px;
+    gap: 3.5rem;
     justify-content: center;
     @media only screen and (max-width: 768px) {
         grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
-        gap: 50px;
-        padding: 75px 0;
+        gap: 5rem;
+        padding: 7.5rem 0;
     }
 `
 
@@ -34,16 +34,16 @@ const Section4 = () => {
             <Component>
                 <GridContainer>
                     <Card
-                        src="https://picsum.photos/id/100/400/400"
-                        text="some text"
+                        src="/modal1.webp"
+                        text="Experiential sales support services"
                     />
                     <Card
-                        src="https://picsum.photos/id/100/400/400"
-                        text="some text"
+                        src="/modal2.webp"
+                        text="Donor and constituent engagement"
                     />
                     <Card
-                        src="https://picsum.photos/id/100/400/400"
-                        text="some text"
+                        src="/modal3.webp"
+                        text="Colleges and universities"
                     />
                 </GridContainer>
             </Component>

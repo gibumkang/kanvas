@@ -2,15 +2,19 @@ import styled from 'styled-components'
 import CircleCircleBullet from '../../../GeneralPurposeComponents/CircleCircleBullet/CircleCircleBullet'
 import { FormattedBulletContainer } from '../../../Services/Engage/Sections/Section2'
 import BulletContent from './BulletContent/BulletContent'
+import {BsChatRightText} from 'react-icons/bs'
+import {FaHandSparkles} from 'react-icons/fa'
+import {BsCashCoin} from 'react-icons/bs'
+
+
 
 const ResponsiveContainer = styled.div`
     display: flex;
-    background-color: #000;
     justify-content: center;
-    padding: 150px 0;
+    padding: 6rem 0;
 
     @media only screen and (max-width: 768px) {
-        padding: 50px 0;
+        padding: 5rem 0;
     }
 `
 const Flex1 = styled.div`
@@ -40,15 +44,15 @@ const Bullets = () => {
     const bulletsContent = [
         {
             title: 'ENGAGE',
-            content: 'Fusce eu varius augue, eget vehicula lectus.',
+            content: 'Build and maintain quality relationships',
         },
         {
             title: 'EXTEND',
-            content: 'Fusce eu varius augue, eget vehicula lectus.',
+            content: 'Drive quality sales for your business',
         },
         {
             title: 'REWARD',
-            content: 'Fusce eu varius augue, eget vehicula lectus.',
+            content: 'Offer exclusive gifts to your top clients',
         },
     ]
 
@@ -58,19 +62,19 @@ const Bullets = () => {
             <Flex3>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
-                        <p>hello</p>
+                        <BsChatRightText />
                     </CircleCircleBullet>
                     <BulletContent {...bulletsContent[0]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
-                        <p>hello</p>
+                        <FaHandSparkles />
                     </CircleCircleBullet>
                     <BulletContent {...bulletsContent[1]} />
                 </FormattedBulletContainer>
                 <FormattedBulletContainer>
                     <CircleCircleBullet>
-                        <p>hello</p>
+                        <BsCashCoin />
                     </CircleCircleBullet>
                     <BulletContent {...bulletsContent[2]} />
                 </FormattedBulletContainer>

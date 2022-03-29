@@ -130,7 +130,7 @@
 .container > input:not(:focus):placeholder-shown + span,
 .container > textarea:not(:focus):placeholder-shown + span {
     font-size: inherit;
-    line-height: 68px;
+    line-height: 58px;
 }
 
 .container > input:not(:focus):placeholder-shown + span::before,

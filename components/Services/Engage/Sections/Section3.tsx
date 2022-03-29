@@ -4,17 +4,17 @@ import YellowLetteringParagraph from '../../../GeneralPurposeComponents/YellowLe
 
 const FormattedH3 = styled.h3`
     text-align: center;
-    padding: 50px;
+    padding: 5rem;
 `
 
 const Page = styled(MinFullPage)`
-    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0 20%;
-
+    background: url('/services-experience.webp') no-repeat center;
+    background-size: cover;
     @media only screen and (max-width: 768px) {
         padding: 0;
     }

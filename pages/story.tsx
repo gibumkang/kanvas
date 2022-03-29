@@ -51,28 +51,22 @@ const TitleContainer = styled.div`
 `
 
 const ContentContainer = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 64ch;
-
+    display: flex;
+    & > div {
+        &:nth-child(1){
+            width: 30rem;
+            position: relative;
+            top: 1rem;
+        }
+        &:nth-child(2){
+            flex: 1;
+        }
+    }
     p {
         font-size: 20px;
         padding-right: 0;
         span {
             font-size: 40px;
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        grid-template-columns: unset;
-        padding: 50px;
-        p {
-            font-size: 16px;
-            padding: 30px;
-            span {
-                font-size: 36px;
-            }
         }
     }
 `
@@ -95,7 +89,7 @@ const Story = () => {
     const ownersData = [
         {
             ownerDetails: {
-                src: 'https://picsum.photos/id/100/400/400',
+                // src: 'https://picsum.photos/id/100/400/400',
                 alt: 'owner',
                 width: 250,
                 height: 300,
@@ -105,7 +99,7 @@ const Story = () => {
         },
         {
             ownerDetails: {
-                src: 'https://picsum.photos/id/100/400/400',
+                // src: 'https://picsum.photos/id/100/400/400',
                 alt: 'owner',
                 width: 250,
                 height: 300,
@@ -115,7 +109,7 @@ const Story = () => {
         },
         {
             ownerDetails: {
-                src: 'https://picsum.photos/id/100/400/400',
+                // src: 'https://picsum.photos/id/100/400/400',
                 alt: 'owner',
                 width: 250,
                 height: 300,
@@ -131,15 +125,18 @@ const Story = () => {
             <BodyContainer>
                 <TitleContainer>
                     <h1>Story</h1>
-                    <h2>Social & Intellectual Engagement</h2>
+                    <h2>Social &amp; Intellectual Engagement</h2>
                 </TitleContainer>
                 <ContentContainer>
-                    <Image
-                        src="https://picsum.photos/id/100/400/400"
-                        width={250}
-                        height={300}
-                    />
-                    <YellowLetteringParagraph text={text} />
+                    <div>
+                        <Image
+                            src="/story.jpg"
+                            alt="The Partners at Raise Your Spirits"
+                            width={268}
+                            height={188}
+                        />
+                    </div>
+                    <div><YellowLetteringParagraph text={text} /></div>
                 </ContentContainer>
                 <OwnersContainer>
                     {ownersData.map(({ ownerDetails, text }) => {

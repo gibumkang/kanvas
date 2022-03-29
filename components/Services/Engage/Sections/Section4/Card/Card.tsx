@@ -6,6 +6,9 @@ const CardContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h4 {
+        font-size: 2.2rem;
+    }
 `
 
 export const ButtonWithExtraEffects = styled(GS.StyledButton)`
@@ -15,15 +18,16 @@ export const ButtonWithExtraEffects = styled(GS.StyledButton)`
 `
 
 const FormattedImage = styled.img`
-    max-height: 300px;
-    border-radius: 10px;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    max-width: 27rem;
+    height: auto;
 `
 
 const Card = ({ src, text }) => {
     return (
         <CardContainer>
             <FormattedImage src={src} />
-            <div>Image</div>
             <h4>{text}</h4>
             <ButtonWithExtraEffects>Read More</ButtonWithExtraEffects>
         </CardContainer>
