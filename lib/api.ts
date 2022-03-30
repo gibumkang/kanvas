@@ -63,7 +63,7 @@ export const getSampleSlugs = async () => {
 
 export const sendMail = async (subject, body, mutationId = 'contact') => {
     const from = 'noreply@raiseyourspirits.net'
-    const to = 'hello@studiokanvas.com'
+    const to = 'info@raiseyourspirits.net'
     const data = await fetchAPI(
         `
             mutation SendEmail($input: SendEmailInput!) {
