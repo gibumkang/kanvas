@@ -117,7 +117,7 @@ const Landing = () => {
                     </motion.div>
                     <motion.div variants={buttonVariant} initial="initial" animate="animate">
                         <MobileButtonWrapper>
-                            <Link href="/services">
+                            <Link href="/services" passHref>
                                 <ButtonWithExtraEffects>
                                     Our <strong>Services</strong>
                                 </ButtonWithExtraEffects>

@@ -7,7 +7,10 @@ const API_URL = process.env.WP_API_URL
 async function fetchAPI(query: string, { variables }: IVariables = {}) {
     // Set up some headers to tell the fetch call
     // that this is an application/json type
-    const headers = { 'Content-Type': 'application/json' }
+    const headers = { 
+        'Content-Type': 'application/json',
+        'User-Agent': '*'
+    }
 
     // build out the fetch() call using the API_URL
     // environment variable pulled in at the start

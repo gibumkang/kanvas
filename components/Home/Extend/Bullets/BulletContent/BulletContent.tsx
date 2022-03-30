@@ -45,7 +45,7 @@ const BulletContent = ({ title, content, link }) => {
         <Container>
             <Title>{title}</Title>
             <Content>{content}</Content>
-            <Link href={link}><ReadMore>Read More</ReadMore></Link>
+            <Link href={link} passHref><ReadMore>Read More</ReadMore></Link>
         </Container>
     )
 }
