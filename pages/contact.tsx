@@ -59,6 +59,11 @@ const FormattedContactUs = styled.button`
     }
 `
 
+const StyledParagraph = styled.p`
+    color: red;
+    padding-top: 2rem;
+`
+
 const Contact = () => {
     const [formData, setFormData] = useState({
         first: '',
@@ -102,8 +107,7 @@ const Contact = () => {
         `
         const data = await sendMail('You recieved an inquiry from raiseyourspirits.net!', emailContent)
         if(data.sent){
-            setSubmitting(false)
-            setButtonText('Sent!')
+            setButtonText('Sent! Thank you for your submission')
         }else{
             setSubmitting(false)
             setButtonText('Submit')
@@ -190,7 +194,7 @@ const Contact = () => {
                         />
                     </ContentContainer>
                     <FormattedContactUs type="submit" disabled={submitting}>{buttonText}</FormattedContactUs>
-                    {!wasMailSent && <p>Your message did not send. Please try again.</p>}
+                    {!wasMailSent && <StyledParagraph>Sorry, your message did not send. Please try again later or email us directly at info@raiseyourspirits.net.</StyledParagraph>}
                 </form>
             </FlexContainer>
             <div></div>
