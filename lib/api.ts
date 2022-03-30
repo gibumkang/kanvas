@@ -23,8 +23,8 @@ async function fetchAPI(query: string, { variables }: IVariables = {}) {
 
     // error handling work
     const json = await res.json()
-    if (json.errors) {
-        console.log(json.errors)
+    if (json.error) {
+        console.log(json.error)
         console.log('error details', query, variables)
         throw new Error('Failed to fetch API')
     }
