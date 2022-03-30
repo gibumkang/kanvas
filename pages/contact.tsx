@@ -125,6 +125,7 @@ const Contact = () => {
                                 value={formData.first}
                                 onChange={changeHandler}
                                 element="input"
+                                required
                             />
                             <CustomTextField
                                 name="last"
@@ -132,6 +133,7 @@ const Contact = () => {
                                 value={formData.last}
                                 onChange={changeHandler}
                                 element="input"
+                                required
                             />
                         </DoubleLayout>
                         <CustomTextField
@@ -141,6 +143,7 @@ const Contact = () => {
                             onChange={changeHandler}
                             element="input"
                             type="email"
+                            required
                         />
                         <CustomTextField
                             name="subject"
@@ -148,10 +151,11 @@ const Contact = () => {
                             value={formData.subject}
                             onChange={changeHandler}
                             element="input"
+                            required
                         />
                         <CustomTextField
                             name="message"
-                            placeholder="Message*"
+                            placeholder="Message (Optional)"
                             value={formData.message}
                             onChange={changeHandler}
                             element="textarea"
@@ -159,27 +163,30 @@ const Contact = () => {
                         <DoubleLayout>
                             <CustomTextField
                                 name="desiredDates"
-                                placeholder="Desired Event Date(s)"
+                                placeholder="Desired Event Date(s)*"
                                 value={formData.desiredDates}
                                 onChange={changeHandler}
                                 element="input"
+                                required
                             />
                             <CustomTextField
                                 name="attendees"
-                                placeholder="Projected number of attendees"
+                                placeholder="Projected number of attendees*"
                                 value={formData.attendees}
                                 onChange={changeHandler}
                                 element="input"
                                 type="number"
                                 min={1}
+                                required
                             />
                         </DoubleLayout>
                         <CustomTextField
                             name="locations"
-                            placeholder="Desired Location(s). Please write the city and state"
+                            placeholder="Desired Location(s). Please write the city and state*"
                             value={formData.locations}
                             onChange={changeHandler}
                             element="input"
+                            required
                         />
                     </ContentContainer>
                     <FormattedContactUs type="submit" disabled={submitting}>{buttonText}</FormattedContactUs>

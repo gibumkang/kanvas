@@ -21,6 +21,7 @@ interface IProps {
     name: string
     type?: TType
     min?: number
+    required?: any
 }
 
 const CustomTextField = ({
@@ -31,6 +32,7 @@ const CustomTextField = ({
     name,
     type,
     min,
+    required
 }: IProps) => {
     const props = min
         ? { value, onChange, name, min }
@@ -38,7 +40,7 @@ const CustomTextField = ({
 
     const inputElement =
         element === 'input' ? (
-            <input placeholder=" " {...props} type={type} />
+            <input placeholder=" " {...props} type={type} required={required} />
         ) : (
             <textarea placeholder=" " {...props} />
         )

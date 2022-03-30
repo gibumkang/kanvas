@@ -2,7 +2,7 @@ interface IVariables {
     variables?: object
 }
 
-const API_URL = process.env.WP_API_URL
+const API_URL = 'https://mydigitalcanvas.com/raiseyourspirits/graphql'
 
 async function fetchAPI(query: string, { variables }: IVariables = {}) {
     // Set up some headers to tell the fetch call
