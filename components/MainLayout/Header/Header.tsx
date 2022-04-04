@@ -6,27 +6,23 @@ import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
 
 const HeaderContainer = styled.div`
     display: flex;
-    padding: 20px 40px;
+    padding: 2rem 4rem;
     position: absolute;
-    width: auto;
     z-index: 3;
-    min-width: 100%;
-    max-width: 100vw;
-    align-items: stretch;
-    @media only screen and (max-width: 768px) {
-        justify-content: flex-end !important;
+    width: 100%;
+    align-items: center;
+    & > div {
+        &:nth-child(2) {
+            flex-grow: 1;
+        }
     }
 `
 
 const LogoContainer = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
-`
-
-const Grower = styled.div`
-    flex-grow: 6;
 `
 
 const Header = () => {
@@ -34,10 +30,10 @@ const Header = () => {
         <HeaderContainer>
             <LogoContainer>
                 <Logo />
-                <Navbar />
             </LogoContainer>
-            <Grower></Grower>
-            <IconBar />
+            <div>
+                <Navbar />
+            </div>
             <OffCanvasMenu />
         </HeaderContainer>
     )

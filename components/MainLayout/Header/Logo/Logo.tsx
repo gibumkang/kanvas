@@ -8,7 +8,16 @@ const ImageContainer = styled.div`
 
 const Logo = () => {
     return (
-        <Link href="/" passHref><ImageContainer><Image src="/logo.png" width="146" height="95" alt="Raise Your Spirits" /></ImageContainer></Link>
+        <Link href="/" passHref>
+            <ImageContainer>
+                <Image
+                    src="/logo.svg"
+                    width="146"
+                    height="60"
+                    alt="Raise Your Spirits"
+                />
+            </ImageContainer>
+        </Link>
     )
 }
 

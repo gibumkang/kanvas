@@ -58,11 +58,6 @@ const NavOption = ({ page }: INavOptionProps) => {
 
     return (
         <NavOptionContainer>
-            {isCurrentPage ? (
-                <CurrentPageIndicatorOn />
-            ) : (
-                <CurrentPageIndicatorOff />
-            )}
             <Link href={`${page === 'HOME' ? '/' : `/${page.toLowerCase()}`}`}>
                 {isCurrentPage ? (
                     <NavLinkBold>{page}</NavLinkBold>

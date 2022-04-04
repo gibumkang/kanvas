@@ -1,9 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { meta } from '../data/meta'
 
 class MyDocument extends Document {
     render() {
         return (
-            <Html lang='en'>
+            <Html lang="en">
                 <Head>
                     <meta charSet="UTF-8" />
                     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -20,7 +21,7 @@ class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap"
                         rel="stylesheet"
                     />
-                    <meta name="description" content="Extend your brand beyond the physical to the experiential with Raise Your Spirits." />
+                    <meta name="description" content={meta[0].description} />
                 </Head>
                 <body>
                     <Main />

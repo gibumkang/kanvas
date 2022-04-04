@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="510px" height="237px" viewBox="0 0 510 237" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <defs>
+        <polygon id="path-1" points="0 0 510 0 510 237 0 237"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="homepage" transform="translate(-120.000000, -8075.000000)">
+            <g id="Group-3" transform="translate(120.000000, 8075.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M421.43901,141.136492 C412.336877,133.271993 402.969375,125.778926 393.442652,118.532216 C402.976957,111.281716 412.325504,103.735587 421.43901,95.8672978 C454.693451,67.1419776 484.32372,34.9221666 510,0 L402.214971,0 C320.4095,85.8007388 208.393741,141.432122 83.6630491,151.642705 L83.6630491,0 L0,0 L0,237 L41.8334201,237 C139.155356,237 234.221661,212.546145 318.604995,166.837297 C348.989668,187.080328 377.04289,210.598023 402.214971,237 L510,237 C484.32372,202.077833 454.693451,169.854232 421.43901,141.136492" id="Fill-1" fill="#FFAE00" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,15 +1,12 @@
-import Clients from '../components/Home/Clients/Clients'
-import Landing from '../components/Home/Landing/Landing'
-import Extend from '../components/Home/Extend/Extend'
+import Landing from '../components/Home/Landing'
+import HomePortfolio from '../components/Home/HomePortfolio'
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Landing />
-            <Extend />
-            {/* <HomeGallery /> */}
-            <Clients />
-        </div>
+            <HomePortfolio />
+        </>
     )
 }
 

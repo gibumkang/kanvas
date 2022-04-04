@@ -261,10 +261,12 @@ export const GridTwo = styled.div`
 
 //main button
 export const MainButton = styled(motion.a)`
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2rem;
     text-decoration: none;
     transition: all 0.25s ease-in-out;
-    color: ${(props) => props.theme.colors.primary};
+    border-radius: 1rem;
+    color: #222;
+    font-weight: bold;
     border: 0.3rem solid ${(props) => props.theme.colors.primary};
     display: inline-block;
     margin: 1rem 0rem;
@@ -272,6 +274,24 @@ export const MainButton = styled(motion.a)`
         background: ${(props) => props.theme.colors.primary};
         text-decoration: none;
         cursor: pointer;
+        color: #fff;
+    }
+`
+
+export const PillButton = styled(motion.div)`
+    padding: 0.5rem 2.25rem;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    border-radius: 3rem;
+    color: #222;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border: 0.1rem solid ${(props) => props.theme.colors.primary};
+    display: inline-block;
+    margin: 1rem 1.5rem 0rem 0rem;
+    &:hover {
+        background: ${(props) => props.theme.colors.primary};
+        text-decoration: none;
         color: #fff;
     }
 `
