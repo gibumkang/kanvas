@@ -40,7 +40,7 @@ const StyledFlex = styled.div`
         font-size: 4rem;
         color: ${(props) => props.theme.colors.primary};
     }
-    @media screen and (max-width: ${(props) => props.theme.midWidth}){
+    @media screen and (max-width: ${(props) => props.theme.midWidth}) {
         h1 {
             font-size: 3.2rem;
         }
@@ -62,8 +62,8 @@ const Landing = () => {
                 <div>
                     <h2>welcome</h2>
                     <h1>
-                        Kanvas is web agency that focuses on
-                        branding, ecommerce, and web3.
+                        Kanvas is a web agency that focuses on branding,
+                        ecommerce, and web3.
                     </h1>
                 </div>
             </StyledFlex>

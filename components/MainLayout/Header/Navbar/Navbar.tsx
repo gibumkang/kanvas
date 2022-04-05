@@ -5,23 +5,6 @@ import { useRouter } from 'next/router'
 
 const NavbarContainer = styled.nav`
     text-align: right;
-    & > a {
-        text-decoration: none;
-        color: #ccc;
-        padding-right: 3rem;
-        text-align: right;
-        transition: all 0.25s ease-in-out;
-        &:nth-last-child(1) {
-            padding-right: 0rem;
-        }
-        &:hover {
-            color: #fff;
-        }
-        &.active {
-            font-weight: bold;
-            color: #fff;
-        }
-    }
     @media only screen and (max-width: 768px) {
         display: none;
     }
@@ -33,7 +16,7 @@ const Navbar = () => {
         <NavbarContainer>
             {links.map((link) => {
                 return (
-                    <Link passHref href={link.link}>
+                    <Link passHref href={link.link} key={link.link}>
                         <a
                             className={
                                 router.pathname == link.link ? 'active' : ''

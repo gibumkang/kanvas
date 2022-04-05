@@ -1,8 +1,9 @@
 import Navbar from './Navbar/Navbar'
 import styled from 'styled-components'
-import IconBar from './IconBar/IconBar'
 import Logo from './Logo/Logo'
 import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
+import { useRouter } from 'next/router'
+import { meta } from '../../../data/meta'
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -16,6 +17,42 @@ const HeaderContainer = styled.div`
             flex-grow: 1;
         }
     }
+    & > div > nav > a {
+        text-decoration: none;
+        color: #333;
+        padding-right: 3rem;
+        text-align: right;
+        transition: all 0.25s ease-in-out;
+        &:nth-last-child(1) {
+            padding-right: 0rem;
+        }
+        &:hover {
+            color: #000;
+        }
+        &.active {
+            font-weight: bold;
+            color: #000;
+        }
+    }
+    &.home {
+        & > div > nav > a {
+            text-decoration: none;
+            color: #ccc;
+            padding-right: 3rem;
+            text-align: right;
+            transition: all 0.25s ease-in-out;
+            &:nth-last-child(1) {
+                padding-right: 0rem;
+            }
+            &:hover {
+                color: #fff;
+            }
+            &.active {
+                font-weight: bold;
+                color: #fff;
+            }
+        }
+    }
 `
 
 const LogoContainer = styled.div`
@@ -26,10 +63,17 @@ const LogoContainer = styled.div`
 `
 
 const Header = () => {
+    const router = useRouter()
     return (
-        <HeaderContainer>
+        <HeaderContainer className={router.pathname == '/' ? 'home' : ''}>
             <LogoContainer>
-                <Logo />
+                <Logo
+                    logo={
+                        router.pathname == '/'
+                            ? meta[0].whitelogo
+                            : meta[0].darklogo
+                    }
+                />
             </LogoContainer>
             <div>
                 <Navbar />

@@ -1,3 +1,5 @@
+import { meta } from './meta'
+
 export const links = [
     {
         title: 'home',
@@ -21,6 +23,6 @@ export const links = [
     },
     {
         title: 'contact',
-        link: '/contact',
+        link: `mailto:${meta[0].email}`,
     },
 ]
