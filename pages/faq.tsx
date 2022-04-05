@@ -105,7 +105,7 @@ const faq = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>
-                            what if i'm not satisfied with the outcome?
+                            what if i&apos;m not satisfied with the outcome?
                         </Accordion.Header>
                         <Accordion.Body>
                             <p>
@@ -139,7 +139,7 @@ const faq = () => {
                                 Sketch or Figma, depending on your project. From
                                 the information gathered on the previous stage,
                                 we can bring your vision into reality with a
-                                curated, original design. Don't be shy to
+                                curated, original design. Don&apos;t be shy to
                                 express your opinions, as the design should be
                                 nailed during this phase. It is critical the
                                 team at Kanvas understands your purpose and

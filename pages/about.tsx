@@ -51,14 +51,14 @@ const about = () => {
                                 Since his youth, Ben was drafting menus for
                                 imaginary restaurants in outer space and
                                 creating whacky, yet totally fun websites on
-                                Geocities. It wasn't until his early twenties
-                                when he discovered writing code, combining his
-                                fascination for the arts to be a frontend
-                                developer. He is currently an MBA/MIS student at
-                                UNLV with over ten years of experience in the
-                                web development field. When he isn't absored in
-                                his work, you can find him on the slopes
-                                partaking in winter sports.
+                                Geocities. It wasn&apos;t until his early
+                                twenties when he discovered writing code,
+                                combining his fascination for the arts to be a
+                                frontend developer. He is currently an MBA/MIS
+                                student at UNLV with over ten years of
+                                experience in the web development field. When he
+                                isn&apos;t absored in his work, you can find him
+                                on the slopes partaking in winter sports.
                             </p>
                             <p>
                                 The head engineer is really a diehard anime fan
@@ -77,7 +77,7 @@ const about = () => {
                                 pertaining to ecommerce and web3. She has an
                                 extensive career in traditional graphic design
                                 and is now taking the web3 scene by storm. And
-                                if that isn't impressive enough, she is the
+                                if that isn&apos;t impressive enough, she is the
                                 mother of two wonderful kids. Never doubt the
                                 power of being a supermom!
                             </p>

@@ -68,7 +68,11 @@ const Footer: React.FC = () => {
         <StyledFooter>
             <div className="contact">
                 <small>ready to chat?</small>
-                <a href={`mailto:${meta[0].email}`} target="_blank">
+                <a
+                    href={`mailto:${meta[0].email}`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     contact us
                 </a>
             </div>
