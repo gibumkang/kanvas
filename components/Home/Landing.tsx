@@ -55,7 +55,7 @@ const Landing = () => {
     return (
         <Container>
             <StyledVideo>
-                <video autoPlay muted loop>
+                <video autoPlay muted loop playsInline>
                     <source src="/video.mp4" type="video/mp4" />
                 </video>
             </StyledVideo>
