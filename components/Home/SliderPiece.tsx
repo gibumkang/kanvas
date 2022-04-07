@@ -20,6 +20,9 @@ const StyledContainer = styled.div`
         min-width: initial;
         width: 100%;
     }
+    @media screen and (max-width: 400px){
+        height: 40rem;
+    }
 `
 
 const slide = keyframes`
@@ -31,6 +34,18 @@ const slide = keyframes`
     }
     100% {
         left: 135rem;
+    }
+`
+
+const slide2 = keyframes`
+    0% {
+        left: 80rem;
+    }
+    50% {
+        left: -50rem;
+    }
+    100% {
+        left: 80rem;
     }
 `
 
@@ -60,6 +75,14 @@ const StyledFlex = styled(motion.div)`
             width: 85.5rem;
             height: auto;
             display: block;
+        }
+    }
+    @media screen and (max-width: 400px){
+        animation: ${slide2} 20s ease-in-out infinite;
+        & > div {
+            img {
+                max-width: 50rem;
+            }
         }
     }
 `

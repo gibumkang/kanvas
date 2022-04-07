@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { meta } from '../../data/meta'
 
 const Container = styled.div`
     width: 100%;
@@ -61,10 +62,7 @@ const Landing = () => {
             <StyledFlex>
                 <div>
                     <h2>welcome</h2>
-                    <h1>
-                        Kanvas is a web agency that focuses on branding,
-                        ecommerce, and web3.
-                    </h1>
+                    <h1>{meta[0].description}</h1>
                 </div>
             </StyledFlex>
         </Container>

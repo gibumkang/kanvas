@@ -39,8 +39,8 @@ const StyledFlex = styled.div`
                 &::after {
                     position: absolute;
                     content: '';
-                    bottom: 0.5rem;
-                    right: 0;
+                    bottom: 0.3rem;
+                    right: -0.3rem;
                     z-index: -1;
                     background: ${(props) => props.theme.colors.primary};
                     width: 5rem;

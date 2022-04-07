@@ -1,10 +1,7 @@
-const green = '#53B21F'
-
-//acts as a theme switcher + global variables
 export const theme = {
     fonts: {
-        header: 'Barlow',
-        main: 'Barlow',
+        header: 'Barlow, Inter, sans-serif',
+        main: 'Barlow, Inter, sans-serif',
     },
     padding: '3rem',
     maxWidth: '1440px',

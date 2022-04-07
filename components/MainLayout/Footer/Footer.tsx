@@ -36,12 +36,16 @@ const StyledFooter = styled.footer`
     .logo {
         position: absolute;
         left: 15%;
-        opacity: 0.5;
+        opacity: 0.4;
         bottom: 0rem;
         z-index: 0;
         @media screen and (max-width: 600px) {
             left: 3rem;
             max-width: 40rem;
+        }
+        @media screen and (max-width: 400px) {
+            left: 0rem;
+            width: 100%;
         }
     }
 `

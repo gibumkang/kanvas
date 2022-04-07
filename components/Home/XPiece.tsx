@@ -18,9 +18,13 @@ const StyledContainer = styled.div`
     position: relative;
     overflow: hidden;
     background: #eee;
+    z-index: 1;
     @media screen and (max-width: 1000px) {
         min-width: initial;
         width: 100%;
+    }
+    @media screen and (max-width: 400px){
+        height: 40rem;
     }
 `
 
@@ -56,6 +60,16 @@ const StyledWrapper = styled.div`
             }
         }
     }
+    @media screen and (max-width: 400px){
+        .flex {
+            & > div {
+                img {
+                    width: 40rem;
+                    height: 20rem;
+                }
+            }
+        }
+    }
 `
 
 const StyledWives = styled.div`
@@ -76,6 +90,15 @@ const StyledWives = styled.div`
                 width: auto;
                 margin: 0rem auto;
                 transition: all 0.25s ease-in-out;
+            }
+        }
+    }
+    @media screen and (max-width: 400px){
+        .flex {
+            & > div {
+                img {
+                    height: 20rem;
+                }
             }
         }
     }

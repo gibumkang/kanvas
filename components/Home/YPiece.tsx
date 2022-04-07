@@ -16,9 +16,13 @@ const StyledContainer = styled.div`
     border: 0.5rem solid #999;
     position: relative;
     overflow: hidden;
+    z-index: 1;
     @media screen and (max-width: 1000px) {
         min-width: initial;
         width: 100%;
+    }
+    @media screen and (max-width: 400px){
+        height: 40rem;
     }
 `
 
@@ -47,6 +51,14 @@ const StyledFlex = styled.div`
         & > div {
             img {
                 margin: 1.5rem auto;
+            }
+        }
+    }
+    @media screen and (max-width: 400px){
+        & > div {
+            img {
+                width: 20rem;
+                height: 30rem;
             }
         }
     }
