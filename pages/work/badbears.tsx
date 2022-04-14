@@ -17,7 +17,7 @@ const Badbears = () => {
                 description={piece.description}
                 technology={piece.technology}
                 portfolio={piece.portfolio}
-                testimonials={piece.testimonials}
+                testimonials={piece.testimonials} header={piece.header}
                 alt={piece.name}
             />
         </>

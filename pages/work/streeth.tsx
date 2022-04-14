@@ -3,8 +3,8 @@ import PortfolioComponent from '../../components/Common/PortfolioComponent'
 import Heading from '../../components/MainLayout/Heading/Heading'
 import { portfolio } from '../../data/portfolio'
 
-const Pastelwives = () => {
-    const filtered = portfolio.filter((piece) => piece.slug === 'pastelwives')
+const Streeth = () => {
+    const filtered = portfolio.filter((piece) => piece.slug === 'streeth')
     const piece = filtered[0]
     return (
         <>
@@ -17,12 +17,13 @@ const Pastelwives = () => {
                 description={piece.description}
                 technology={piece.technology}
                 portfolio={piece.portfolio}
-                testimonials={piece.testimonials} header={piece.header}
-                slug={piece.slug}
+                testimonials={piece.testimonials} 
+                header={piece.header}
                 alt={piece.name}
+                slug={piece.slug}
             />
         </>
     )
 }
 
-export default Pastelwives
+export default Streeth

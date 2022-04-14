@@ -10,7 +10,7 @@ interface HeadingProps {
 
 const StyledIntro = styled.div`
     margin: 0 auto;
-    padding: 30rem 3rem;
+    padding: 20rem 3rem;
     max-width: ${(props) => props.theme.maxWidth};
     h1 {
         font-size: 4rem;
@@ -23,6 +23,7 @@ const StyledIntro = styled.div`
         line-height: 7rem;
     }
     @media screen and (max-width: ${(props) => props.theme.midWidth}) {
+        padding: 20rem 3rem 7.5rem 3rem;
         h1 {
             font-size: 2.5rem;
         }

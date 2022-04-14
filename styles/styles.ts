@@ -2,36 +2,6 @@
 import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
 
-    @font-face {
-        font-family: Barlow;
-        src: url('../public/fonts/Barlow-Regular.ttf') format('truetype');
-        font-display: swap;
-        font-weight: normal;
-    }
-
-    @font-face {
-        font-family: Barlow;
-        src: url('../public/fonts/Barlow-Italic.ttf') format('truetype');
-        font-display: swap;
-        font-style: italic;
-        font-weight: normal;
-    }
-
-    @font-face {
-        font-family: Barlow;
-        src: url('../public/fonts/Barlow-Bold.ttf') format('truetype');
-        font-display: swap;
-        font-weight: bold;
-    }
-
-    @font-face {
-        font-family: Barlow;
-        src: url('../public/fonts/Barlow-BoldItalic.ttf') format('truetype');
-        font-display: swap;
-        font-weight: bold;
-        font-style: italic;
-    }
-
     ::selection {
         background: ${(props) => props.theme.colors.primary};
         color: #fff;

@@ -33,6 +33,18 @@ const StyledFlex = styled.div`
             flex: 1.75;
         }
     }
+    @media screen and (max-width: 900px){
+        display: block;
+        & > div {
+            text-align: center;
+            &:nth-child(1){
+                .title {
+                    margin-left: 0rem;
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+    }
 `
 
 const About = () => {

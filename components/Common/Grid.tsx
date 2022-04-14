@@ -59,7 +59,7 @@ const StyledGrid = styled.div`
                     position: absolute;
                     content: '';
                     bottom: 0.25rem;
-                    right: 0;
+                    right: -0.25rem;
                     z-index: -1;
                     background: ${(props) => props.theme.colors.primary};
                     width: 5rem;
@@ -112,9 +112,11 @@ const StyledFilter = styled.div`
         }
     }
     @media screen and (max-width: 1000px) {
-        text-align: center;
         & > div {
             padding: 1rem 0rem;
+            &:nth-child(1) {
+                padding-left: 3rem;
+            }
         }
     }
 `

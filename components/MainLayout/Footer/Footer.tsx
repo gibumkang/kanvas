@@ -35,17 +35,14 @@ const StyledFooter = styled.footer`
     }
     .logo {
         position: absolute;
-        left: 15%;
-        opacity: 0.4;
+        left: 35%;
         bottom: 0rem;
         z-index: 0;
+        max-width: 35rem;
+        height: auto;
         @media screen and (max-width: 600px) {
             left: 3rem;
-            max-width: 40rem;
-        }
-        @media screen and (max-width: 400px) {
-            left: 0rem;
-            width: 100%;
+            max-width: 20rem;
         }
     }
 `
@@ -59,7 +56,7 @@ const logoVariant = {
     animate: {
         y: 0,
         rotateY: '0deg',
-        opacity: 0.5,
+        opacity: 1,
         transition: {
             duration: 0.75,
         },
@@ -91,6 +88,7 @@ const Footer: React.FC = () => {
                 src="/logo-k.svg"
                 alt={meta[0].name}
                 className="logo"
+                viewport={{ once: true }}
             />
         </StyledFooter>
     )

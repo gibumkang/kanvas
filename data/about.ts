@@ -43,15 +43,12 @@ export const about: AboutProps[] = [
         title: 'lead designer',
         description: 
             `
-                This talented graphic designer knows more than
-                just making pretty things, Borami is highly
+                This talented graphic designer does more than make 
+                pretty things. Borami is highly
                 knowledgeable in a variety of web platforms
                 pertaining to ecommerce and web3. She has an
                 extensive career in traditional graphic design
-                and is now taking the web3 scene by storm. And
-                if that isn&apos;t impressive enough, she is the
-                mother of two wonderful kids. Never doubt the
-                power of being a supermom!
+                and is now making amazing visual content for the web3 space.
             `,
     },
     {
@@ -62,11 +59,9 @@ export const about: AboutProps[] = [
                 Aaron is a recent graduate and new to the
                 development scene, but his composure and
                 approach in his work is one that is comparable
-                to a seasoned veteran. A houseplant lover at
-                heart, you can find Aaron reading up on the
-                latest news and documentation available in the
-                development world, feeding his drive to be a
-                superstar in this industry.
+                to a seasoned veteran. When not tending to his houseplants, 
+                you can find Aaron reading up on the
+                latest news and documentation to become a better developer.
             `,
     },
 ]

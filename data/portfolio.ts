@@ -10,6 +10,12 @@ export interface PortfolioProps {
     work: string
     portfolio: Portfolio[]
     testimonials?: Testimonial[]
+    header?: HeaderProps[]
+}
+
+export interface HeaderProps {
+    source: string
+    video?: boolean
 }
 
 export interface Portfolio {
@@ -51,6 +57,12 @@ export const portfolio: PortfolioProps[] = [
         category: ['web development', 'ux/ui'],
         slug: 'evercast',
         work: '/work-evercast.webp',
+        header: [
+            {
+                source: '/hp-evercast.mp4',
+                video: true
+            }
+        ],
         portfolio: [
             {
                 caption:
@@ -103,6 +115,12 @@ export const portfolio: PortfolioProps[] = [
         category: ['ecommerce', 'branding', 'web development', 'ux/ui'],
         slug: 'tylv',
         work: '/work-tylv.webp',
+        header: [
+            {
+                source: '/tylv.mp4',
+                video: true
+            }
+        ],
         portfolio: [
             {
                 caption: 'Custom story design and layout makes it easy for users to navigate through different items. Created with Adobe Photoshop and Sketch.',
@@ -135,6 +153,11 @@ export const portfolio: PortfolioProps[] = [
         title: 'generate a collection of unique and quirky artwork for the <strong>NFT space</strong>',
         technology: ['React', 'Nextjs', 'Typescript', 'Solidity', 'Sketch/Figma'],
         link: '/work/pastelwives',
+        header: [
+            {
+                source: '/work-pastelwives.webp',
+            }
+        ],
         description:
             `
                 <p>
@@ -183,8 +206,14 @@ export const portfolio: PortfolioProps[] = [
     {
         name: 'Yesports',
         title: 'launch eSports into <strong>the metaverse</strong>',
-        technology: ['React', 'Typescript', 'Solidity'],
+        technology: ['React', 'Typescript', 'Solidity', 'Hardhat', 'Nextjs'],
         link: '/work/yesports',
+        header: [
+            {
+                source: '/hp-yesports.mp4',
+                video: true
+            }
+        ],
         description:
             `
                 <p>
@@ -193,6 +222,8 @@ export const portfolio: PortfolioProps[] = [
                 </p>
                 <p>
                     The platform was built on the Polygon network in order to avoid higher gas fees on other blockchains, such as the Ethereum blockchain.
+                    "Users can access web3 benefits with ease thanks to the marketplace," Matt says. "The eSports team can focus on what really matters, which
+                    is playing competitive games."
                 </p>
             `,
         category: ['smart contract development', 'web development'],
@@ -219,9 +250,15 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Streeth',
-        title: 'a web3 marketplace for artists to share <strong>art creation</strong>',
-        technology: ['React', 'Typescript', 'Solidity'],
+        title: 'Create street art <strong>inspired</strong> NFTs',
+        technology: ['React', 'Typescript', 'Solidity', 'Nextjs', 'Nodejs'],
         link: '/work/streeth',
+        header: [
+            {
+                source: '/streeth.mp4',
+                video: true
+            }
+        ],
         description:
             `
                 <p>
@@ -229,8 +266,8 @@ export const portfolio: PortfolioProps[] = [
                     From the website it states, "Humanity has not been able to trade, collect, enjoy, or display street art in museums. Till now".
                 </p>
                 <p>
-                    Streeth.io is a NFT marketplace that aims to do just that. Built using React and developed on the Ethereum blockchain, it enables
-                    artists the opportunity to share art with the world.
+                    As part of the launch, the creators wanted to release generative NFTs for collectors to purchase. 799 non-fungible tokens
+                    were developed on the Ethereum blockchain with dozens of unique traits. Our task was to create the generative artwork for this client.
                 </p>
             `,
         category: ['smart contract development', 'web development'],
@@ -238,8 +275,12 @@ export const portfolio: PortfolioProps[] = [
         work: '/work-streeth.webp',
         portfolio: [
             {
-                caption: '',
-                source: '',
+                caption: '<p>We created 799 unique, randomly generated NFTs on the smart contract for the Ethereum blockchain.</p>',
+                source: '/streeth-1.webp',
+            },
+            {
+                caption: '<p>Our team was responsible for deploying the frontend interface using React and Nextjs.</p>',
+                source: '/streeth-2.webp',
             },
         ],
         testimonials: [
@@ -256,6 +297,12 @@ export const portfolio: PortfolioProps[] = [
         title: 'create a <strong>seamless solution</strong> to connect prospect, buyers, and tenants',
         technology: ['HTML/CSS/JS', 'Photoshop', 'WordPress', 'Django'],
         link: '/work/americana',
+        header: [
+            {
+                source: '/americana.mp4',
+                video: true
+            }
+        ],
         description:
             `
                 <p>
@@ -298,6 +345,12 @@ export const portfolio: PortfolioProps[] = [
         title: 'redefining <strong>green juice</strong> for the world to consume',
         technology: ['HTML/CSS/JS', 'Sketch', 'Shopify', 'Liquid'],
         link: '/work/basegreens',
+        header: [
+            {
+                source: '/basegreens.mp4',
+                video: true
+            }
+        ],
         description:
             `
                 <p>
@@ -319,15 +372,15 @@ export const portfolio: PortfolioProps[] = [
         portfolio: [
             {
                 caption: '<p>The design for Base greens was made entirely from scratch, from branding to the user interface on the website.</p>',
-                source: '/evercast-1.webp',
+                source: '/basegreens-1.webp',
             },
             {
-                caption: '<p>The packaging design was done in Adobe Illustrator and is now used in storefronts.</p>',
-                source: '/evercast-1.webp',
+                caption: '<p>The packaging design was created in Adobe Illustrator and is now used in storefronts.</p>',
+                source: '/basegreens-2.webp',
             },
             {
                 caption: '<p>The custom Shopify theme makes managing content easy and provides a unique interface that carries over the Base greens brand.</p>',
-                source: '/evercast-1.webp',
+                source: '/basegreens-3.webp',
             },
         ],
         testimonials: [
