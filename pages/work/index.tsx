@@ -1,6 +1,6 @@
 import React from 'react'
-import Heading from '../components/MainLayout/Heading/Heading'
-import Grid from '../components/Common/Grid'
+import Heading from '../../components/MainLayout/Heading/Heading'
+import Grid from '../../components/Common/Grid'
 
 const Work = () => {
     return (

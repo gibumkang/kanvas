@@ -10,10 +10,6 @@ export const links = [
         link: '/work',
     },
     {
-        title: 'blog',
-        link: '/blog',
-    },
-    {
         title: 'faq',
         link: '/faq',
     },

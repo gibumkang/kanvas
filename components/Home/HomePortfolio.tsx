@@ -85,6 +85,13 @@ const pieceVariant = {
     },
 }
 
+const ButtonContainer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 10rem;
+`
+
 const HomePortfolio: React.FC = () => {
     let homePortfolio = portfolio.slice(0, 5)
     return (
@@ -104,6 +111,9 @@ const HomePortfolio: React.FC = () => {
                     </div>
                 )
             })}
+            <ButtonContainer>
+                <Link passHref href="/work"><GS.MainButton>see all work</GS.MainButton></Link>
+            </ButtonContainer>
         </GS.MaxContainer>
     )
 }

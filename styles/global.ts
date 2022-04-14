@@ -507,3 +507,22 @@ export const StyledBar = styled.div`
     padding: 1rem 0rem;
     width: 100%;
 `
+
+export const StyledUnderline = styled.p`
+    font-size: 3.2rem;
+    strong {
+        position: relative;
+        white-space: nowrap;
+        z-index: 2;
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 0.5rem;
+            right: -0.3rem;
+            z-index: -1;
+            background: ${(props) => props.theme.colors.primary};
+            width: 5rem;
+            height: 1rem;
+        }
+    }
+`

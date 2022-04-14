@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import * as GS from '../../styles/global'
 import { portfolio } from '../../data/portfolio'
 import { motion, AnimatePresence } from 'framer-motion'
+import { truncate } from 'fs'
+import Link from 'next/link'
 
 interface FilterProps {
     filterItem: (e: any) => void
@@ -25,6 +27,7 @@ const StyledGrid = styled.div`
             border: 0.25rem solid #ccc;
             min-height: 50rem;
             margin-bottom: 1.5rem;
+            cursor: pointer;
             position: relative;
             overflow: hidden;
             background: #eee;
@@ -46,6 +49,7 @@ const StyledGrid = styled.div`
         }
         h2 {
             font-size: 3.2rem;
+            cursor: pointer;
             color: #000;
             strong {
                 position: relative;
@@ -54,7 +58,7 @@ const StyledGrid = styled.div`
                 &::after {
                     position: absolute;
                     content: '';
-                    bottom: 0.5rem;
+                    bottom: 0.25rem;
                     right: 0;
                     z-index: -1;
                     background: ${(props) => props.theme.colors.primary};
@@ -152,6 +156,11 @@ const Portfolio = () => {
         }
     }
 
+    const truncate = (text:string) => {
+        const truncated = text.substring(0, 200) + '...learn more'
+        return truncated
+    }
+
     return (
         <StyledContainer>
             <Filter filterItem={filterItem} />
@@ -166,15 +175,19 @@ const Portfolio = () => {
                                 exit="exit"
                             >
                                 <div className="slide">
-                                    <img src={piece.work} alt={piece.name} />
+                                    <Link href={piece.link}>
+                                        <img src={piece.work} alt={piece.name} />
+                                    </Link>
                                 </div>
                                 <small>{piece.name}</small>
-                                <h2
-                                    dangerouslySetInnerHTML={{
-                                        __html: piece.title,
-                                    }}
-                                />
-                                <p>{piece.description}</p>
+                                <Link href={piece.link}>
+                                    <h2
+                                        dangerouslySetInnerHTML={{
+                                            __html: piece.title,
+                                        }}
+                                    />
+                                </Link>
+                                <div dangerouslySetInnerHTML={{ __html: truncate(piece.description) }} />
                                 {piece.category.map((kind) => {
                                     return (
                                         <GS.PillButton

@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import * as GS from '../../../styles/global'
 
 interface HeadingProps {
     title: string
     description: string
+    parse?: boolean
 }
 
 const StyledIntro = styled.div`
@@ -12,8 +14,6 @@ const StyledIntro = styled.div`
     max-width: ${(props) => props.theme.maxWidth};
     h1 {
         font-size: 4rem;
-        position: relative;
-        top: 2rem;
         color: ${(props) => props.theme.colors.primary};
     }
 
@@ -25,7 +25,6 @@ const StyledIntro = styled.div`
     @media screen and (max-width: ${(props) => props.theme.midWidth}) {
         h1 {
             font-size: 2.5rem;
-            top: 0rem;
         }
         p {
             font-size: 3rem;
@@ -35,11 +34,11 @@ const StyledIntro = styled.div`
 `
 
 const Heading: React.FC<HeadingProps> = (props) => {
-    const { title, description } = props
+    const { title, description, parse } = props
     return (
         <StyledIntro>
             <h1>{title}</h1>
-            <p>{description}</p>
+            <GS.StyledUnderline dangerouslySetInnerHTML={{ __html: description }} />
         </StyledIntro>
     )
 }

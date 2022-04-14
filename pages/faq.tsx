@@ -37,7 +37,7 @@ const faq = () => {
             <Heading
                 title={'faq'}
                 description={
-                    'have a question? it may be already answered below! take a look.'
+                    'have a question? it may be already answered below! take a look'
                 }
             />
             <StyledContainer>
@@ -78,12 +78,7 @@ const faq = () => {
                                 development.
                             </p>
                             <p>
-                                For web3 projects, a minting project with no
-                                utilization typically starts at $7,000. This
-                                includes UX/UI design, web2 and web3
-                                development. Your project will be staged on
-                                testnet before being deployed on your preferred
-                                blockchain.
+                                For web3 projects, please contact us for more information.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -112,9 +107,7 @@ const faq = () => {
                                 Kanvas strongly believes in customer
                                 satisfaction. If you are not pleased with your
                                 results for any reason, please contact us as we
-                                will provide a full refund. Certain restrictions
-                                apply and all assets provided by Kanvas will be
-                                revoked.
+                                will provide a full refund.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -201,7 +194,7 @@ const faq = () => {
                                 this time. However, we are currently investing
                                 into a media outlet that will have substantial
                                 reach and exposure particularly in the
-                                cryptocurrency space. Stay tuned!
+                                cryptocurrency space.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -245,9 +238,9 @@ const faq = () => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <p>
-                                We primarily utilize Shopify. We may use a
-                                different platform based on request, but
-                                typically our first choice is Shopify.
+                                We primarily utilize Shopify and Snipcart. Shopify
+                                is the preferred platform for those that are already with the application.
+                                Otherwise, we prefer to use Snipcart as a jamstack solution.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -259,9 +252,7 @@ const faq = () => {
                             <p>
                                 Yes, unless you prefer to use a monolithic
                                 solution such as a traditional WordPress
-                                application. In the near future, all Shopify
-                                applications will also utilize a jamstack
-                                solution.
+                                application.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -271,11 +262,8 @@ const faq = () => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <p>
-                                This is a nextjs website built with React as the
-                                frontend library. The blog section is coupled
-                                with a headless WordPress application. The
-                                aesthetics are created with Framer Motion,
-                                Bootstrap, and styled-components.
+                                This is a Nextjs website built with React as the
+                                frontend library.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
