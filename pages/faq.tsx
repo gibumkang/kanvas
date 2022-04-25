@@ -61,24 +61,13 @@ const faq = () => {
                                 amount of time, research, and dedication in
                                 order to properly execute your project. Because
                                 of this, we are comfortable sharing baseline
-                                prices. However, the amount of content (pages,
-                                components, etc.) your project entails is what
-                                will determines the final quote.
+                                prices if you contact us. However, the amount of
+                                content (pages, components, etc.) your project
+                                entails is what will determines the final quote.
                             </p>
                             <p>
-                                Typically, a UX/UI design starts at $1,999. For
-                                a non-ecommerce website, the development costs
-                                start at $1,999. If you require both UX/UI
-                                design and web development, we offer a package
-                                deal that starts at $3,499 instead.
-                            </p>
-                            <p>
-                                For ecommerce, a project typically starts at
-                                $4,999 which includes both UX/UI design and web
-                                development.
-                            </p>
-                            <p>
-                                For web3 projects, please contact us for more information.
+                                Please contact us for more information regarding
+                                our pricing.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
@@ -238,9 +227,10 @@ const faq = () => {
                         </Accordion.Header>
                         <Accordion.Body>
                             <p>
-                                We primarily utilize Shopify and Snipcart. Shopify
-                                is the preferred platform for those that are already with the application.
-                                Otherwise, we prefer to use Snipcart as a jamstack solution.
+                                We primarily utilize Shopify and Snipcart.
+                                Shopify is the preferred platform for those that
+                                are already with the application. Otherwise, we
+                                prefer to use Snipcart as a jamstack solution.
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>

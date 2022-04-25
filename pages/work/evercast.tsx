@@ -1,28 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PortfolioComponent from '../../components/Common/PortfolioComponent'
 import Heading from '../../components/MainLayout/Heading/Heading'
-import { portfolio } from '../../data/portfolio'
+import { PortfolioProps, portfolio } from '../../data/portfolio'
 
 const Evercast = () => {
-    const filtered = portfolio.filter((piece) => piece.slug === 'evercast')
-    const piece = filtered[0]
+    const [data, setData] = useState<PortfolioProps>()
+    useEffect(() => {
+        const filtered = portfolio.filter((piece) => piece.slug === 'evercast')
+        setData(filtered[0])
+    }, [data, setData, portfolio])
     return (
-        <>
-            <Heading
-                title={piece.name}
-                description={piece.title}
-                parse={true}
-            />
-            <PortfolioComponent
-                description={piece.description}
-                technology={piece.technology}
-                portfolio={piece.portfolio}
-                testimonials={piece.testimonials} 
-                header={piece.header}
-                alt={piece.name}
-                slug={piece.slug}
-            />
-        </>
+        data && (
+            <>
+                <Heading
+                    title={data.name}
+                    description={data.title}
+                    parse={true}
+                />
+                <PortfolioComponent
+                    description={data.description}
+                    technology={data.technology}
+                    portfolio={data.portfolio}
+                    testimonials={data.testimonials}
+                    header={data.header}
+                    slug={data.slug}
+                    alt={data.name}
+                />
+            </>
+        )
     )
 }
 
