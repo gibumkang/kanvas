@@ -6,6 +6,7 @@ import { portfolio } from '../../data/portfolio'
 import Link from 'next/link'
 import Piece from './Piece'
 import { motion } from 'framer-motion'
+import { BsArrowRightCircle } from 'react-icons/bs'
 
 interface PortfolioComponentProps {
     name: string
@@ -90,6 +91,16 @@ const ButtonContainer = styled.div`
     margin: 0 auto;
     text-align: center;
     padding-bottom: 10rem;
+    .button {
+        font-size: 3rem;
+        padding: 0.5rem 3.5rem;
+        svg {
+            position: relative;
+            bottom: 0.3rem;
+            font-size: 2.3rem;
+            left: 0.25rem;
+        }
+    }
 `
 
 const HomePortfolio: React.FC = () => {
@@ -112,7 +123,11 @@ const HomePortfolio: React.FC = () => {
                 )
             })}
             <ButtonContainer>
-                <Link passHref href="/work"><GS.MainButton>see all work</GS.MainButton></Link>
+                <Link passHref href="/work">
+                    <GS.MainButton className="button">
+                        see all work <BsArrowRightCircle />
+                    </GS.MainButton>
+                </Link>
             </ButtonContainer>
         </GS.MaxContainer>
     )

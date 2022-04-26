@@ -8,7 +8,7 @@ export interface AboutProps {
 export const about: AboutProps[] = [
     {
         name: 'benjamin kang',
-        title: 'founder',
+        title: 'Founder',
         description: `
                 Since his youth, Ben was drafting menus for
                 imaginary restaurants in outer space and
@@ -26,7 +26,7 @@ export const about: AboutProps[] = [
     },
     {
         name: 'matthew jiang',
-        title: 'lead engineer',
+        title: 'Lead engineer',
         description: `
                 The head engineer is really a diehard anime fan
                 inside. You will find Matt rocking his Naruto
@@ -41,7 +41,7 @@ export const about: AboutProps[] = [
     },
     {
         name: 'borami kang',
-        title: 'lead designer',
+        title: 'Lead Designer',
         description: `
                 This talented graphic designer does more than make 
                 pretty things. Borami is highly
@@ -54,7 +54,7 @@ export const about: AboutProps[] = [
     },
     {
         name: 'aaron choi',
-        title: 'frontend developer',
+        title: 'Frontend Developer',
         description: `
                 Aaron is a recent graduate and new to the
                 development scene, but his composure and

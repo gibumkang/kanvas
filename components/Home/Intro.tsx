@@ -60,6 +60,13 @@ const StyledGrid = styled.div`
     }
     @media screen and (max-width: 500px) {
         margin-bottom: 10rem;
+        grid-gap: 1.5rem;
+        & > div {
+            p {
+                font-size: 1.3rem;
+                padding-top: 0.5rem;
+            }
+        }
     }
 `
 
@@ -72,8 +79,8 @@ const Intro = () => {
                     <h2>our mission</h2>
                     <p>
                         To create a digital presence empowered by design,
-                        research, and experience. We provide a turnkey solution
-                        for all your digital needs.
+                        research, and experience. We provide a <em>turnkey</em>{' '}
+                        solution for all your digital needs.
                     </p>
                 </div>
                 <div className="line">&nbsp;</div>
@@ -81,7 +88,8 @@ const Intro = () => {
                     <h2>our services</h2>
                     <p>
                         Whether you are looking to launch an online store or
-                        your very own NFT collection, we can help. See our{' '}
+                        your very own NFT collection, <em>we can help</em>. See
+                        our{' '}
                         <Link passHref href="/faq">
                             <a>faq</a>
                         </Link>{' '}

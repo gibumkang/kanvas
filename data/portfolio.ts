@@ -36,7 +36,7 @@ export interface Testimonial {
 export const portfolio: PortfolioProps[] = [
     {
         name: 'Evercast LLC',
-        title: 'engineer a new way to collaborate and <strong>work digitally</strong> on the web',
+        title: 'Engineer a new way to collaborate and <strong>work digitally</strong> on the web',
         technology: [
             'React',
             'Typescript',
@@ -49,16 +49,16 @@ export const portfolio: PortfolioProps[] = [
                 <p>
                     Evercast is a video conferencing software that enables users to collaborate anywhere in the world.
                     It has the resources to stream in 4k, which is useful when reviewing high quality content over the web.
-                    Because of this, Evercast is a popular choice in the film and video game industry. The features make
+                    For this reason, Evercast is a popular choice in the film and video game industry. The features make
                     it easy for auditors to review and revise content.
                 </p>
                 <p>
                     Evercast is available in three platforms: web, ios, and native desktop. Our task is to maintain and build
                     the platform for the web using React and webRTC, an open-source codebase that allows users to stream video
-                    and audio content.
+                    and audio in real time.
                 </p>
                 <p>
-                    Part of the task is to build and maintain the Administrative Portal, which is a proprietary solution that allows
+                    Part of the service we provide is building the Administrative Portal, which is a proprietary solution that allows
                     users to manage live rooms, credits, accounts, and other features.
                 </p>
             `,
@@ -99,24 +99,24 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'TYLV Clothing',
-        title: 'create a <strong>digital storefront</strong> for a selfless cause, intended for a region in peril',
+        title: 'Create a digital <strong>storefront</strong> for a selfless cause, intended for a region in peril',
         technology: ['Shopify', 'HTML/CSS/JS', 'Sketch', 'Liquid'],
         link: '/work/tylv',
         description: `
                 <p>
                     TYLV Clothing is a non-profit organization. The members generate revenue from apparel sales, where 100% of the proceeds goes towards the region of Tigray.
-                    Sales have primarily been conducted through Instagram, which is a great tool for exposure but not to manage ecommerce activity on a daily basis. 
-                    It was our objective to provide a substantial ecommerce solution and tell the story of the ongoing conflict.
+                    Sales have primarily been conducted through Instagram, which functions well for exposure but is not effective in ecommerce activity and daily management. 
+                    It was our objective to provide a substantial ecommerce solution and tell the story of the ongoing conflict in Tigray.
                 </p>
                 <p>
                     For several years, Tigray has been in conflict with Ethiopia due to political and cultural issues. Thousands of lives, both soldiers and civilians, 
                     have fallen due to the bloodshed taking place.
                 </p>
                 <p>
-                    "Before we did any design or development work, we wanted to better understand the situation," Ben said. "We knew it was important to tell a story and take this opportunity to educate others."
+                    "Before we did any design or development work, we wanted to better understand the situation," Ben (Lead Developer) stated. "We knew it was important to tell a story and take this opportunity to educate others."
                 </p>
                 <p>
-                    The website was created to highlight the apparel line, but also explain the events in Tigray and the organization's purpose.
+                    The website was created to highlight the apparel line, but also to explain the events in Tigray and the organization's purpose.
                 </p>
             `,
         category: ['ecommerce', 'branding', 'web development', 'ux/ui'],
@@ -131,7 +131,7 @@ export const portfolio: PortfolioProps[] = [
         portfolio: [
             {
                 caption:
-                    'Custom story design and layout makes it easy for users to navigate through different items. Created with Adobe Photoshop and Sketch.',
+                    'Custom story design and layout make it easy for users to navigate through different items. Created with Adobe Photoshop and Sketch.',
                 source: '/tylv-1.webp',
             },
             {
@@ -148,7 +148,7 @@ export const portfolio: PortfolioProps[] = [
             },
             {
                 caption:
-                    'Shopify ecommerce platform provides easier management of sales, inventory, and promotions.',
+                    'The Shopify ecommerce platform provides easier management of sales, inventory, and promotions.',
                 source: '/tylv-2.webp',
             },
         ],
@@ -164,7 +164,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Pastel Wives',
-        title: 'generate a collection of unique and quirky artwork for the <strong>NFT space</strong>',
+        title: 'Generate a collection of unique and quirky artwork for the <strong>NFT space</strong>',
         technology: [
             'React',
             'Nextjs',
@@ -203,7 +203,7 @@ export const portfolio: PortfolioProps[] = [
             },
             {
                 caption:
-                    '<p>A dedicated website was created in React and Nextjs in order to provide information and support wallet integration for minting.</p>',
+                    '<p>A dedicated website was created in React and Nextjs to provide information and support wallet integration for minting.</p>',
                 source: '/pastelwives-2.webp',
             },
             {
@@ -227,7 +227,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Yesports',
-        title: 'launch eSports into <strong>the metaverse</strong>',
+        title: 'Launch eSports into <strong>the metaverse</strong>',
         technology: ['React', 'Typescript', 'Solidity', 'Hardhat', 'Nextjs'],
         link: '/work/yesports',
         header: [
@@ -242,7 +242,7 @@ export const portfolio: PortfolioProps[] = [
                     into the metaverse by using Yesports, which enables users to easily distribute NFTs through its own marketplace.
                 </p>
                 <p>
-                    The platform was built on the Polygon network in order to avoid higher gas fees on other blockchains, such as the Ethereum blockchain.
+                    The platform was built on the Polygon network to avoid higher gas fees on other blockchains, such as the Ethereum blockchain.
                     "Users can access web3 benefits with ease thanks to the marketplace," Matt says. "The eSports team can focus on what really matters, which
                     is playing competitive games."
                 </p>
@@ -269,7 +269,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Lead Engineer at Yesports',
                 photo: '/testimonial.webp',
                 testimonial:
-                    '<p>Matt and Kanvas was a pleasure to work with. We were able to enhance our platform by relying on their engineering expertise.</p>',
+                    '<p>Matt and Kanvas were a pleasure to work with. We were able to enhance our platform by relying on their engineering expertise.</p>',
             },
         ],
     },
@@ -321,7 +321,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Americana Property Management',
-        title: 'create a <strong>seamless solution</strong> to connect prospect, buyers, and tenants',
+        title: 'Create a <strong>seamless solution</strong> to connect prospects, buyers, and tenants',
         technology: ['HTML/CSS/JS', 'Photoshop', 'WordPress', 'Django'],
         link: '/work/americana',
         header: [
@@ -336,7 +336,7 @@ export const portfolio: PortfolioProps[] = [
                     be overhauled and integrated with the backend platform built in Django.
                 </p>
                 <p>
-                    Our primary task was to create an unique design and utilize WordPress as the content management system.
+                    Our primary task was to create a unique design and utilize WordPress as the content management system.
                     The Django application makes it easy for the client to manage tenants, sales of properties, repair requests, and more.
                 </p>
             `,
@@ -372,7 +372,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Basegreens',
-        title: 'redefining <strong>green juice</strong> for the world to consume',
+        title: 'Redefining <strong>green juice</strong> for the world to consume',
         technology: ['HTML/CSS/JS', 'Sketch', 'Shopify', 'Liquid'],
         link: '/work/basegreens',
         header: [
@@ -383,16 +383,16 @@ export const portfolio: PortfolioProps[] = [
         ],
         description: `
                 <p>
-                    Base greens is a frozen green juice that offers a variety of ways to consume healthy greens. You can enjoy Base greens by adding it
+                    Base greens is a frozen green juice that offers a variety of ways to consume healthy greens. You can enjoy Basegreens by adding it
                     in food as a base, blending it with fruits as a smoothie, or simply by itself.
                 </p>
                 <p>
-                    "Base greens is made by two women entrepreneurs", Borami, the lead designer, stated. "We wanted to make sure that it had a homegrown
+                    "Basegreens is made by two women entrepreneurs", Borami, the lead designer, stated. "We wanted to make sure that it had a homegrown
                     look and feel to it, but also the professionalism of a brand you would find at Whole Foods."
                 </p>
                 <p>
-                    Since Base greens sells the product online, we wanted to utilize Shopify since it is easy for users to manage inventory, promotion, and sales.
-                    We created a custom theme from scratch, and added interactive animations to educate users exactly what Base greens is and how to consume it.
+                    Since Basegreens sell the product online, we wanted to utilize Shopify since it is easy for users to manage inventory, promotion, and sales.
+                    We created a custom theme from scratch and added interactive animations to educate users on exactly what Basegreens is and how to consume it.
                 </p>
             `,
         category: ['ecommerce', 'branding', 'web development', 'ux/ui'],
@@ -427,7 +427,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'NV Grow',
-        title: 'connect <strong>entrepreneurs</strong> to reach business goals',
+        title: 'Connect <strong>entrepreneurs</strong> to reach business goals',
         technology: ['HTML/CSS/JS', 'Sketch', 'WordPress'],
         link: '/work/nvgrow',
         header: [
@@ -443,7 +443,7 @@ export const portfolio: PortfolioProps[] = [
                 </p>
                 <p>
                     The client has requested a clean interface that is professional and easy to use to manage content. The application was created on WordPress
-                    since many of the intended users have some level of experience with it from the past. The design and development was made completely from scratch,
+                    since many of the intended users have some level of experience with it from the past. The design and development were made completely from scratch
                     and configured with Advanced Custom Fields.
                 </p>
             `,
@@ -454,7 +454,7 @@ export const portfolio: PortfolioProps[] = [
             {
                 caption: `
                     <p>
-                        Advanced Custom Fields and WordPress makes the application easy to manage and use. Custom fields were made
+                        Advanced Custom Fields and WordPress make the application easy to manage and use. Custom fields were made
                         to make updating headers, links, and components much more straightforward.
                     </p>`,
                 source: '/nvgrow-2.webp',
@@ -487,7 +487,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Blackstone Launchpad',
-        title: 'integrate a state-of-the-art <strong>learning platform</strong>',
+        title: 'Integrate a state-of-the-art <strong>learning platform</strong>',
         technology: ['HTML/CSS/JS', 'Sketch', 'WordPress'],
         link: '/work/blackstone',
         header: [
@@ -534,7 +534,7 @@ export const portfolio: PortfolioProps[] = [
     },
     {
         name: 'Travel Token NFT',
-        title: '420 NFTs for travelers and explorers',
+        title: '420 NFTs for travelers and <strong>explorers</strong>',
         technology: ['React', 'Typescript', 'Solidity'],
         work: '/work-traveltoken.webp',
         link: '/work/traveltoken',
@@ -550,12 +550,12 @@ export const portfolio: PortfolioProps[] = [
                     exclusive events around the world. The project is founded by Drew Binksy, who has over 10 million followers on social media.
                 </p>
                 <p>
-                    The NFT is a ERC-721 token that is non-generative. "This was a great project to execute the non-generative nature of NFT", said Ben.
+                    The NFT is a ERC-721 token that is non-generative. "This was a great project to execute the non-generative nature of NFT", said Ben, Core Developer at Kanvas.
                     "The process is roughly the same, but minor differences."
                 </p>
                 <p>
-                    Kanvas was responsible for the minting of the NFT and development of the frontend. It was also our responsibility to ensure that
-                    ancillary marketing channels were aligned with the project, so project management was also a core service for this client.
+                    Kanvas was responsible for the minting of the NFTs and development of the frontend. It was also our responsibility to ensure that
+                    ancillary marketing channels were aligned with the project. Thus, project management was also a core service for this client.
                 </p>
             `,
         category: ['smart contract development', 'web development'],
@@ -585,7 +585,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Founder, Youtube Influencer',
                 photo: '/testimonial.webp',
                 testimonial:
-                    '<p>Ben and Kanvas was great to work with! They guided me every step of the way to ensure my project would be successful. No doubt I will work with them again for my future project!</p>',
+                    '<p>Ben and Kanvas were great to work with! They guided me every step of the way to ensure my project would be successful. No doubt I will work with them again for my future projects!</p>',
             },
         ],
     },

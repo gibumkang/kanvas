@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 const StyledContainer = styled.div`
     max-width: 144rem;
     margin: 0 auto;
-    padding: 0rem 3rem;
+    padding: 0rem;
 `
 
 const StyledFlex = styled.div`
@@ -54,7 +54,8 @@ const StyledFlex = styled.div`
     }
     @media screen and (max-width: 900px) {
         display: block;
-        padding-top: 10rem;
+        padding: 0rem 3rem 6rem 3rem;
+        border-bottom: 0.1rem solid #eee;
         & > div {
             text-align: center;
             &:nth-child(1) {
@@ -78,12 +79,7 @@ const StyledFlex = styled.div`
 const About = () => {
     return (
         <>
-            <Heading
-                title={'about'}
-                description={
-                    'just folks looking to make the web a better place'
-                }
-            />
+            <Heading title={'about'} description={'Meet the staff at Kanvas'} />
             <StyledContainer>
                 {about.map((person) => {
                     return (

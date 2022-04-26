@@ -37,7 +37,7 @@ const faq = () => {
             <Heading
                 title={'faq'}
                 description={
-                    'have a question? it may be already answered below! take a look'
+                    'Have a question? check out our frequently asked questions'
                 }
             />
             <StyledContainer>
@@ -125,7 +125,7 @@ const faq = () => {
                                 express your opinions, as the design should be
                                 nailed during this phase. It is critical the
                                 team at Kanvas understands your purpose and
-                                aesthetic approach before moving onto the next
+                                esthetic approach before moving onto the next
                                 step.
                             </p>
                             <h3>Development</h3>
@@ -164,12 +164,6 @@ const faq = () => {
                                 inquire for any questions, you will not be
                                 billed during this period.
                             </p>
-                            <p>
-                                If you would like continued upkeep, please
-                                contact us as we also provided curated retainer
-                                services for basic maintenance and/or content
-                                creation.
-                            </p>
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="4">
@@ -189,6 +183,22 @@ const faq = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="5">
                         <Accordion.Header>
+                            do you provide maintenance or long-term upkeep
+                            services?
+                        </Accordion.Header>
+                        <Accordion.Body>
+                            <p>
+                                If you would like continued upkeep, please
+                                contact us as we also provided curated retainer
+                                services for basic maintenance and/or content
+                                creation. The price of the retainer is based on
+                                the scope of the services and updates required
+                                for your application.
+                            </p>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="6">
+                        <Accordion.Header>
                             do you offer any discounts?
                         </Accordion.Header>
                         <Accordion.Body>
@@ -201,7 +211,7 @@ const faq = () => {
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="6">
+                    <Accordion.Item eventKey="7">
                         <Accordion.Header>
                             what type of web3 services do you offer?
                         </Accordion.Header>
@@ -221,7 +231,7 @@ const faq = () => {
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="7">
+                    <Accordion.Item eventKey="8">
                         <Accordion.Header>
                             what platform do you use for ecommerce?
                         </Accordion.Header>
@@ -234,7 +244,7 @@ const faq = () => {
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="8">
+                    <Accordion.Item eventKey="9">
                         <Accordion.Header>
                             will my application be a jamstack application?
                         </Accordion.Header>
@@ -246,7 +256,7 @@ const faq = () => {
                             </p>
                         </Accordion.Body>
                     </Accordion.Item>
-                    <Accordion.Item eventKey="9">
+                    <Accordion.Item eventKey="10">
                         <Accordion.Header>
                             how was this website made?
                         </Accordion.Header>

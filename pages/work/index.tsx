@@ -8,7 +8,7 @@ const Work = () => {
             <Heading
                 title={'our work'}
                 description={
-                    'our goal is to translate your vision into reality.'
+                    'Our goal is to translate your vision into reality'
                 }
             />
             <Grid />

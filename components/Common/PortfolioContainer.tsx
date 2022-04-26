@@ -116,6 +116,9 @@ const StyledTestimonial = styled.div`
             img {
                 margin: 0 auto;
             }
+            h4 {
+                padding-bottom: 2rem;
+            }
         }
     }
 `
