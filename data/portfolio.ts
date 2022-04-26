@@ -93,7 +93,7 @@ export const portfolio: PortfolioProps[] = [
                 name: 'Ric Roman Waugh',
                 title: 'Director of Greenland',
                 photo: '/work-evercast.webp',
-                testimonial: `<p>"Evercast has become my go-to weapon for production... I couldn't imagine life without it."</p>`,
+                testimonial: `<p>Evercast has become my go-to weapon for production... I couldn't imagine life without it.</p>`,
             },
         ],
     },
@@ -158,7 +158,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Founder of TYLV',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'It was incredible working with Kanvas and Ben. We were able to finally transition our Instagram business to a legitimate online business with Shopify. This helps our cause and those affected by the conflict in Tigray.',
+                    '<p>It was incredible working with Kanvas and Ben. We were able to finally transition our Instagram business to a legitimate online business with Shopify. This helps our cause and those affected by the conflict in Tigray.</p>',
             },
         ],
     },
@@ -269,7 +269,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Lead Engineer at Yesports',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'Matt and Kanvas was a pleasure to work with. We were able to enhance our platform by relying on their engineering expertise.',
+                    '<p>Matt and Kanvas was a pleasure to work with. We were able to enhance our platform by relying on their engineering expertise.</p>',
             },
         ],
     },
@@ -315,7 +315,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Project Manager',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'Matt was pivotal in launching our exclusive NFTs to the public with no hiccups. Definitely open to working with Kanvas again in the future.',
+                    '<p>Matt was pivotal in launching our exclusive NFTs to the public with no hiccups. Definitely open to working with Kanvas again in the future.</p>',
             },
         ],
     },
@@ -366,7 +366,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Founder of Americana Property Management',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'Our previous website had no features for tenant and agent management. Kanvas made it so much easier for us to use the website with WordPress and a custom backend integration. We are very happy with the results.',
+                    '<p>Our previous website had no features for tenant and agent management. Kanvas made it so much easier for us to use the website with WordPress and a custom backend integration. We are very happy with the results.</p>',
             },
         ],
     },
@@ -421,7 +421,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Founding Partners',
                 photo: '/testi-basegreens.webp',
                 testimonial:
-                    'Kanvas was pivotal for taking our business online. We are planning to add more features to our beautiful website and will continue to work with Kanvas for the foreseeable future!',
+                    '<p>Kanvas was pivotal for taking our business online. We are planning to add more features to our beautiful website and will continue to work with Kanvas for the foreseeable future!</p>',
             },
         ],
     },
@@ -481,7 +481,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Director of NV Grow',
                 photo: '/testi-nvgrow.webp',
                 testimonial:
-                    'It was a pleasure working with Kanvas. Our organization and college appreciates their efforts.',
+                    '<p>It was a pleasure working with Kanvas. Our organization and college appreciates their efforts.</p>',
             },
         ],
     },
@@ -528,7 +528,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Blackstone Launchpad Lead',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'Kanvas was able to incorporate the Blackstone Launchpad in a very short amount of time. We are thrilled that our students have access to this amazing platform.',
+                    '<p>Kanvas was able to incorporate the Blackstone Launchpad in a very short amount of time. We are thrilled that our students have access to this amazing platform.</p>',
             },
         ],
     },
@@ -585,7 +585,7 @@ export const portfolio: PortfolioProps[] = [
                 title: 'Founder, Youtube Influencer',
                 photo: '/testimonial.webp',
                 testimonial:
-                    'Ben and Kanvas was great to work with! They guided me every step of the way to ensure my project would be successful. No doubt I will work with them again for my future project!',
+                    '<p>Ben and Kanvas was great to work with! They guided me every step of the way to ensure my project would be successful. No doubt I will work with them again for my future project!</p>',
             },
         ],
     },
