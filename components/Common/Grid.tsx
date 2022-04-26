@@ -45,23 +45,26 @@ const StyledGrid = styled.div`
         small {
             color: #666;
         }
-        h2 {
-            font-size: 3.2rem;
-            cursor: pointer;
-            color: #000;
-            strong {
-                position: relative;
-                white-space: nowrap;
-                z-index: 2;
-                &::after {
-                    position: absolute;
-                    content: '';
-                    bottom: 0.25rem;
-                    right: -0.25rem;
-                    z-index: -1;
-                    background: ${(props) => props.theme.colors.primary};
-                    width: 5rem;
-                    height: 1rem;
+        a {
+            text-decoration: none;
+            h2 {
+                font-size: 3.2rem;
+                cursor: pointer;
+                color: #000;
+                strong {
+                    position: relative;
+                    white-space: nowrap;
+                    z-index: 2;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0.25rem;
+                        right: -0.25rem;
+                        z-index: -1;
+                        background: ${(props) => props.theme.colors.primary};
+                        width: 5rem;
+                        height: 1rem;
+                    }
                 }
             }
         }
