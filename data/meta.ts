@@ -2,7 +2,7 @@ export const meta = [
     {
         name: 'Kanvas',
         description:
-            'Kanvas is a web agency that focuses on branding, ecommerce, and web3.',
+            'Kanvas is an all-in-one web agency that focuses on branding, ecommerce, and web3.',
         whitelogo: '/logo.svg',
         darklogo: '/logo-v2.svg',
         alt: 'Studio Kanvas',

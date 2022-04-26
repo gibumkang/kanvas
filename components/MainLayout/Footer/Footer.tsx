@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
 import { meta } from '../../../data/meta'
 import { motion } from 'framer-motion'
 
@@ -17,6 +16,7 @@ const StyledFooter = styled.footer`
         z-index: 1;
         small {
             display: block;
+            font-size: 1.6rem;
         }
         a {
             font-size: 4rem;
@@ -56,7 +56,7 @@ const logoVariant = {
     animate: {
         y: 0,
         rotateY: '0deg',
-        opacity: 1,
+        opacity: 0.5,
         transition: {
             duration: 0.75,
         },
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noreferrer"
                 >
-                    contact us
+                    let&apos;s connect.
                 </a>
             </div>
             <p>

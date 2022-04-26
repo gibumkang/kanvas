@@ -10,7 +10,7 @@ const Badbears = () => {
             (piece) => piece.slug === 'traveltoken'
         )
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

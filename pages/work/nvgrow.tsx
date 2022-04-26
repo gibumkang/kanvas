@@ -8,7 +8,7 @@ const NVGrow = () => {
     useEffect(() => {
         const filtered = portfolio.filter((piece) => piece.slug === 'nvgrow')
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
 
     return (
         data && (

@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { services } from '../../data/services'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const StyledFlex = styled.div`
     gap: 5rem;
@@ -10,7 +13,8 @@ const StyledFlex = styled.div`
             font-size: 3.2rem;
             color: #000;
         }
-        p {
+        p,
+        a {
             font-size: 2.1rem;
             color: #555;
         }
@@ -32,6 +36,31 @@ const StyledFlex = styled.div`
             }
         }
     }
+    @media screen and (max-width: 500px) {
+        padding: 10rem 0rem;
+    }
+`
+
+const StyledGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    & > div {
+        text-align: center;
+        img {
+            width: 6rem;
+            height: auto;
+            filter: invert(63%) sepia(91%) saturate(1648%) hue-rotate(1deg)
+                brightness(105%) contrast(106%);
+            position: relative;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 20rem;
+    }
+    @media screen and (max-width: 500px) {
+        margin-bottom: 10rem;
+    }
 `
 
 const Intro = () => {
@@ -43,8 +72,8 @@ const Intro = () => {
                     <h2>our mission</h2>
                     <p>
                         To create a digital presence empowered by design,
-                        research, and experience. Our goal is to translate your
-                        vision into reality.
+                        research, and experience. We provide a turnkey solution
+                        for all your digital needs.
                     </p>
                 </div>
                 <div className="line">&nbsp;</div>
@@ -52,11 +81,38 @@ const Intro = () => {
                     <h2>our services</h2>
                     <p>
                         Whether you are looking to launch an online store or
-                        your very own NFT collection, we can help. See our faq
+                        your very own NFT collection, we can help. See our{' '}
+                        <Link passHref href="/faq">
+                            <a>faq</a>
+                        </Link>{' '}
                         page for details.
                     </p>
                 </div>
             </StyledFlex>
+            <StyledGrid>
+                {services.map((service) => {
+                    return (
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                transition: { delay: 0.5 },
+                            }}
+                            whileHover={{
+                                scale: 1.1,
+                            }}
+                            key={service.description}
+                        >
+                            <img
+                                src={service.source}
+                                alt={service.description}
+                            />
+                            <p>{service.description}</p>
+                        </motion.div>
+                    )
+                })}
+            </StyledGrid>
         </>
     )
 }

@@ -10,7 +10,7 @@ const Basegreens = () => {
             (piece) => piece.slug === 'basegreens'
         )
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

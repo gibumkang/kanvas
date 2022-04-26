@@ -10,7 +10,7 @@ const Pastelwives = () => {
             (piece) => piece.slug === 'pastelwives'
         )
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

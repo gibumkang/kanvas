@@ -8,7 +8,7 @@ const TYLV = () => {
     useEffect(() => {
         const filtered = portfolio.filter((piece) => piece.slug === 'tylv')
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
 
     return (
         data && (

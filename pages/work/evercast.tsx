@@ -8,7 +8,7 @@ const Evercast = () => {
     useEffect(() => {
         const filtered = portfolio.filter((piece) => piece.slug === 'evercast')
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

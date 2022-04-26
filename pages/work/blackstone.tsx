@@ -10,7 +10,7 @@ const Blackstone = () => {
             (piece) => piece.slug === 'blackstone'
         )
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

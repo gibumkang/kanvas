@@ -8,7 +8,7 @@ const Americana = () => {
     useEffect(() => {
         const filtered = portfolio.filter((piece) => piece.slug === 'americana')
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
     return (
         data && (
             <>

@@ -8,7 +8,7 @@ const Streeth = () => {
     useEffect(() => {
         const filtered = portfolio.filter((piece) => piece.slug === 'streeth')
         setData(filtered[0])
-    }, [data, setData, portfolio])
+    }, [data, setData])
 
     return (
         data && (
