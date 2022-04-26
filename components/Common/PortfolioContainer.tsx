@@ -35,8 +35,10 @@ const StyledImageContainer = styled(motion.div)`
         padding-bottom: 7.5rem;
         img,
         video {
-            border-top: 0.5rem solid #ccc;
-            border-bottom: 0.5rem solid #ccc;
+            border-top: 0.15rem solid #ccc;
+            border-bottom: 0.15rem solid #ccc;
+            border-left: 0rem;
+            border-right: 0rem;
             border-radius: 0;
         }
     }
