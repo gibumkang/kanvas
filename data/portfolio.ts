@@ -203,7 +203,7 @@ export const portfolio: PortfolioProps[] = [
             },
             {
                 caption:
-                    '<p>A dedicated website was created in React and Nextjs order to provide information and support wallet integration for minting.</p>',
+                    '<p>A dedicated website was created in React and Nextjs in order to provide information and support wallet integration for minting.</p>',
                 source: '/pastelwives-2.webp',
             },
             {

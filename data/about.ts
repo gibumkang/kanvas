@@ -2,14 +2,14 @@ export interface AboutProps {
     name: string
     title: string
     description: string
+    source?: string
 }
 
 export const about: AboutProps[] = [
     {
         name: 'benjamin kang',
         title: 'founder',
-        description: 
-            `
+        description: `
                 Since his youth, Ben was drafting menus for
                 imaginary restaurants in outer space and
                 creating whacky, yet totally fun websites on
@@ -22,12 +22,12 @@ export const about: AboutProps[] = [
                 isn&apos;t absored in his work, you can find him
                 on the slopes partaking in winter sports.
             `,
+        source: '/placeholder.webp',
     },
     {
         name: 'matthew jiang',
         title: 'lead engineer',
-        description: 
-            `
+        description: `
                 The head engineer is really a diehard anime fan
                 inside. You will find Matt rocking his Naruto
                 profile picture more than his actual face these
@@ -37,12 +37,12 @@ export const about: AboutProps[] = [
                 the way for new and exciting apps in the
                 cryptocurrency space.
             `,
+        source: '/matt.webp',
     },
     {
         name: 'borami kang',
         title: 'lead designer',
-        description: 
-            `
+        description: `
                 This talented graphic designer does more than make 
                 pretty things. Borami is highly
                 knowledgeable in a variety of web platforms
@@ -50,12 +50,12 @@ export const about: AboutProps[] = [
                 extensive career in traditional graphic design
                 and is now making amazing visual content for the web3 space.
             `,
+        source: '/borami.webp',
     },
     {
         name: 'aaron choi',
         title: 'frontend developer',
-        description: 
-            `
+        description: `
                 Aaron is a recent graduate and new to the
                 development scene, but his composure and
                 approach in his work is one that is comparable
@@ -63,5 +63,6 @@ export const about: AboutProps[] = [
                 you can find Aaron reading up on the
                 latest news and documentation to become a better developer.
             `,
+        source: '/aaron.webp',
     },
 ]

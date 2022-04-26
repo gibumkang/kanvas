@@ -142,10 +142,10 @@ const faq = () => {
                                 deployed to production.
                             </p>
                             <p>
-                                If you are interested in a web3 project, it will
-                                first be deployed to a testnet before being
-                                deployed on mainnet. You will be informed
-                                regarding this process step by step.
+                                If it is a web3 project, it will first be
+                                deployed to testnet before it is deployed on
+                                mainnet. You will be informed regarding this
+                                process step by step.
                             </p>
                             <p>
                                 <strong>Production</strong> - Production is a

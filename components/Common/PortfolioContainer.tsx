@@ -84,17 +84,17 @@ const StyledTestimonial = styled.div`
             position: relative;
             :before {
                 content: '"';
-                position: absolute;
+                position: relative;
                 font-size: 3rem;
-                left: -1.5rem;
-                top: -1rem;
+                left: 0rem;
+                line-height: 0rem;
                 font-family: serif;
             }
             :after {
                 content: '"';
                 position: relative;
                 font-size: 3rem;
-                right: -0.25rem;
+                right: 0rem;
                 line-height: 0rem;
                 font-family: serif;
             }

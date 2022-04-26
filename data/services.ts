@@ -5,24 +5,28 @@ interface ServiceProps {
 
 export const services: ServiceProps[] = [
     {
-        source: '/responsive.svg',
-        description: 'responsive design',
-    },
-    {
         source: '/design.svg',
         description: 'ux/ui design',
     },
     {
-        source: '/web3.svg',
-        description: 'web3 development',
+        source: '/responsive.svg',
+        description: 'responsive design',
     },
     {
         source: '/consultation.svg',
         description: 'consultation',
     },
     {
+        source: '/web3.svg',
+        description: 'web3 development',
+    },
+    {
         source: '/flow.svg',
         description: 'diagram/flow production',
+    },
+    {
+        source: '/nft.svg',
+        description: 'nft development',
     },
     {
         source: '/branding.svg',
@@ -35,9 +39,5 @@ export const services: ServiceProps[] = [
     {
         source: '/turnkey.svg',
         description: 'turnkey solution',
-    },
-    {
-        source: '/nft.svg',
-        description: 'nft development',
     },
 ]
