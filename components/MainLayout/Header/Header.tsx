@@ -4,6 +4,7 @@ import Logo from './Logo/Logo'
 import OffCanvasMenu from './OffCanvasMenu/OffCanvasMenu'
 import { useRouter } from 'next/router'
 import { meta } from '../../../data/meta'
+import HelmetComponent from './HelmetComponent'
 
 const HeaderContainer = styled.div`
     display: flex;
@@ -65,21 +66,24 @@ const LogoContainer = styled.div`
 const Header = () => {
     const router = useRouter()
     return (
-        <HeaderContainer className={router.pathname == '/' ? 'home' : ''}>
-            <LogoContainer>
-                <Logo
-                    logo={
-                        router.pathname == '/'
-                            ? meta[0].whitelogo
-                            : meta[0].darklogo
-                    }
-                />
-            </LogoContainer>
-            <div>
-                <Navbar />
-            </div>
-            <OffCanvasMenu />
-        </HeaderContainer>
+        <>
+            <HelmetComponent />
+            <HeaderContainer className={router.pathname == '/' ? 'home' : ''}>
+                <LogoContainer>
+                    <Logo
+                        logo={
+                            router.pathname == '/'
+                                ? meta[0].whitelogo
+                                : meta[0].darklogo
+                        }
+                    />
+                </LogoContainer>
+                <div>
+                    <Navbar />
+                </div>
+                <OffCanvasMenu />
+            </HeaderContainer>
+        </>
     )
 }
 

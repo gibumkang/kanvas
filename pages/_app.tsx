@@ -6,6 +6,7 @@ import theme from '../styles/themes'
 import MainLayout from '../components/MainLayout/MainLayout'
 import HeaderContextProvider from '../hooks/HeaderContext'
 import 'bootstrap/dist/css/bootstrap.css'
+import { HelmetProvider } from 'react-helmet-async'
 import { meta } from '../data/meta'
 
 const MyApp = ({ Component, pageProps }) => {
@@ -19,15 +20,17 @@ const MyApp = ({ Component, pageProps }) => {
                 <title>{meta[0].name}</title>
             </Head>
             <ThemeProvider theme={theme}>
-                {/* // easily implement dark mode here */}
-                <GlobalStyle />
-                <MainContextProvider>
-                    <HeaderContextProvider>
-                        <MainLayout>
-                            <Component {...pageProps} />
-                        </MainLayout>
-                    </HeaderContextProvider>
-                </MainContextProvider>
+                <HelmetProvider>
+                    {/* // easily implement dark mode here */}
+                    <GlobalStyle />
+                    <MainContextProvider>
+                        <HeaderContextProvider>
+                            <MainLayout>
+                                <Component {...pageProps} />
+                            </MainLayout>
+                        </HeaderContextProvider>
+                    </MainContextProvider>
+                </HelmetProvider>
             </ThemeProvider>
         </>
     )
